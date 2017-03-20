@@ -1,0 +1,34 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: cms	
+  username: postgres
+  password: 12345
+  host: localhost
+
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: cms_test
+  username: postgres
+  password: 12345
+  host: localhost
+  
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: cms_production
+  username: postgres
+  password: 12345
+  host: localhost

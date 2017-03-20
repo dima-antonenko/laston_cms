@@ -1,0 +1,11 @@
+<br/>
+<%= flash[:notice]  %>
+<br/>
+name:  <%= @order.customer_name %><br/>
+email: <%= @order.customer_email %><br/>
+phone: <%= @order.customer_phone %><br/>
+sity: <%= @order.customer_sity %><br/>
+<hr/>
+<% @line_items.each do |item| %>
+  <%= item.product.name %> x <%= item.quantity %><br/>
+<% end %>	
