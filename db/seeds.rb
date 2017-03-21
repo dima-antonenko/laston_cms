@@ -14,7 +14,7 @@ end
 
 first_category_id = ProductCategory.first.id
 
-10.times do |t|
+50.times do |t|
   Product.create!(product_category_id: first_category_id, name: "Товар #{t}", description: "описание", price: t * 100)
 end
 
