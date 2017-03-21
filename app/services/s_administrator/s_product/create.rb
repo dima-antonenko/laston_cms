@@ -2,13 +2,18 @@ module SAdministrator
   module SProduct
     class Create
 
-      def initialize(product, params)
-        @product = product
-        @params = params
+      def initialize(params)
+        @product = Product.new
+        @params  = params
       end
 
       def main
         set_static
+        if @product.save
+          return @product
+        else
+          false
+        end    
       end
 
 
@@ -23,9 +28,7 @@ module SAdministrator
         @product.description         = @params[:product][:description]
         @product.avatar              = @params[:product][:avatar]
         @product.slug                = @params[:product][:slug]
-      end
-
-   
+      end   
 
     end
   end

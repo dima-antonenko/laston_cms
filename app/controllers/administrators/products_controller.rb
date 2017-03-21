@@ -4,7 +4,7 @@ class Administrators::ProductsController < AdministratorsController
 
   def index
     @actions = [['Удалить', 0], ['Опубликовать', 1], ['Снять с публикации', 2]]
-    @products = Product.paginate(:page => params[:page], :per_page => 20)
+    @products = Product.order(:name).paginate(:page => params[:page], :per_page => 20)
   end
 
   def edit
@@ -25,17 +25,16 @@ class Administrators::ProductsController < AdministratorsController
 
   def new
     @product = Product.new
-    @product_categories  = ProductCategory.all.collect {|category| [category.name, category.id ]}
+    @product_categories = ProductCategory.all.collect {|category| [category.name, category.id ]}
   end
 
   def create
-    @product = Product.new
-    SAdministrator::SProduct::Create.new(@product, params).main
+    result = SAdministrator::SProduct::Create.new(params).main
     respond_to do |format|
-      if @product.save
-        format.html { redirect_to edit_administrators_product_path(@product), notice: 'Товар создан' }
+      if result
+        format.html { redirect_to edit_administrators_product_path(result), notice: 'Товар создан' }
       else
-        format.html {  redirect_to :back, notice: 'Произошла ошибка' }
+        format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end
   end
