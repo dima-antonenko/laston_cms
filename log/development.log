@@ -25232,3 +25232,196 @@ Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a
 
 
 Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-21 15:52:53 +0300
+
+
+Started GET "/administrators/product_categories" for 127.0.0.1 at 2017-03-21 15:53:48 +0300
+Processing by Administrators::ProductCategoriesController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProductCategory Load (1.9ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  ORDER BY "product_categories"."name" ASC  [["product_category_id", 0]]
+  [1m[36mProductCategory Load (0.5ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 365]]
+  [1m[35mProductCategory Load (1.7ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 366]]
+  [1m[36mProductCategory Load (4.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 367]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 368]]
+  [1m[36mProductCategory Load (0.5ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 369]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 370]]
+  [1m[36mProductCategory Load (0.9ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  [1m[35mProductCategory Load (1.5ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mProductCategory Load (0.8ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 362]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 362]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 363]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 363]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 365]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 365]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 366]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 366]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mProductCategory Load (1.3ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 367]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 367]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 368]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 368]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 368]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 368]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 368]]
+  [1m[36mProductCategory Load (1.6ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 369]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 369]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 369]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 369]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 369]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 370]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 370]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 370]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 370]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 370]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/product_categories/index.html.erb within layouts/administrator (106.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 101.1ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-21 15:53:48 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-21 15:53:48 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-21 15:53:48 +0300
+
+
+Started GET "/administrators/product_categories" for 127.0.0.1 at 2017-03-21 15:55:30 +0300
+Processing by Administrators::ProductCategoriesController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProductCategory Load (4.3ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  ORDER BY "product_categories"."name" ASC  [["product_category_id", 0]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 365]]
+  [1m[35mProductCategory Load (0.5ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 366]]
+  [1m[36mProductCategory Load (3.6ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 367]]
+  [1m[35mProductCategory Load (0.5ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 368]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 369]]
+  [1m[35mProductCategory Load (0.5ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 370]]
+  [1m[36mProductCategory Load (0.9ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mProductCategory Load (1.8ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 362]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 362]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mProductCategory Load (0.6ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 363]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 363]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 365]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 365]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 366]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 366]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mProductCategory Load (6.1ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 367]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 367]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 368]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 368]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 368]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 368]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 368]]
+  [1m[36mProductCategory Load (0.5ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 369]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 369]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 369]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 369]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 369]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 370]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 370]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 370]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 370]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 370]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 367]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/product_categories/index.html.erb within layouts/administrator (122.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 119.7ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-21 15:55:30 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-21 15:55:30 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-21 15:55:30 +0300
+
+
+Started GET "/administrators/product_categories" for 127.0.0.1 at 2017-03-21 15:57:22 +0300
+Processing by Administrators::ProductCategoriesController#index as HTML
+  [1m[36mAdministrator Load (0.7ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProductCategory Load (0.6ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  ORDER BY "product_categories"."name" ASC LIMIT 20 OFFSET 0  [["product_category_id", 0]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 365]]
+  [1m[35mProductCategory Load (0.5ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 366]]
+  [1m[36mProductCategory Load (0.5ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 367]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 368]]
+  [1m[36mProductCategory Load (0.5ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 369]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 370]]
+  [1m[36mProductCategory Load (1.1ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories"  ORDER BY "product_categories"."name" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "product_categories"
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 362]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 362]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 363]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 363]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 363]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 365]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 365]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 365]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 366]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 366]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 366]]
+  Rendered administrators/product_categories/index.html.erb within layouts/administrator (80.8ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 87.3ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-21 15:57:22 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-21 15:57:22 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-21 15:57:22 +0300

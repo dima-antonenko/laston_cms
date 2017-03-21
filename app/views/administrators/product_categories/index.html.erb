@@ -23,7 +23,7 @@
             <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-overflow-container uk-margin-bottom">
-                        <table class="uk-table uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_pager_filter">
+                        <table class="uk-table uk-table-nowrap uk-table-hover table_check">
                             <thead>
                                 <tr>
                                     <th>id</th>
@@ -47,6 +47,9 @@
                                 <% end %>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="will_paginate_plugin uk-text-center">
+                        <%= will_paginate @product_categories %>
                     </div>
                 </div>
             </div>
