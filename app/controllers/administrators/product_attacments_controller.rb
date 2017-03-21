@@ -2,7 +2,11 @@ class Administrators::ProductAttacmentsController < AdministratorsController
 
 
   def destroy
-    ProductAttachment.find(params[:id]).destroy
+    attacment = ProductAttachment.find(params[:id])
+    product = Product.find(attacment.product_id)
+    product.gallery.delete(attacment.image)
+    product.save
+    attacment.destroy
     respond_to do |format|
       format.html { redirect_to :back, notice: 'Изображение удалено' }
     end

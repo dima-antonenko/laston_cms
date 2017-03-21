@@ -6,11 +6,13 @@ class Administrators::ProductCategoriesController < AdministratorsController
 
   def index
     @product_categories = ProductCategory.all
-    @parent_product_categories = @product_categories.where(product_category_id: 0)
+    @parent_product_categories = @product_categories.where(product_category_id: 0).order(:name)
   end
 
   def new
-    @product_category = Administrators::ProductCategoryDecorator.decorate(ProductCategory.new())
+    @product_category = ProductCategory.new()
+    @list_to_form     = ProductCategory.all.collect{|category| [category.name, category.id]} << ['Родитель', 0]
+
   end
 
   def create
@@ -36,11 +38,11 @@ class Administrators::ProductCategoriesController < AdministratorsController
   end
 
   def edit
-
+    @list_to_form = ProductCategory.all.collect{|category| [category.name, category.id]} << ['Родитель', 0]
   end
 
   def destroy
-    ProductCategory.friendly.find(params[:id]).destroy
+    @product_category.destroy
     respond_to do |format|
       format.html { redirect_to :back, notice: 'Категория удалена' }
     end
@@ -51,12 +53,12 @@ class Administrators::ProductCategoriesController < AdministratorsController
 
 
   def set_product_category
-    @product_category = Administrators::ProductCategoryDecorator.decorate(ProductCategory.friendly.find(params[:id]))
+    @product_category = ProductCategory.friendly.find(params[:id])
   end
 
   def product_category_params
-    params.require(:product_category).permit(:name, :product_category_id, :slug, :description, :seo_title,
-                                          :seo_description, :seo_keywords, :avatar)
+    params.require(:product_category).permit(:name, :product_category_id, :slug, :description, :meta_title,
+                                          :meta_description, :meta_keywords, :avatar)
   end
 
 

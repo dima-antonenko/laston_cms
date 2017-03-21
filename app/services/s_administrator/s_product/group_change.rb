@@ -8,7 +8,6 @@ module SAdministrator
 
       def main
         if @params[:checked_products] and @params[:checked_action]
-
           if @params[:checked_action] == '0'
             destroy
           elsif @params[:checked_action] == '1'

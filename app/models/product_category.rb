@@ -5,7 +5,7 @@ class ProductCategory < ActiveRecord::Base
 
   mount_uploader :avatar, ProductCategoryAvatarUploader
 
-  has_many :product_categories
+  has_many :product_categories, dependent: :destroy
   belongs_to :product_category
 
   has_many :products
