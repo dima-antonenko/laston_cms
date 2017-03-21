@@ -10,38 +10,36 @@ module SAdministrator
         if @params[:checked_products] and @params[:checked_action]
 
           if @params[:checked_action] == '0'
-            self.destroy
+            destroy
           elsif @params[:checked_action] == '1'
-            self.publish
+            publish
           elsif @params[:checked_action] == '2'
-            self.unpublish
-          end  
-              
-
-        end 
+            unpublish
+          end
+        end
       end
 
 
-      protected
+      private
 
 
       def destroy
         Product.where(id: @params[:checked_products]).each do |product|
-            product.destroy
+          product.destroy
         end
       end
 
       def publish
         Product.where(id: @params[:checked_products]).each do |product|
-            product.update_attribute(:active, true)
+          product.update_attribute(:active, true)
         end
       end
 
       def unpublish
         Product.where(id: @params[:checked_products]).each do |product|
-            #product.update_attribute(:active, false)
-            product.active = false
-            product.save
+          #product.update_attribute(:active, false)
+          product.active = false
+          product.save
         end
       end
 

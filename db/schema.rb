@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419154859) do
+ActiveRecord::Schema.define(version: 20170320110427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -257,7 +257,6 @@ ActiveRecord::Schema.define(version: 20160419154859) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.string   "sku"
     t.decimal  "price"
     t.string   "slug"
     t.string   "avatar"
@@ -272,6 +271,7 @@ ActiveRecord::Schema.define(version: 20160419154859) do
     t.string   "meta_title"
     t.text     "meta_description"
     t.text     "meta_keywords"
+    t.string   "gallery",             default: [],                array: true
   end
 
   add_index "products", ["avatar"], name: "index_products_on_avatar", using: :btree
@@ -281,7 +281,6 @@ ActiveRecord::Schema.define(version: 20160419154859) do
   add_index "products", ["seo_description"], name: "index_products_on_seo_description", using: :btree
   add_index "products", ["seo_keywords"], name: "index_products_on_seo_keywords", using: :btree
   add_index "products", ["seo_title"], name: "index_products_on_seo_title", using: :btree
-  add_index "products", ["sku"], name: "index_products_on_sku", using: :btree
   add_index "products", ["slug"], name: "index_products_on_slug", using: :btree
 
   create_table "site_variables", force: :cascade do |t|

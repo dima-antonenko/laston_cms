@@ -8,14 +8,14 @@ class Product < ActiveRecord::Base
 
   attr_accessor :checked_products, :checked_action
 
-  has_many :product_attacments, dependent: :destroy
+  has_many :product_attacments
 
   has_many :line_items
 
-  
+
   validates :name, presence: true
-  validates :sku, presence: true
   validates :price, presence: true
   validates :product_category_id, presence: true
+
 
 end

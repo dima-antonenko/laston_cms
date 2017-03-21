@@ -1,31 +1,27 @@
-#ProductCategory.destroy_all
-#Product.destroy_all
+ProductCategory.destroy_all
+Product.destroy_all
 
 10.times do |i|
   ProductCategory.create(name: "Категория #{i}", description: "this is description")
-end	
+end
 
 ProductCategory.all.each do |product_category|
- 5.times do |i|
- 	ProductCategory.create(product_category_id: product_category.id, name: "Категория #{product_category.id}-#{i}",
- 	 description: "this is description")
- end	
+  5.times do |i|
+    ProductCategory.create!(product_category_id: product_category.id, name: "Категория #{product_category.id}-#{i}",
+                           description: "this is description")
+  end
+end
+
+first_category_id = ProductCategory.first.id
+
+10.times do |t|
+  Product.create!(product_category_id: first_category_id, name: "Товар #{t}", description: "описание", price: t * 100)
 end
 
 
 
-
-#Product.create(id: 1, product_category_id: 1, name: "Тестовый товар", description: "описание", sku: "228")
-
-
-#10.times do |t|
-#	Product.create(product_category_id: 1, name: "для удаления", description: "описание", sku: t)
-#end
-
 =begin
-	
-
-	
+    
 Menu.destroy_all
 MenuItem.destroy_all
 

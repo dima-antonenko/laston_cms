@@ -4,7 +4,7 @@ class Administrators::ProductsController < AdministratorsController
 
   def index
     @actions = [['Удалить', 0], ['Опубликовать', 1], ['Снять с публикации', 2]]
-    @products = Product.paginate(:page => params[:page], :per_page => 30)
+    @products = Product.paginate(:page => params[:page], :per_page => 20)
   end
 
   def edit
@@ -13,10 +13,10 @@ class Administrators::ProductsController < AdministratorsController
   end
 
   def update
-    SAdministrator::SProduct::Update.new(@product, params).main
+    result = SAdministrator::SProduct::Update.new(@product, params).main
     respond_to do |format|
-      if @product.save
-        format.html { redirect_to :back, notice: 'Информация обновлена' }
+      if result 
+        format.html { redirect_to edit_administrators_product_path(result), notice: 'Информация обновлена' }
       else
         format.html {  redirect_to :back, notice: 'Произошла ошибка' }
       end
@@ -51,7 +51,7 @@ class Administrators::ProductsController < AdministratorsController
   def checked
     SAdministrator::SProduct::GroupChange.new(params).main
     respond_to do |format|
-      format.html {  redirect_to :back, notice: 'Товар удален' }
+      format.html { redirect_to :back, notice: 'Информация обновлена' }
     end
   end
 
