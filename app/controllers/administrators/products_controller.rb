@@ -15,10 +15,10 @@ class Administrators::ProductsController < AdministratorsController
   def update
     result = SAdministrator::SProduct::Update.new(@product, params).main
     respond_to do |format|
-      if result 
+      if result
         format.html { redirect_to edit_administrators_product_path(result), notice: 'Информация обновлена' }
       else
-        format.html {  redirect_to :back, notice: 'Произошла ошибка' }
+        format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end
   end
@@ -43,7 +43,7 @@ class Administrators::ProductsController < AdministratorsController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Товар удален' }
+      format.html { redirect_to administrators_products_path, notice: 'Товар удален' }
     end
   end
 
@@ -55,7 +55,7 @@ class Administrators::ProductsController < AdministratorsController
     end
   end
 
- 
+
 
   private
 
@@ -63,10 +63,6 @@ class Administrators::ProductsController < AdministratorsController
     @product = Product.friendly.find(params[:id])
   end
 
-  def product_params
-    params.require(:product).permit(:name, :avatar, :price, :product_category_id, :sku, :description,
-     :stock, :active, :checked_action, :checked_products[])
 
-  end
 
 end

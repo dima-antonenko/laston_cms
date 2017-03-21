@@ -27,23 +27,21 @@
     <script type="text/javascript" src="/admin_theme/bower_components/matchMedia/matchMedia.addListener.js"></script>
     <link rel="stylesheet" href="/admin_theme/assets/css/ie.css" media="all">
     <![endif]-->
+    <%= stylesheet_link_tag    'administrator', media: 'all' %>
+    <%= csrf_meta_tags %>
 </head>
 <body class=" sidebar_main_open sidebar_main_swipe">
 
     <%= render '/layouts/administrator/header' %>
     <%= render '/layouts/administrator/sidebar' %>
 
-    
+
     <div id="page_content">
         <%= yield %>
     </form>
 </div>
 </div>
-<div class="md-fab-wrapper">
-<a class="md-fab md-fab-primary" href="#" id="product_edit_submit">
-    <i class="material-icons">&#xE161;</i>
-</a>
-</div>
+
 <!-- google web fonts -->
 <script>
 WebFontConfig = {
@@ -288,5 +286,6 @@ $sidebar_main.removeClass('accordion_mode');
 });
 });
 </script>
+<%= javascript_include_tag 'administrator' %>
 </body>
 </html>
