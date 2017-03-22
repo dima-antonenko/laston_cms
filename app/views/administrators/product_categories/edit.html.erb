@@ -25,7 +25,7 @@
                             </div>
                             <div class="uk-form-row">
                                 <label for="product_edit_name_control">Описание</label>
-                                 <%= f.text_area :description %>
+                                <%= f.text_area :description %>
                             </div>
                         </div>
                     </div>
@@ -70,18 +70,16 @@
                         <%= f.file_field :avatar, class: "product_file_upload" %>
                     </div>
                     <div class="uk-form-row">
-                       <img src="<%= @product_category.avatar %>" alt="" class="img_big"/>
+                        <img src="<%= @product_category.avatar %>" alt="" class="img_big"/>
                     </div>
                 </div>
             </div>
-
             
         </div>
         <div class="md-fab-wrapper">
             <a class="md-btn" href="/administrators/product_categories">Назад</a>
             <%= f.submit(class: "md-btn md-btn-success", value: "Обновить") %>
-            <% end %>
         </div>
     </div>
-    
+    <% end %>
 </div>

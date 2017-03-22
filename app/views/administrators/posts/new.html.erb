@@ -35,7 +35,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="md-card">
                 <div class="md-card-content large-padding">
                     <div class="uk-grid uk-grid-divider uk-grid-medium" data-uk-grid-margin>
@@ -60,32 +59,29 @@
                     </div>
                 </div>
             </div>
-
             
         </div>
         <div class="uk-width-xLarge-3-10  uk-width-large-3-10">
-        <div class="md-card">
-            <div class="md-card-toolbar">
-                <div class="md-card-toolbar-actions">
-                    <%= f.file_field :avatar, class: "product_file_upload" %>
+            <div class="md-card">
+                <div class="md-card-toolbar">
+                    <div class="md-card-toolbar-actions">
+                        <%= f.file_field :avatar, class: "product_file_upload" %>
+                    </div>
+                    <h3 class="md-card-toolbar-heading-text">
+                    Аватар
+                    </h3>
                 </div>
-                <h3 class="md-card-toolbar-heading-text">
-                Аватар
-                </h3>
-            </div>
-            <div class="md-card-content">
-                <div class="uk-margin-bottom uk-text-center uk-position-relative">
-                   
+                <div class="md-card-content">
+                    <div class="uk-margin-bottom uk-text-center uk-position-relative">
+                        
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-
         <div class="md-fab-wrapper">
             <a class="md-btn" href="/administrators/posts">Назад</a>
             <%= f.submit(class: "md-btn md-btn-success", value: "Сохранить") %>
-            <% end %>
         </div>
     </div>
-    
+    <% end %>
 </div>

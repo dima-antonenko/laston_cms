@@ -43,7 +43,7 @@ class Administrators::PostCategoriesController < AdministratorsController
   def destroy
     @post_category.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Категория удалена' }
+      format.html { redirect_to '/administrators/post_categories', notice: 'Категория удалена' }
     end
   end
 

@@ -1,4 +1,3 @@
-
 <div id="page_heading">
     <h1 id="product_edit_name"><%= @menu_item.title %></h1>
     <span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">Меню: <%= @menu_item.menu.name %></span>
@@ -8,22 +7,22 @@
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
         <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
             <div class="md-card">
-                 <div class="md-card-toolbar">
+                <div class="md-card-toolbar">
                     <h3 class="md-card-toolbar-heading-text">
-                        <%= @menu_item.menu.name %>
+                    <%= @menu_item.menu.name %>
                     </h3>
                 </div>
                 <div class="md-card-content">
                     <ul>
                         <% @parent_menu_parent_items.each do |item| %>
+                        <li><%=  link_to item.title, edit_administrators_menu_item_path(item) %></li>
+                        <% if item.menu_items %>
+                        <ul>
+                            <% item.menu_items.each do |item| %>
                             <li><%=  link_to item.title, edit_administrators_menu_item_path(item) %></li>
-                            <% if item.menu_items %>
-                                <ul>
-                                 <% item.menu_items.each do |item| %>
-                                    <li><%=  link_to item.title, edit_administrators_menu_item_path(item) %></li>
-                                 <% end %>
-                                </ul>
                             <% end %>
+                        </ul>
+                        <% end %>
                         <% end %>
                     </ul>
                 </div>
@@ -53,7 +52,7 @@
                                 <label for="product_edit_name_control">Позиция</label>
                                 
                                 <%= f.text_field :position, class: "md-input" %>
-                            </div>                          
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,10 +60,8 @@
             <div class="md-fab-wrapper">
                 <a class="md-btn" href="<%= edit_administrators_menu_path(@menu_item.menu_id) %>">Назад</a>
                 <%= f.submit(class: "md-btn md-btn-success", value: "Обновить") %>
-                <% end %>
             </div>
-            
-            
-        </div>
+        </div>      
     </div>
-    
+    <% end %>
+</div>
