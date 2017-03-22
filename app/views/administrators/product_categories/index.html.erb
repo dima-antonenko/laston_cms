@@ -29,7 +29,7 @@
                                     <th>id</th>
                                     <th>Название</th>
                                     <th>Родитель</th>
-                                    <th></th>
+                                    <th>Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,7 +42,12 @@
                                         <%= "Родительская категория" if category.product_category == nil %>
                                     </td>
                                     
-                                    <td><%= link_to "Удалить", administrators_product_category_path(category), method: :delete %></td>
+                                    <td>
+                                    <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_product_category_path(category)%>
+                            <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_product_category_path(category), method: :delete %>
+                            <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, product_category_path(category) %>
+
+                                   
                                 </tr>
                                 <% end %>
                             </tbody>
