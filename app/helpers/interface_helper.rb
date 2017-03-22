@@ -11,10 +11,10 @@ module InterfaceHelper
 
   #родительская категория товара в списке товаров
   def get_product_category_name(product)
-    if product.product_category_id === 0
-      'без категории'
-    else
+    if product.product_category
       product.product_category.name
+    else
+      'без категории'
     end
   end
 
