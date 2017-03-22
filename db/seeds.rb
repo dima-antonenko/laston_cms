@@ -23,7 +23,7 @@ end
 
 Menu.destroy_all
 MenuItem.destroy_all
-Menu.create(name: "главное меню", descriptor: "main_menu")
+Menu.create(name: "Главное меню", descriptor: "main_menu")
 Menu.create(name: "Меню в футоре", descriptor: "footer_menu")
 
 MenuItem.create(title: "Главная", menu_id: Menu.first.id, url: '/', position: 1)
@@ -38,10 +38,19 @@ MenuItem.create(title: "О Компании", menu_id: Menu.last.id, url: '/abou
 MenuItem.create(title: "Тестовая страница", menu_id: Menu.last.id, url: '/', position: 4)
 MenuItem.create(title: "Тестовая страница2", menu_id: Menu.last.id, menu_item_id: MenuItem.last.id, url: '/', position: 1)
 
-=end
+
 
 PostCategory.destroy_all
 
 40.times do |i|
   PostCategory.create!(name: "Категория #{i}", description: "this is a description")
 end  
+
+=end
+
+Post.destroy_all
+
+20.times do |i|
+  Post.create(name: "Запись #{i}", post_category_id: PostCategory.last.id,
+   content: "this is content of post #{i}", lead: "this is lead of post #{i}")
+end 

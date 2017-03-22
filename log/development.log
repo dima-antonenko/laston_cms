@@ -34382,3 +34382,1611 @@ Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a
 
 
 Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 11:07:52 +0300
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-03-22 15:54:35 +0300
+Processing by Administrators::PostsController#index as HTML
+Completed 401 Unauthorized in 33ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/administrators/sign_in" for 127.0.0.1 at 2017-03-22 15:54:36 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/shared/_links.html.erb (2.9ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/sessions/new.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 571ms (Views: 182.5ms | ActiveRecord: 356.1ms)
+
+
+Started POST "/administrators/sign_in" for 127.0.0.1 at 2017-03-22 15:54:43 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5VGcWR3eMRGsZRyanu9mD9nhi+UbvA3rEonhdVauwFelrHMeu5D6gctVsL4P/00ZA1XtlbFHvfC//f2fkM60Vw==", "administrator"=>{"email"=>"1@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mAdministrator Load (32.9ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."email" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["email", "1@mail.ru"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "administrators" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "administrators"."id" = $5[0m  [["last_sign_in_at", "2017-03-22 06:11:44.352677"], ["current_sign_in_at", "2017-03-22 12:54:43.748983"], ["sign_in_count", 5], ["updated_at", "2017-03-22 12:54:43.750898"], ["id", 1]]
+  [1m[35m (41.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/posts
+Completed 302 Found in 488ms (ActiveRecord: 75.4ms)
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-03-22 15:54:43 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (55.9ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered administrators/posts/index.html.erb within layouts/administrator (60.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.6ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 683ms (Views: 577.7ms | ActiveRecord: 58.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (89.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (49.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (26.1ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 0"], ["post_category_id", 49], ["content", "this is content of post 0"], ["lead", "this is lead of post 0"], ["created_at", "2017-03-22 12:58:17.908004"], ["updated_at", "2017-03-22 12:58:17.908004"]]
+  [1m[35m (23.9ms)[0m  COMMIT
+  [1m[36mPostCategory Load (1.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (16.3ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 1"], ["post_category_id", 49], ["content", "this is content of post 1"], ["lead", "this is lead of post 1"], ["created_at", "2017-03-22 12:58:17.971832"], ["updated_at", "2017-03-22 12:58:17.971832"]]
+  [1m[35m (19.9ms)[0m  COMMIT
+  [1m[36mPostCategory Load (1.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 2"], ["post_category_id", 49], ["content", "this is content of post 2"], ["lead", "this is lead of post 2"], ["created_at", "2017-03-22 12:58:18.015267"], ["updated_at", "2017-03-22 12:58:18.015267"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+  [1m[36mPostCategory Load (1.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 3"], ["post_category_id", 49], ["content", "this is content of post 3"], ["lead", "this is lead of post 3"], ["created_at", "2017-03-22 12:58:18.026905"], ["updated_at", "2017-03-22 12:58:18.026905"]]
+  [1m[35m (13.0ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 4"], ["post_category_id", 49], ["content", "this is content of post 4"], ["lead", "this is lead of post 4"], ["created_at", "2017-03-22 12:58:18.048617"], ["updated_at", "2017-03-22 12:58:18.048617"]]
+  [1m[35m (3.4ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 5"], ["post_category_id", 49], ["content", "this is content of post 5"], ["lead", "this is lead of post 5"], ["created_at", "2017-03-22 12:58:18.059253"], ["updated_at", "2017-03-22 12:58:18.059253"]]
+  [1m[35m (3.8ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 6"], ["post_category_id", 49], ["content", "this is content of post 6"], ["lead", "this is lead of post 6"], ["created_at", "2017-03-22 12:58:18.070529"], ["updated_at", "2017-03-22 12:58:18.070529"]]
+  [1m[35m (4.3ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.8ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 7"], ["post_category_id", 49], ["content", "this is content of post 7"], ["lead", "this is lead of post 7"], ["created_at", "2017-03-22 12:58:18.081716"], ["updated_at", "2017-03-22 12:58:18.081716"]]
+  [1m[35m (4.2ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.7ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 8"], ["post_category_id", 49], ["content", "this is content of post 8"], ["lead", "this is lead of post 8"], ["created_at", "2017-03-22 12:58:18.092609"], ["updated_at", "2017-03-22 12:58:18.092609"]]
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.7ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 9"], ["post_category_id", 49], ["content", "this is content of post 9"], ["lead", "this is lead of post 9"], ["created_at", "2017-03-22 12:58:18.103691"], ["updated_at", "2017-03-22 12:58:18.103691"]]
+  [1m[35m (4.4ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 10"], ["post_category_id", 49], ["content", "this is content of post 10"], ["lead", "this is lead of post 10"], ["created_at", "2017-03-22 12:58:18.115117"], ["updated_at", "2017-03-22 12:58:18.115117"]]
+  [1m[35m (4.0ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 11"], ["post_category_id", 49], ["content", "this is content of post 11"], ["lead", "this is lead of post 11"], ["created_at", "2017-03-22 12:58:18.126808"], ["updated_at", "2017-03-22 12:58:18.126808"]]
+  [1m[35m (3.1ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.8ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 12"], ["post_category_id", 49], ["content", "this is content of post 12"], ["lead", "this is lead of post 12"], ["created_at", "2017-03-22 12:58:18.137401"], ["updated_at", "2017-03-22 12:58:18.137401"]]
+  [1m[35m (4.2ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.8ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 13"], ["post_category_id", 49], ["content", "this is content of post 13"], ["lead", "this is lead of post 13"], ["created_at", "2017-03-22 12:58:18.148433"], ["updated_at", "2017-03-22 12:58:18.148433"]]
+  [1m[35m (4.3ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.7ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 14"], ["post_category_id", 49], ["content", "this is content of post 14"], ["lead", "this is lead of post 14"], ["created_at", "2017-03-22 12:58:18.159027"], ["updated_at", "2017-03-22 12:58:18.159027"]]
+  [1m[35m (4.5ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.7ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 15"], ["post_category_id", 49], ["content", "this is content of post 15"], ["lead", "this is lead of post 15"], ["created_at", "2017-03-22 12:58:18.170075"], ["updated_at", "2017-03-22 12:58:18.170075"]]
+  [1m[35m (5.1ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.7ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 16"], ["post_category_id", 49], ["content", "this is content of post 16"], ["lead", "this is lead of post 16"], ["created_at", "2017-03-22 12:58:18.181081"], ["updated_at", "2017-03-22 12:58:18.181081"]]
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.7ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 17"], ["post_category_id", 49], ["content", "this is content of post 17"], ["lead", "this is lead of post 17"], ["created_at", "2017-03-22 12:58:18.192152"], ["updated_at", "2017-03-22 12:58:18.192152"]]
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.7ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 18"], ["post_category_id", 49], ["content", "this is content of post 18"], ["lead", "this is lead of post 18"], ["created_at", "2017-03-22 12:58:18.203289"], ["updated_at", "2017-03-22 12:58:18.203289"]]
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories"  ORDER BY "post_categories"."id" DESC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("name", "post_category_id", "content", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Запись 19"], ["post_category_id", 49], ["content", "this is content of post 19"], ["lead", "this is lead of post 19"], ["created_at", "2017-03-22 12:58:18.214888"], ["updated_at", "2017-03-22 12:58:18.214888"]]
+  [1m[35m (4.9ms)[0m  COMMIT
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-03-22 15:58:19 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.9ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.8ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (212.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 233ms (Views: 221.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 15:58:20 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 15:58:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 15:58:20 +0300
+
+
+Started GET "/administrators/posts/1/edit" for 127.0.0.1 at 2017-03-22 15:58:25 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "1"]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPostCategory Load (1.1ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (67.4ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 3.1ms)
+
+NoMethodError - undefined method `cktext_area' for #<ActionView::Helpers::FormBuilder:0x00558c3282af00>
+Did you mean?  text_area:
+  app/views/administrators/posts/edit.html.erb:29:in `block in _app_views_administrators_posts_edit_html_erb__3364867876677235352_47030315206780'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:38:in `block in capture'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:202:in `with_output_buffer'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  actionview (4.2.3) lib/action_view/helpers/form_helper.rb:444:in `form_for'
+  app/views/administrators/posts/edit.html.erb:6:in `_app_views_administrators_posts_edit_html_erb__3364867876677235352_47030315206780'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/c2334f8218cc263a/variables" for 127.0.0.1 at 2017-03-22 15:58:26 +0300
+
+
+Started GET "/administrators/posts/1/edit" for 127.0.0.1 at 2017-03-22 15:58:56 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (7.9ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "1"]]
+  [1m[36mPost Load (5.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mPostCategory Load (0.9ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (30.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 44.2ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 15:58:56 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 15:58:56 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 15:58:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RenameSeoFieldsFromPosts (20170322130009)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (153.8ms)[0m  [1mALTER TABLE "posts" DROP "seo_title"[0m
+  [1m[35m (16.3ms)[0m  ALTER TABLE "posts" DROP "seo_description"
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "posts" DROP "seo_keywords"[0m
+  [1m[35m (729.7ms)[0m  ALTER TABLE "posts" ADD "meta_title" character varying DEFAULT '' NOT NULL
+  [1m[36m (393.2ms)[0m  [1mALTER TABLE "posts" ADD "meta_description" text DEFAULT '' NOT NULL[0m
+  [1m[35m (361.5ms)[0m  ALTER TABLE "posts" ADD "meta_keywords" text DEFAULT '' NOT NULL
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20170322130009"]]
+  [1m[35m (26.7ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'administrators'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'back_calls'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'banners'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'carts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ckeditor_assets'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'form_requests'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'line_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'menu_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'menus'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'post_categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'product_attachments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'product_categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'product_questions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'site_variables'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sliders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'slides'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/administrators/posts/1/edit" for 127.0.0.1 at 2017-03-22 16:02:36 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdministrator Load (1.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "1"]]
+PG::Error: ERROR:  cached plan must not change result type
+: SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "1"]]
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 1]]
+PG::Error: ERROR:  cached plan must not change result type
+: SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPostCategory Load (1.0ms)[0m  [1mSELECT "post_categories".* FROM "post_categories"[0m
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (6.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 97ms (Views: 19.5ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:02:36 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:02:36 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:02:36 +0300
+
+
+Started PATCH "/administrators/posts/1" for 127.0.0.1 at 2017-03-22 16:02:59 +0300
+Processing by Administrators::PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLAniMbzlf9DSZ9wKT/sxXXtP0La9Sjo+XgZ3SB+JVGkHOx8U2STr6XuvSB8QhWtr8wVJkbq0NstEZ7U3vGwKA==", "post"=>{"name"=>"Запись 1212", "post_category_id"=>"49", "slug"=>"this-is-url", "content"=>"this is content of post 0", "lead"=>"this is lead of post 0", "meta_title"=>"11", "meta_description"=>"22", "meta_keywords"=>"33"}, "commit"=>"Обновить", "id"=>"1"}
+  [1m[35mAdministrator Load (1.0ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "1"]]
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameters: meta_title, meta_description, meta_keywords
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "posts" SET "name" = $1, "slug" = $2, "updated_at" = $3 WHERE "posts"."id" = $4  [["name", "Запись 1212"], ["slug", "this-is-url"], ["updated_at", "2017-03-22 13:02:59.143436"], ["id", 1]]
+  [1m[36m (43.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/posts/this-is-url/edit
+Completed 302 Found in 62ms (ActiveRecord: 47.6ms)
+
+
+Started GET "/administrators/posts/this-is-url/edit" for 127.0.0.1 at 2017-03-22 16:02:59 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"this-is-url"}
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.7ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "this-is-url"]]
+  [1m[35mPostCategory Load (0.8ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (6.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 21.0ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/administrators/posts/this-is-url" for 127.0.0.1 at 2017-03-22 16:03:37 +0300
+Processing by Administrators::PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HHc06Ymc5OA3Nt3BITaOgaSG13RSsAH3FjdBNROeL0SI2/8dHAvisNGR/5F0S3fpfqf9EM6v+cTCXsY87RG6PQ==", "post"=>{"name"=>"Запись 1212", "post_category_id"=>"49", "slug"=>"this-is-url", "content"=>"this is content of post 0", "lead"=>"this is lead of post 0", "meta_title"=>"11", "meta_description"=>"22", "meta_keywords"=>"33"}, "commit"=>"Обновить", "id"=>"this-is-url"}
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "this-is-url"]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "posts" SET "meta_title" = $1, "meta_description" = $2, "meta_keywords" = $3, "updated_at" = $4 WHERE "posts"."id" = $5  [["meta_title", "11"], ["meta_description", "22"], ["meta_keywords", "33"], ["updated_at", "2017-03-22 13:03:37.664863"], ["id", 1]]
+  [1m[36m (30.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/posts/this-is-url/edit
+Completed 302 Found in 90ms (ActiveRecord: 40.3ms)
+
+
+Started GET "/administrators/posts/this-is-url/edit" for 127.0.0.1 at 2017-03-22 16:03:37 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"this-is-url"}
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "this-is-url"]]
+  [1m[35mPostCategory Load (0.8ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (5.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 19.0ms | ActiveRecord: 3.8ms)
+
+
+Started PATCH "/administrators/posts/this-is-url" for 127.0.0.1 at 2017-03-22 16:03:44 +0300
+Processing by Administrators::PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3mdePy953F5wNQ5bt4ANTZ05a7rYG2OXTaJ/u6OAmTFKy5XLuu7aDpaSLAvi/fQlRxhB3kQEm6SZy/iyXQ8MSA==", "post"=>{"name"=>"Запись 1212", "post_category_id"=>"49", "slug"=>"this-is-url", "content"=>"this is content of post 0", "lead"=>"this is lead of post 0", "meta_title"=>"11", "meta_description"=>"22", "meta_keywords"=>"33", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f4149a66cd8 @tempfile=#<Tempfile:/tmp/RackMultipart20170322-2729-7nno4g.jpg>, @original_filename="nastol.com.ua_176881.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[avatar]\"; filename=\"nastol.com.ua_176881.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Обновить", "id"=>"this-is-url"}
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "this-is-url"]]
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mPost Load (1.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "avatar" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["avatar", "nastol.com.ua_176881.jpg"], ["updated_at", "2017-03-22 13:03:46.269198"], ["id", 1]]
+  [1m[35m (20.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/posts/this-is-url/edit
+Completed 302 Found in 1501ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/administrators/posts/this-is-url/edit" for 127.0.0.1 at 2017-03-22 16:03:46 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"this-is-url"}
+  [1m[36mAdministrator Load (0.8ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "this-is-url"]]
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT "post_categories".* FROM "post_categories"[0m
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (8.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 53.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/administrators/posts/this-is-url/edit" for 127.0.0.1 at 2017-03-22 16:04:20 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"this-is-url"}
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (2.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "this-is-url"]]
+  [1m[35mPostCategory Load (1.4ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (19.0ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 47.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:04:20 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:04:20 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:04:20 +0300
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-03-22 16:04:36 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (2.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (1.7ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.5ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (33.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/administrators/posts/this-is-url/edit" for 127.0.0.1 at 2017-03-22 16:05:58 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"this-is-url"}
+  [1m[36mAdministrator Load (3.3ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "this-is-url"]]
+  [1m[36mPostCategory Load (1.0ms)[0m  [1mSELECT "post_categories".* FROM "post_categories"[0m
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (2.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 4.8ms)
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/dima/Rails/laston_cms/app/views/administrators/posts/edit.html.erb:93: syntax error, unexpected end-of-input, expecting keyword_end:
+  app/views/administrators/posts/edit.html.erb:91:in `'
+  actionview (4.2.3) lib/action_view/template.rb:296:in `compile'
+  actionview (4.2.3) lib/action_view/template.rb:245:in `block (2 levels) in compile!'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:244:in `block in compile!'
+  actionview (4.2.3) lib/action_view/template.rb:232:in `compile!'
+  actionview (4.2.3) lib/action_view/template.rb:144:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/84603b837ccd29c9/variables" for 127.0.0.1 at 2017-03-22 16:05:58 +0300
+
+
+Started GET "/administrators/posts/this-is-url/edit" for 127.0.0.1 at 2017-03-22 16:06:16 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"this-is-url"}
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "this-is-url"]]
+  [1m[35mPostCategory Load (2.5ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (8.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 25.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:06:17 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:06:17 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:06:17 +0300
+
+
+Started GET "/products/this-is-url" for 127.0.0.1 at 2017-03-22 16:06:31 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"this-is-url"}
+  [1m[36mProduct Load (88.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1  ORDER BY "products"."id" ASC LIMIT 1[0m  [["slug", "this-is-url"]]
+Completed 404 Not Found in 131ms (ActiveRecord: 91.0ms)
+
+ActiveRecord::RecordNotFound - ActiveRecord::RecordNotFound:
+  friendly_id (5.1.0) lib/friendly_id/finder_methods.rb:23:in `find'
+  app/controllers/site/products_controller.rb:4:in `show'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/915230a7bfd09520/variables" for 127.0.0.1 at 2017-03-22 16:06:31 +0300
+
+
+Started DELETE "/administrators/posts/this-is-url" for 127.0.0.1 at 2017-03-22 16:07:14 +0300
+Processing by Administrators::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gH8GEit3SsaDLAT7zBPfpxexAPArBC3DBex9N1lOhLgU083mvuBMlmWLJquZbibPzZAqlLcb1fDRhfo+p8ERwQ==", "id"=>"this-is-url"}
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "this-is-url"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 1]]
+  [1m[35m (51.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/posts
+Completed 302 Found in 105ms (ActiveRecord: 60.0ms)
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-03-22 16:07:15 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.5ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (60.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 71.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/administrators/posts/2/edit" for 127.0.0.1 at 2017-03-22 16:07:19 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "2"]]
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mPostCategory Load (0.9ms)[0m  [1mSELECT "post_categories".* FROM "post_categories"[0m
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (6.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 21.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/administrators/new" for 127.0.0.1 at 2017-03-22 16:07:58 +0300
+
+ActionController::RoutingError (No route matches [GET] "/administrators/new"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (17.5ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.0ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (258.3ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (31.1ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (64.0ms)
+
+
+Started GET "/administrators/posts/new" for 127.0.0.1 at 2017-03-22 16:08:04 +0300
+Processing by Administrators::PostsController#new as HTML
+  [1m[35mAdministrator Load (3.7ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPostCategory Load (2.6ms)[0m  [1mSELECT "post_categories".* FROM "post_categories"[0m
+  Rendered administrators/posts/new.html.erb within layouts/administrator (34.3ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 6.3ms)
+
+NoMethodError - undefined method `cktext_area' for #<ActionView::Helpers::FormBuilder:0x00558c33150378>
+Did you mean?  text_area:
+  app/views/administrators/posts/new.html.erb:28:in `block in _app_views_administrators_posts_new_html_erb___4132284171395504796_47030320736700'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:38:in `block in capture'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:202:in `with_output_buffer'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  actionview (4.2.3) lib/action_view/helpers/form_helper.rb:444:in `form_for'
+  app/views/administrators/posts/new.html.erb:5:in `_app_views_administrators_posts_new_html_erb___4132284171395504796_47030320736700'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/a08a8658a9fbc777/variables" for 127.0.0.1 at 2017-03-22 16:08:04 +0300
+
+
+Started GET "/administrators/posts/new" for 127.0.0.1 at 2017-03-22 16:08:49 +0300
+Processing by Administrators::PostsController#new as HTML
+  [1m[35mAdministrator Load (3.7ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPostCategory Load (0.8ms)[0m  [1mSELECT "post_categories".* FROM "post_categories"[0m
+  Rendered administrators/posts/new.html.erb within layouts/administrator (25.0ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.3ms)
+Completed 200 OK in 76ms (Views: 64.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:08:49 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:08:49 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:08:49 +0300
+
+
+Started POST "/administrators/posts" for 127.0.0.1 at 2017-03-22 16:09:11 +0300
+Processing by Administrators::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fn11pTceBet3jBuBRQO/v1/ecKP1M6jCWFXI1+9aKL7q0b5RookDu5ErOdEQfkbXhf9ax2ksUPGMPE/eEdW9xw==", "post"=>{"name"=>"11", "post_category_id"=>"0", "slug"=>"12123", "content"=>"1321", "lead"=>"11", "meta_title"=>"11", "meta_description"=>"11", "meta_keywords"=>"11", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f4154f87860 @tempfile=#<Tempfile:/tmp/RackMultipart20170322-2729-129of9d.jpg>, @original_filename="gryazniy-flag-usa.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"post[avatar]\"; filename=\"gryazniy-flag-usa.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Сохранить"}
+  [1m[35mAdministrator Load (0.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("name", "post_category_id", "slug", "content", "avatar", "meta_title", "meta_description", "meta_keywords", "lead", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["name", "11"], ["post_category_id", 0], ["slug", "12123"], ["content", "1321"], ["avatar", "gryazniy-flag-usa.jpg"], ["meta_title", "11"], ["meta_description", "11"], ["meta_keywords", "11"], ["lead", "11"], ["created_at", "2017-03-22 13:09:12.254524"], ["updated_at", "2017-03-22 13:09:12.254524"]]
+  [1m[36m (60.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/posts/12123/edit
+Completed 302 Found in 482ms (ActiveRecord: 61.5ms)
+
+
+Started GET "/administrators/posts/12123/edit" for 127.0.0.1 at 2017-03-22 16:09:12 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"12123"}
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1[0m  [["slug", "12123"]]
+  [1m[35mPostCategory Load (0.9ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (6.8ms)
+  Rendered layouts/administrator/_header.html.erb (0.3ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 24.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/administrators/posts/" for 127.0.0.1 at 2017-03-22 16:09:21 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.9ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.5ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mPostCategory Load (0.5ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (34.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 47.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/administrators/posts/" for 127.0.0.1 at 2017-03-22 16:10:50 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.8ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mPostCategory Load (0.5ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (74.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 94.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:10:50 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:10:50 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:10:50 +0300
+
+
+Started GET "/administrators/posts/" for 127.0.0.1 at 2017-03-22 16:12:12 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (3.9ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.5ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mPostCategory Load (0.4ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (130.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 163ms (Views: 144.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:12:12 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:12:13 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:12:13 +0300
+
+
+Started GET "/administrators/posts/" for 127.0.0.1 at 2017-03-22 16:12:26 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (1.2ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (4.0ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (2.5ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mPostCategory Load (5.1ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (102.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 159ms (Views: 137.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:12:26 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:12:27 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:12:27 +0300
+
+
+Started GET "/administrators/posts/" for 127.0.0.1 at 2017-03-22 16:13:45 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.7ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.4ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mPostCategory Load (0.5ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (81.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 97.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:13:45 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:13:46 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:13:46 +0300
+
+
+Started GET "/administrators/posts/" for 127.0.0.1 at 2017-03-22 16:14:12 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (2.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (1.2ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mPostCategory Load (4.4ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (79.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 96.8ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-22 16:14:12 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-22 16:14:13 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-22 16:14:13 +0300
+
+
+Started GET "/administrators/posts/2/edit" for 127.0.0.1 at 2017-03-22 16:14:20 +0300
+Processing by Administrators::PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (1.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "2"]]
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mPostCategory Load (1.1ms)[0m  SELECT "post_categories".* FROM "post_categories"
+  Rendered administrators/posts/edit.html.erb within layouts/administrator (5.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 22.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2017-03-22 16:14:24 +0300
+
+ActionController::RoutingError - uninitialized constant Site::PostsController:
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:65:in `rescue in controller'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/11a414845a4e3fb2/variables" for 127.0.0.1 at 2017-03-22 16:14:24 +0300
+
+
+Started DELETE "/administrators/posts/2" for 127.0.0.1 at 2017-03-22 16:14:31 +0300
+Processing by Administrators::PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YN88b9GE5vVquSXOoqF4uFEqGLyfuZcRLS/ZlkWkrjv0c/ebRBPgpYweB5733IHQiwsy2AOmbyL5Rl6fuys7Qg==", "id"=>"2"}
+  [1m[36mAdministrator Load (1.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."slug" = $1  ORDER BY "posts"."id" ASC LIMIT 1  [["slug", "2"]]
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 2]]
+  [1m[35m (53.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/posts
+Completed 302 Found in 74ms (ActiveRecord: 57.2ms)
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-03-22 16:14:32 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.8ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.8ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mPostCategory Load (0.4ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mPostCategory Load (0.4ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (47.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 72ms (Views: 65.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/administrators/posts/new" for 127.0.0.1 at 2017-03-22 16:14:34 +0300
+Processing by Administrators::PostsController#new as HTML
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPostCategory Load (0.8ms)[0m  [1mSELECT "post_categories".* FROM "post_categories"[0m
+  Rendered administrators/posts/new.html.erb within layouts/administrator (5.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 28.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-03-22 16:15:38 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[35mAdministrator Load (1.7ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.8ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mPostCategory Load (0.5ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  [1m[35mPostCategory Load (0.5ms)[0m  SELECT  "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  Rendered administrators/posts/index.html.erb within layouts/administrator (80.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 129ms (Views: 85.7ms | ActiveRecord: 13.2ms)

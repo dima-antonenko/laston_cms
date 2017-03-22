@@ -40,8 +40,9 @@ class Administrators::PostsController < AdministratorsController
   end
 
   def destroy
+    @post.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Запись удалена' }
+      format.html { redirect_to '/administrators/posts', notice: 'Запись удалена' }
     end
   end
 
@@ -55,7 +56,7 @@ class Administrators::PostsController < AdministratorsController
 
   def post_params
     params.require(:post).permit(:name, :post_category_id, :slug, :content, :avatar,
-     :seo_title, :seo_description, :seo_keywords, :lead)
+                                 :meta_title, :meta_description, :meta_keywords, :lead)
   end
 
 
