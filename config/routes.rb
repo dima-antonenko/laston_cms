@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'site#home'
+  root 'site/static_pages#home'
   
   devise_for :administrators
   

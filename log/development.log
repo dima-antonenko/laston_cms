@@ -37417,3 +37417,9 @@ Processing by Administrators::PostsController#index as HTML
   Rendered layouts/administrator/_header.html.erb (0.1ms)
   Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
 Completed 200 OK in 64ms (Views: 57.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-22 16:39:22 +0300
+Processing by Site::StaticPagesController#home as HTML
+  Rendered site/static_pages/home.html.erb within layouts/site (0.6ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.0ms)
