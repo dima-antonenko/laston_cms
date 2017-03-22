@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322065210) do
+ActiveRecord::Schema.define(version: 20170322074220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,24 +164,20 @@ ActiveRecord::Schema.define(version: 20170322065210) do
 
   create_table "post_categories", force: :cascade do |t|
     t.string   "name"
-    t.integer  "post_category_id", default: 0
     t.string   "slug"
     t.text     "description"
     t.string   "avatar"
-    t.string   "seo_title"
-    t.string   "seo_description"
-    t.string   "seo_keywords"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "post_category_id", default: 0,  null: false
+    t.string   "meta_title",       default: "", null: false
+    t.text     "meta_description", default: "", null: false
+    t.text     "meta_keywords",    default: "", null: false
   end
 
   add_index "post_categories", ["avatar"], name: "index_post_categories_on_avatar", using: :btree
   add_index "post_categories", ["description"], name: "index_post_categories_on_description", using: :btree
   add_index "post_categories", ["name"], name: "index_post_categories_on_name", using: :btree
-  add_index "post_categories", ["post_category_id"], name: "index_post_categories_on_post_category_id", using: :btree
-  add_index "post_categories", ["seo_description"], name: "index_post_categories_on_seo_description", using: :btree
-  add_index "post_categories", ["seo_keywords"], name: "index_post_categories_on_seo_keywords", using: :btree
-  add_index "post_categories", ["seo_title"], name: "index_post_categories_on_seo_title", using: :btree
   add_index "post_categories", ["slug"], name: "index_post_categories_on_slug", using: :btree
 
   create_table "posts", force: :cascade do |t|
@@ -218,17 +214,15 @@ ActiveRecord::Schema.define(version: 20170322065210) do
   add_index "product_attachments", ["product_id"], name: "index_product_attachments_on_product_id", using: :btree
 
   create_table "product_categories", force: :cascade do |t|
-    t.string   "name"
-    t.string   "slug"
-    t.string   "avatar"
-    t.text     "description"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
-    t.string   "banner"
-    t.integer  "product_category_id", default: 0
-    t.string   "meta_title",          default: ""
-    t.text     "meta_description",    default: ""
-    t.text     "meta_keywords",       default: ""
+    t.string  "name"
+    t.string  "slug"
+    t.string  "avatar"
+    t.text    "description"
+    t.string  "banner"
+    t.integer "product_category_id", default: 0
+    t.string  "meta_title",          default: ""
+    t.text    "meta_description",    default: ""
+    t.text    "meta_keywords",       default: ""
   end
 
   add_index "product_categories", ["avatar"], name: "index_product_categories_on_avatar", using: :btree

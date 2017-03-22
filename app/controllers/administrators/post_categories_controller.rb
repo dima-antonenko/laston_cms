@@ -5,12 +5,13 @@ class Administrators::PostCategoriesController < AdministratorsController
 
 
   def index
-    @post_categories = PostCategory.all
+    @post_categories = PostCategory.all.order(:name).paginate(:page => params[:page], :per_page => 20)
     @parent_post_categories = PostCategory.where(post_category_id: 0)
   end
 
   def new
-    @post_category = Administrators::PostCategoryDecorator.decorate(PostCategory.new())
+    @post_category = PostCategory.new()
+    @list_to_form = PostCategory.all.collect{|category| [category.name, category.id]} << ['Родитель', 0]
   end
 
   def create
@@ -36,11 +37,11 @@ class Administrators::PostCategoriesController < AdministratorsController
   end
 
   def edit
-
+    @list_to_form = PostCategory.all.collect{|category| [category.name, category.id]} << ['Родитель', 0]
   end
 
   def destroy
-    PostCategory.find(params[:id]).destroy
+    @post_category.destroy
     respond_to do |format|
       format.html { redirect_to :back, notice: 'Категория удалена' }
     end
@@ -51,12 +52,12 @@ class Administrators::PostCategoriesController < AdministratorsController
 
 
   def set_post_category
-    @post_category = Administrators::PostCategoryDecorator.decorate(PostCategory.friendly.find(params[:id]))
+    @post_category = PostCategory.friendly.find(params[:id])
   end
 
   def post_category_params
-    params.require(:post_category).permit(:name, :post_category_id, :slug, :description, :seo_title,
-                                          :seo_description, :seo_keywords, :avatar)
+    params.require(:post_category).permit(:name, :post_category_id, :slug, :description, :meta_title,
+                                          :meta_description, :meta_keywords, :avatar)
   end
 
 

@@ -4,7 +4,7 @@ class PostCategory < ActiveRecord::Base
   
   mount_uploader :avatar, PostCategoryAvatarUploader
 
-  has_many :post_categories
+  has_many :post_categories, dependent: :destroy
   belongs_to :post_category
 
   has_many :posts

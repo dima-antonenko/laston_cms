@@ -43,27 +43,26 @@
                                     </td>
                                     
                                     <td>
-                                    <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_product_category_path(category)%>
-                            <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_product_category_path(category), method: :delete %>
-                            <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, product_category_path(category) %>
-
-                                   
-                                </tr>
-                                <% end %>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="will_paginate_plugin uk-text-center">
-                        <%= will_paginate @product_categories %>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_product_category_path(category)%>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_product_category_path(category), method: :delete %>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, product_category_path(category) %>
+                                        
+                                    </tr>
+                                    <% end %>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="will_paginate_plugin uk-text-center">
+                            <%= will_paginate @product_categories %>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="md-fab-wrapper">
-                <a class="md-btn md-btn-success" href="/administrators/product_categories/new">Добавить</a>
                 
+                <div class="md-fab-wrapper">
+                    <a class="md-btn md-btn-success" href="/administrators/product_categories/new">Добавить</a>
+                    
+                </div>
             </div>
         </div>
+        
     </div>
-    
-</div>

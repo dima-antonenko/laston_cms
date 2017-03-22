@@ -1,7 +1,7 @@
+=begin 
+
 ProductCategory.destroy_all
 Product.destroy_all
-Menu.destroy_all
-MenuItem.destroy_all
 
 10.times do |i|
   ProductCategory.create(name: "Категория #{i}", description: "this is description")
@@ -21,6 +21,8 @@ first_category_id = ProductCategory.first.id
 end
 
 
+Menu.destroy_all
+MenuItem.destroy_all
 Menu.create(name: "главное меню", descriptor: "main_menu")
 Menu.create(name: "Меню в футоре", descriptor: "footer_menu")
 
@@ -35,3 +37,11 @@ MenuItem.create(title: "Контакты", menu_id: Menu.last.id, url: '/contact
 MenuItem.create(title: "О Компании", menu_id: Menu.last.id, url: '/about', position: 3)
 MenuItem.create(title: "Тестовая страница", menu_id: Menu.last.id, url: '/', position: 4)
 MenuItem.create(title: "Тестовая страница2", menu_id: Menu.last.id, menu_item_id: MenuItem.last.id, url: '/', position: 1)
+
+=end
+
+PostCategory.destroy_all
+
+40.times do |i|
+  PostCategory.create!(name: "Категория #{i}", description: "this is a description")
+end  
