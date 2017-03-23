@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322130009) do
+ActiveRecord::Schema.define(version: 20170323065159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -150,17 +150,14 @@ ActiveRecord::Schema.define(version: 20170322130009) do
   create_table "pages", force: :cascade do |t|
     t.string "name"
     t.string "descriptor"
-    t.string "seo_title"
-    t.text   "seo_description"
-    t.text   "seo_keywords"
     t.text   "description"
+    t.string "meta_title",       default: "", null: false
+    t.text   "meta_description", default: "", null: false
+    t.text   "meta_keywords",    default: "", null: false
   end
 
   add_index "pages", ["descriptor"], name: "index_pages_on_descriptor", using: :btree
   add_index "pages", ["name"], name: "index_pages_on_name", using: :btree
-  add_index "pages", ["seo_description"], name: "index_pages_on_seo_description", using: :btree
-  add_index "pages", ["seo_keywords"], name: "index_pages_on_seo_keywords", using: :btree
-  add_index "pages", ["seo_title"], name: "index_pages_on_seo_title", using: :btree
 
   create_table "post_categories", force: :cascade do |t|
     t.string   "name"

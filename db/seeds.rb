@@ -46,7 +46,7 @@ PostCategory.destroy_all
   PostCategory.create!(name: "Категория #{i}", description: "this is a description")
 end  
 
-=end
+
 
 Post.destroy_all
 
@@ -54,3 +54,13 @@ Post.destroy_all
   Post.create(name: "Запись #{i}", post_category_id: PostCategory.last.id,
    content: "this is content of post #{i}", lead: "this is lead of post #{i}")
 end 
+
+=end
+
+Page.destroy_all
+
+Page.create(name: "Главная", descriptor: "main")
+Page.create(name: "Контакты", descriptor: "contacts")
+Page.create(name: "Доставка и оплата", descriptor: "delive-and-chip")
+
+

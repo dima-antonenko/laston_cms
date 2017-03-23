@@ -24,7 +24,7 @@ class Administrators::PagesController < AdministratorsController
 
   end
 
- 
+
 
   private
 
@@ -34,7 +34,7 @@ class Administrators::PagesController < AdministratorsController
   end
 
   def page_params
-    params.require(:page).permit(:name, :content, :seo_title, :seo_description, :seo_keywords)
+    params.require(:page).permit(:name, :description, :meta_title, :meta_description, :meta_keywords)
   end
 
 
