@@ -1,35 +1,32 @@
- <div id="page_content_inner">
-
-            <div class="md-card">
-                <div class="md-card-content">
-                    <div class="uk-overflow-container uk-margin-bottom">
-                        <table class="uk-table uk-table-nowrap uk-table-hover" id="ts_pager_filter">
-                            <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>Название</th>
-                                <th>Содержимое</th> 
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <% @site_variables.each do |variable| %>
-                            <tr>
-                                <td><%= variable.id %></td>
-
-
-                                <td><%= variable.title %></td>
-                                <td><%= variable.content %></td>
-                                     
-                                <td><%= link_to "редактировать", edit_administrators_site_variable_path(variable) %></td>
-                            </tr>
-                            <% end %>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+<div id="page_content_inner">
+    <h3 class="heading_b uk-margin-bottom">Блоки</h3>
+    <div class="md-card">
+        <div class="md-card-content">
+            <div class="uk-overflow-container uk-margin-bottom">
+                <table class="uk-table uk-table-nowrap uk-table-hover" id="ts_pager_filter">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Название</th>
+                            <th>Содержимое</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @site_variables.each do |variable| %>
+                        <tr>
+                            <td><%= variable.id %></td>
+                            <td><%= variable.title %></td>
+                            <td><%= variable.content %></td>
+                            
+                            <td><%= link_to "редактировать", edit_administrators_site_variable_path(variable) %></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
             </div>
+        </div>
+    </div>
+</div>
 
-        </div>
-        
-        </div>
+</div>
