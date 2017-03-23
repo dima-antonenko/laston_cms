@@ -6,14 +6,14 @@
                     <thead>
                         <tr>
                             <th>Количество слайдов</th>
-                            <th>Название</th>
+                            <th class="uk-text-center" >Название</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% @sliders.each do |slider| %>
                         <tr>
                             <td><%= slider.slides.size %></td>
-                            <td><%= link_to slider.name, edit_administrators_slider_path(slider) %></td>
+                            <td class="uk-text-center" ><%= link_to slider.name, edit_administrators_slider_path(slider) %></td>
                             
                         </tr>
                         <% end %>

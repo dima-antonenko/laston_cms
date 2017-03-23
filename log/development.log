@@ -38748,3 +38748,55 @@ Processing by Administrators::SlidersController#index as HTML
   Rendered layouts/administrator/_header.html.erb (0.1ms)
   Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
 Completed 200 OK in 51ms (Views: 35.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/administrators/sliders" for 127.0.0.1 at 2017-03-23 10:23:37 +0300
+Processing by Administrators::SlidersController#index as HTML
+  [1m[35mAdministrator Load (3.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSlider Load (4.7ms)[0m  [1mSELECT "sliders".* FROM "sliders"[0m
+  [1m[35m (2.7ms)[0m  SELECT COUNT(*) FROM "slides" WHERE "slides"."slider_id" = $1  [["slider_id", 4]]
+  Rendered administrators/sliders/index.html.erb within layouts/administrator (10.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 28.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-23 10:23:37 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-23 10:23:37 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-23 10:23:37 +0300
+
+
+Started GET "/administrators/sliders" for 127.0.0.1 at 2017-03-23 10:23:54 +0300
+Processing by Administrators::SlidersController#index as HTML
+  [1m[36mAdministrator Load (2.1ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mSlider Load (2.9ms)[0m  SELECT "sliders".* FROM "sliders"
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "slides" WHERE "slides"."slider_id" = $1[0m  [["slider_id", 4]]
+  Rendered administrators/sliders/index.html.erb within layouts/administrator (10.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-23 10:23:54 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-23 10:23:55 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-23 10:23:55 +0300
+
+
+Started GET "/administrators/sliders/4/edit" for 127.0.0.1 at 2017-03-23 10:23:59 +0300
+Processing by Administrators::SlidersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSlider Load (1.0ms)[0m  [1mSELECT  "sliders".* FROM "sliders" WHERE "sliders"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSlide Load (0.6ms)[0m  SELECT "slides".* FROM "slides" WHERE "slides"."slider_id" = $1  [["slider_id", 4]]
+  Rendered administrators/sliders/edit.html.erb within layouts/administrator (15.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 31.1ms | ActiveRecord: 3.1ms)
