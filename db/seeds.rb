@@ -65,8 +65,15 @@ Page.create(name: "Доставка и оплата", descriptor: "delive-and-ch
 
 
 
-=end
+
 Slider.destroy_all
 Slide.destroy_all
 
 Slider.create(name: "Главный", descriptor: "main")
+
+
+=end
+
+Banner.destroy_all
+
+Banner.create(title: "Первый баннер", descriptor: "first_banner", link: "/")

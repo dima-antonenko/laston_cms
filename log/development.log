@@ -38578,3 +38578,173 @@ Processing by Administrators::SlidersController#edit as HTML
   Rendered layouts/administrator/_header.html.erb (0.1ms)
   Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
 Completed 200 OK in 30ms (Views: 24.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/administrators/slides/new" for 127.0.0.1 at 2017-03-23 10:15:48 +0300
+Processing by Administrators::SlidesController#new as HTML
+  [1m[35mAdministrator Load (1.9ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSlider Load (0.5ms)[0m  [1mSELECT "sliders".* FROM "sliders"[0m
+  Rendered administrators/slides/new.html.erb within layouts/administrator (3.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 23.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/administrators/sliders" for 127.0.0.1 at 2017-03-23 10:15:50 +0300
+Processing by Administrators::SlidersController#index as HTML
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSlider Load (1.2ms)[0m  [1mSELECT "sliders".* FROM "sliders"[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "slides" WHERE "slides"."slider_id" = $1  [["slider_id", 4]]
+  Rendered administrators/sliders/index.html.erb within layouts/administrator (4.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/administrators/banners" for 127.0.0.1 at 2017-03-23 10:17:05 +0300
+Processing by Administrators::BannersController#index as HTML
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (9.2ms)[0m  SELECT "banners".* FROM "banners"
+  Rendered administrators/banners/index.html.erb within layouts/administrator (13.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 228ms (Views: 50.1ms | ActiveRecord: 11.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mBanner Load (0.8ms)[0m  SELECT "banners".* FROM "banners"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (29.9ms)[0m  INSERT INTO "banners" ("title", "descriptor", "link") VALUES ($1, $2, $3) RETURNING "id"  [["title", "Первый баннер"], ["descriptor", "first_banner"], ["link", "/"]]
+  [1m[36m (22.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/administrators/banners" for 127.0.0.1 at 2017-03-23 10:20:56 +0300
+Processing by Administrators::BannersController#index as HTML
+  [1m[36mAdministrator Load (1.1ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (0.6ms)[0m  SELECT "banners".* FROM "banners"
+  Rendered administrators/banners/index.html.erb within layouts/administrator (9.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 54ms (Views: 20.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-23 10:20:56 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-23 10:20:57 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-23 10:20:57 +0300
+
+
+Started GET "/administrators/banners/1/edit" for 127.0.0.1 at 2017-03-23 10:20:58 +0300
+Processing by Administrators::BannersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdministrator Load (1.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (0.6ms)[0m  SELECT  "banners".* FROM "banners" WHERE "banners"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered administrators/banners/edit.html.erb within layouts/administrator (5.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 67.3ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/administrators/banners/1" for 127.0.0.1 at 2017-03-23 10:21:05 +0300
+Processing by Administrators::BannersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gXCcfwV9IN/ZCmvYjnzJ/aQ97r4rvzb3lg1gCwsSbNazLqFWpUPt/nMANkCMsrYtvXoUOcRpgsAiEGyfnUBNhw==", "banner"=>{"title"=>"Первый баннер", "link"=>"/", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f9a3920d020 @tempfile=#<Tempfile:/tmp/RackMultipart20170323-2458-10pzdve.jpg>, @original_filename="nastol.com.ua_174702.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"banner[image]\"; filename=\"nastol.com.ua_174702.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Обновить", "id"=>"1"}
+  [1m[36mAdministrator Load (0.8ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (0.6ms)[0m  SELECT  "banners".* FROM "banners" WHERE "banners"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mBanner Load (0.4ms)[0m  SELECT  "banners".* FROM "banners" WHERE "banners"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "banners" SET "image" = $1 WHERE "banners"."id" = $2[0m  [["image", "nastol.com.ua_174702.jpg"], ["id", 1]]
+  [1m[35m (54.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/banners/1/edit
+Completed 302 Found in 354ms (ActiveRecord: 58.1ms)
+
+
+Started GET "/administrators/banners/1/edit" for 127.0.0.1 at 2017-03-23 10:21:05 +0300
+Processing by Administrators::BannersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (0.6ms)[0m  SELECT  "banners".* FROM "banners" WHERE "banners"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered administrators/banners/edit.html.erb within layouts/administrator (3.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/administrators/banners" for 127.0.0.1 at 2017-03-23 10:21:11 +0300
+Processing by Administrators::BannersController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (0.4ms)[0m  SELECT "banners".* FROM "banners"
+  Rendered administrators/banners/index.html.erb within layouts/administrator (1.8ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/administrators/banners" for 127.0.0.1 at 2017-03-23 10:21:48 +0300
+Processing by Administrators::BannersController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (0.5ms)[0m  SELECT "banners".* FROM "banners"
+  Rendered administrators/banners/index.html.erb within layouts/administrator (3.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-23 10:21:48 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-23 10:21:48 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-23 10:21:48 +0300
+
+
+Started GET "/administrators/banners" for 127.0.0.1 at 2017-03-23 10:22:12 +0300
+Processing by Administrators::BannersController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (2.6ms)[0m  SELECT "banners".* FROM "banners"
+  Rendered administrators/banners/index.html.erb within layouts/administrator (4.8ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-23 10:22:12 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-23 10:22:12 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-23 10:22:12 +0300
+
+
+Started GET "/administrators/banners" for 127.0.0.1 at 2017-03-23 10:22:34 +0300
+Processing by Administrators::BannersController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mBanner Load (4.8ms)[0m  SELECT "banners".* FROM "banners"
+  Rendered administrators/banners/index.html.erb within layouts/administrator (7.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 45.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/administrator.self-ee6d28731b25c1a81b4b45eb2c04c14957b7dba516821bf8d01eb2953fe86a9a.css?body=1" for 127.0.0.1 at 2017-03-23 10:22:34 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-23 10:22:34 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-23 10:22:34 +0300
+
+
+Started GET "/administrators/sliders" for 127.0.0.1 at 2017-03-23 10:22:53 +0300
+Processing by Administrators::SlidersController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mSlider Load (2.4ms)[0m  SELECT "sliders".* FROM "sliders"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "slides" WHERE "slides"."slider_id" = $1[0m  [["slider_id", 4]]
+  Rendered administrators/sliders/index.html.erb within layouts/administrator (28.0ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 35.7ms | ActiveRecord: 7.0ms)

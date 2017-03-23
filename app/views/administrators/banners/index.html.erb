@@ -2,20 +2,20 @@
     <div class="md-card">
         <div class="md-card-content">
             <div class="uk-overflow-container uk-margin-bottom">
-                <table class="uk-table uk-table-align-vertical uk-table-nowrap tablesorter tablesorter-altair" id="ts_pager_filter">
+                <table class="uk-table uk-table-nowrap uk-table-hover " id="ts_pager_filter">
                     <thead>
                         <tr>
                             <th>Первью</th>
-                            <th>id</th>
-                            <th>Название</th>
+                            <th class="uk-text-center" >Ссылка</th>
+                            <th class="uk-text-center" >Название</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% @banners.each do |banner| %>
                         <tr>
                             <td><img class="img_thumb" src="<%= banner.image.list_thumb %>" ></td>
-                            <td><%= banner.id %></td>
-                            <td><%= link_to banner.title, edit_administrators_banner_path(banner) %></td>
+                            <td class="uk-text-center" ><%= banner.link %></td>
+                            <td class="uk-text-center" ><%= link_to banner.title, edit_administrators_banner_path(banner) %></td>
                         </tr>
                         <% end %>
                     </tbody>
