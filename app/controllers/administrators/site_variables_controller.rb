@@ -1,7 +1,7 @@
 class Administrators::SiteVariablesController < AdministratorsController
 
 
-  before_action :set_site_variable, only: [:edit, :update, :destroy]
+  before_action :set_site_variable, only: [:edit, :update]
 
 
   def index
@@ -34,7 +34,7 @@ class Administrators::SiteVariablesController < AdministratorsController
   end
 
   def site_variable_params
-    params.require(:site_variable).permit(:title, :descriptor, :content)
+    params.require(:site_variable).permit(:title, :content)
   end
 
 

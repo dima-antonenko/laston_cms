@@ -72,8 +72,13 @@ Slide.destroy_all
 Slider.create(name: "Главный", descriptor: "main")
 
 
-=end
+
 
 Banner.destroy_all
-
 Banner.create(title: "Первый баннер", descriptor: "first_banner", link: "/")
+
+=end
+
+SiteVariable.destroy_all
+
+SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in_head", content: "8-800-555-35-35")
