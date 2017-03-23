@@ -55,12 +55,18 @@ Post.destroy_all
    content: "this is content of post #{i}", lead: "this is lead of post #{i}")
 end 
 
-=end
 
-Page.destroy_all
+
+Page.destroy_all(
 
 Page.create(name: "Главная", descriptor: "main")
 Page.create(name: "Контакты", descriptor: "contacts")
 Page.create(name: "Доставка и оплата", descriptor: "delive-and-chip")
 
 
+
+=end
+Slider.destroy_all
+Slide.destroy_all
+
+Slider.create(name: "Главный", descriptor: "main")
