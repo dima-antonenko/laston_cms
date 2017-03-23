@@ -38969,3 +38969,107 @@ Processing by Administrators::SiteVariablesController#edit as HTML
   Rendered layouts/administrator/_header.html.erb (0.1ms)
   Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
 Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/administrators/site_variables" for 127.0.0.1 at 2017-03-23 10:32:57 +0300
+Processing by Administrators::SiteVariablesController#index as HTML
+  [1m[35mAdministrator Load (0.8ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mSiteVariable Load (0.6ms)[0m  [1mSELECT "site_variables".* FROM "site_variables"[0m
+  Rendered administrators/site_variables/index.html.erb within layouts/administrator (9.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 49ms (Views: 20.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/administrators/orders" for 127.0.0.1 at 2017-03-23 10:35:38 +0300
+
+ActionController::RoutingError (No route matches [GET] "/administrators/orders"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.9ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.1ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (26.0ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (52.4ms)
+
+
+Started GET "/administrators/product_categories" for 127.0.0.1 at 2017-03-23 10:35:59 +0300
+Processing by Administrators::ProductCategoriesController#index as HTML
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  ORDER BY "product_categories"."name" ASC LIMIT 20 OFFSET 0[0m  [["product_category_id", 0]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 542]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 483]]
+  [1m[35mProductCategory Load (0.5ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 543]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 544]]
+  [1m[35mProductCategory Load (1.0ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 545]]
+  [1m[36mProductCategory Load (0.5ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 546]]
+  [1m[35mProductCategory Load (0.5ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 547]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 548]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 549]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 484]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 485]]
+  [1m[36mProductCategory Load (0.3ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 486]]
+  [1m[35mProductCategory Load (0.4ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 487]]
+  [1m[36mProductCategory Load (0.3ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 488]]
+  [1m[35mProductCategory Load (0.3ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 489]]
+  [1m[36mProductCategory Load (1.1ms)[0m  [1mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1[0m  [["product_category_id", 490]]
+  [1m[35mProductCategory Load (0.8ms)[0m  SELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."product_category_id" = $1  [["product_category_id", 491]]
+  [1m[36mProductCategory Load (1.8ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories"  ORDER BY "product_categories"."name" ASC LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "product_categories"
+  [1m[36mProductCategory Load (0.5ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mProductCategory Load (0.9ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 483]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 483]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 483]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 483]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 483]]
+  [1m[35mProductCategory Load (0.6ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 484]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 484]]
+  [1m[35mCACHE (0.9ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 484]]
+  Rendered administrators/product_categories/index.html.erb within layouts/administrator (110.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 141ms (Views: 108.9ms | ActiveRecord: 17.4ms)
