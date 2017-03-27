@@ -1,4 +1,4 @@
-=begin 
+=begin
 
 ProductCategory.destroy_all
 Product.destroy_all
@@ -77,8 +77,15 @@ Slider.create(name: "Главный", descriptor: "main")
 Banner.destroy_all
 Banner.create(title: "Первый баннер", descriptor: "first_banner", link: "/")
 
-=end
 
 SiteVariable.destroy_all
-
 SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in_head", content: "8-800-555-35-35")
+
+
+
+BackCall.destroy_all
+
+30.times do |i|
+  BackCall.create(product_id: Product.last.id, phone: "8-800-555-35-35-#{i}")
+end
+=end

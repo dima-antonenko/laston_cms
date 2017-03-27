@@ -5,14 +5,14 @@ class Administrators::BackCallsController < AdministratorsController
 
 
   def index
-    @back_calls = BackCall.all
+    @back_calls = BackCall.all.paginate(:page => params[:page], :per_page => 20)
   end
 
 
   def destroy
     @back_call.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'заявка удалена' }
+      format.html { redirect_to :back, notice: 'Заявка удалена' }
     end
   end
 

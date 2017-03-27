@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170323065159) do
+ActiveRecord::Schema.define(version: 20170327055445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,16 +37,13 @@ ActiveRecord::Schema.define(version: 20170323065159) do
   create_table "back_calls", force: :cascade do |t|
     t.string   "phone"
     t.string   "product_id"
-    t.string   "product_name"
-    t.string   "product_sku"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.json     "product_data", default: {}, null: false
   end
 
   add_index "back_calls", ["phone"], name: "index_back_calls_on_phone", using: :btree
   add_index "back_calls", ["product_id"], name: "index_back_calls_on_product_id", using: :btree
-  add_index "back_calls", ["product_name"], name: "index_back_calls_on_product_name", using: :btree
-  add_index "back_calls", ["product_sku"], name: "index_back_calls_on_product_sku", using: :btree
 
   create_table "banners", force: :cascade do |t|
     t.string "title"
