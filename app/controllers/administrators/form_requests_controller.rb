@@ -5,7 +5,7 @@ class Administrators::FormRequestsController < AdministratorsController
 
 
   def index
-    @form_requests = FormRequest.all
+    @form_requests = FormRequest.all.paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
@@ -13,7 +13,7 @@ class Administrators::FormRequestsController < AdministratorsController
   end
 
   def destroy
-    @form_request.destroy
+    @request.destroy
     respond_to do |format|
       format.html { redirect_to :back, notice: 'Объект удален' }
     end
@@ -24,7 +24,7 @@ class Administrators::FormRequestsController < AdministratorsController
 
 
   def set_form_request
-    @form_request = FormRequest.find(params[:id])
+    @request = FormRequest.find(params[:id])
   end
 
 end

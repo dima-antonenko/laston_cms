@@ -78,8 +78,10 @@ Banner.destroy_all
 Banner.create(title: "Первый баннер", descriptor: "first_banner", link: "/")
 
 
+
 SiteVariable.destroy_all
 SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in_head", content: "8-800-555-35-35")
+
 
 
 
@@ -89,11 +91,19 @@ BackCall.destroy_all
   BackCall.create(product_id: Product.last.id, phone: "8-800-555-35-35-#{i}")
 end
 
-=end
+
+
 
 Order.destroy_all
 
 30.times do |i|
   Order.create(customer_name: "Олег", customer_email: "1@mail.ru", customer_phone: "+7 123-456-00-#{i}", customer_city: "Москва",
    total_price: 1000, customer_address: "ул. Солнечная, дом 11, кв. 5")
+end
+=end
+
+FormRequest.destroy_all
+
+30.times do |i|
+  FormRequest.create(name: "Олег", phone: "+7 123-456-00-#{i}", text: "Здесь текст заявки")
 end

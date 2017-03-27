@@ -45392,3 +45392,1101 @@ Processing by Administrators::OrdersController#index as HTML
   Rendered layouts/administrator/_header.html.erb (0.1ms)
   Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
 Completed 200 OK in 45ms (Views: 36.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 11:03:45 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (78.6ms)[0m  SELECT "form_requests".* FROM "form_requests"
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (84.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 176ms (Views: 37.3ms | ActiveRecord: 80.9ms)
+
+
+Started GET "/administrators/orders" for 127.0.0.1 at 2017-03-27 15:45:07 +0300
+Processing by Administrators::OrdersController#index as HTML
+Completed 401 Unauthorized in 73ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/administrators/sign_in" for 127.0.0.1 at 2017-03-27 15:45:09 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/shared/_links.html.erb (2.6ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/sessions/new.html.erb within layouts/application (148.9ms)
+Completed 200 OK in 766ms (Views: 270.2ms | ActiveRecord: 468.0ms)
+
+
+Started POST "/administrators/sign_in" for 127.0.0.1 at 2017-03-27 15:45:21 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fQsjoA1E2NRF3MYL43k51e5Bo7U2s/+uXhYkcUNtSPskGfnKqYFJYjvnpDb6eJAXYwNY0SSCa1IGwRWXNFOpug==", "administrator"=>{"email"=>"1@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mAdministrator Load (82.9ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."email" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["email", "1@mail.ru"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "administrators" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "administrators"."id" = $5[0m  [["last_sign_in_at", "2017-03-27 05:52:49.575578"], ["current_sign_in_at", "2017-03-27 12:45:21.952120"], ["sign_in_count", 8], ["updated_at", "2017-03-27 12:45:21.954279"], ["id", 1]]
+  [1m[35m (20.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/orders
+Completed 302 Found in 573ms (ActiveRecord: 104.6ms)
+
+
+Started GET "/administrators/orders" for 127.0.0.1 at 2017-03-27 15:45:22 +0300
+Processing by Administrators::OrdersController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (169.9ms)[0m  SELECT  "orders".* FROM "orders"  ORDER BY "orders"."created_at" ASC LIMIT 20 OFFSET 0
+  [1m[36m (40.0ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered administrators/orders/index.html.erb within layouts/administrator (255.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.6ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 1288ms (Views: 985.3ms | ActiveRecord: 212.8ms)
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 15:45:43 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[35mAdministrator Load (0.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (109.6ms)[0m  [1mSELECT "form_requests".* FROM "form_requests"[0m
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (113.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 250ms (Views: 65.3ms | ActiveRecord: 111.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (51.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to EditFieldsFromFormRequest (20170327124817)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (51.6ms)[0m  [1mALTER TABLE "form_requests" DROP "name"[0m
+  [1m[35m (13.4ms)[0m  ALTER TABLE "form_requests" DROP "email"
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "form_requests" DROP "phone"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "form_requests" DROP "text"
+  [1m[36m (369.3ms)[0m  [1mALTER TABLE "form_requests" ADD "name" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (119.9ms)[0m  ALTER TABLE "form_requests" ADD "email" character varying DEFAULT '' NOT NULL
+  [1m[36m (88.9ms)[0m  [1mALTER TABLE "form_requests" ADD "phone" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (124.0ms)[0m  ALTER TABLE "form_requests" ADD "text" text DEFAULT '' NOT NULL
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20170327124817"]]
+  [1m[35m (29.3ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'administrators'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'back_calls'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'banners'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'carts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ckeditor_assets'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'form_requests'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'line_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'menu_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'menus'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'pages'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'post_categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'posts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (4.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'product_attachments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'product_categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'product_questions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'products'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'site_variables'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sliders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'slides'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mFormRequest Load (0.8ms)[0m  SELECT "form_requests".* FROM "form_requests"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (22.0ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-0"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.195256"], ["updated_at", "2017-03-27 12:53:44.195256"]]
+  [1m[36m (18.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-1"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.242668"], ["updated_at", "2017-03-27 12:53:44.242668"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-2"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.253742"], ["updated_at", "2017-03-27 12:53:44.253742"]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-3"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.264940"], ["updated_at", "2017-03-27 12:53:44.264940"]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-4"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.276005"], ["updated_at", "2017-03-27 12:53:44.276005"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-5"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.287068"], ["updated_at", "2017-03-27 12:53:44.287068"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-6"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.298064"], ["updated_at", "2017-03-27 12:53:44.298064"]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-7"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.309193"], ["updated_at", "2017-03-27 12:53:44.309193"]]
+  [1m[35m (8.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-8"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.320613"], ["updated_at", "2017-03-27 12:53:44.320613"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-9"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.331592"], ["updated_at", "2017-03-27 12:53:44.331592"]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-10"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.342680"], ["updated_at", "2017-03-27 12:53:44.342680"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-11"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.353925"], ["updated_at", "2017-03-27 12:53:44.353925"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-12"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.365032"], ["updated_at", "2017-03-27 12:53:44.365032"]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-13"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.376606"], ["updated_at", "2017-03-27 12:53:44.376606"]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-14"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.387288"], ["updated_at", "2017-03-27 12:53:44.387288"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-15"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.398245"], ["updated_at", "2017-03-27 12:53:44.398245"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-16"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.409575"], ["updated_at", "2017-03-27 12:53:44.409575"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-17"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.420728"], ["updated_at", "2017-03-27 12:53:44.420728"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-18"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.431643"], ["updated_at", "2017-03-27 12:53:44.431643"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-19"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:53:44.442722"], ["updated_at", "2017-03-27 12:53:44.442722"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 15:53:53 +0300
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[36mAdministrator Load (0.7ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (0.9ms)[0m  SELECT "form_requests".* FROM "form_requests"
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (20.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 31.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/administrator.self-5d6828fce41dee209d4e4e76e52cdb15e4c9e81effa9ef90a5861373521ff2d8.css?body=1" for 127.0.0.1 at 2017-03-27 15:53:54 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-27 15:53:54 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-27 15:53:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mFormRequest Load (0.9ms)[0m  SELECT "form_requests".* FROM "form_requests"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 1]]
+  [1m[36m (24.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 2]]
+  [1m[35m (8.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 3]]
+  [1m[36m (9.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 4]]
+  [1m[35m (9.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 5]]
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 6]]
+  [1m[35m (9.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 7]]
+  [1m[36m (9.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 8]]
+  [1m[35m (9.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 9]]
+  [1m[36m (9.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 10]]
+  [1m[35m (9.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 11]]
+  [1m[36m (31.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 12]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 13]]
+  [1m[36m (8.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 14]]
+  [1m[35m (8.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 15]]
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 16]]
+  [1m[35m (9.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 17]]
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 18]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 19]]
+  [1m[36m (8.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "form_requests" WHERE "form_requests"."id" = $1[0m  [["id", 20]]
+  [1m[35m (9.0ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-0"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.232389"], ["updated_at", "2017-03-27 12:59:07.232389"]]
+  [1m[36m (10.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-1"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.249113"], ["updated_at", "2017-03-27 12:59:07.249113"]]
+  [1m[35m (6.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-2"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.260086"], ["updated_at", "2017-03-27 12:59:07.260086"]]
+  [1m[36m (6.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-3"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.270967"], ["updated_at", "2017-03-27 12:59:07.270967"]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-4"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.282143"], ["updated_at", "2017-03-27 12:59:07.282143"]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-5"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.293336"], ["updated_at", "2017-03-27 12:59:07.293336"]]
+  [1m[35m (7.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-6"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.304480"], ["updated_at", "2017-03-27 12:59:07.304480"]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-7"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.315685"], ["updated_at", "2017-03-27 12:59:07.315685"]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-8"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.326602"], ["updated_at", "2017-03-27 12:59:07.326602"]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-9"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.337683"], ["updated_at", "2017-03-27 12:59:07.337683"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-10"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.348953"], ["updated_at", "2017-03-27 12:59:07.348953"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-11"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.359930"], ["updated_at", "2017-03-27 12:59:07.359930"]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-12"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.371042"], ["updated_at", "2017-03-27 12:59:07.371042"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-13"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.382147"], ["updated_at", "2017-03-27 12:59:07.382147"]]
+  [1m[35m (8.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-14"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.393181"], ["updated_at", "2017-03-27 12:59:07.393181"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-15"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.404523"], ["updated_at", "2017-03-27 12:59:07.404523"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-16"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.415839"], ["updated_at", "2017-03-27 12:59:07.415839"]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-17"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.426828"], ["updated_at", "2017-03-27 12:59:07.426828"]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-18"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.437789"], ["updated_at", "2017-03-27 12:59:07.437789"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-19"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.449034"], ["updated_at", "2017-03-27 12:59:07.449034"]]
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-20"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.459999"], ["updated_at", "2017-03-27 12:59:07.459999"]]
+  [1m[36m (7.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-21"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.471137"], ["updated_at", "2017-03-27 12:59:07.471137"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-22"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.482198"], ["updated_at", "2017-03-27 12:59:07.482198"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-23"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.493232"], ["updated_at", "2017-03-27 12:59:07.493232"]]
+  [1m[35m (8.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-24"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.504540"], ["updated_at", "2017-03-27 12:59:07.504540"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-25"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.515718"], ["updated_at", "2017-03-27 12:59:07.515718"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-26"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.526822"], ["updated_at", "2017-03-27 12:59:07.526822"]]
+  [1m[36m (7.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-27"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.537903"], ["updated_at", "2017-03-27 12:59:07.537903"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Олег"], ["phone", "+7 123-456-00-28"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.549074"], ["updated_at", "2017-03-27 12:59:07.549074"]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "form_requests" ("name", "phone", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Олег"], ["phone", "+7 123-456-00-29"], ["text", "Здесь текст заявки"], ["created_at", "2017-03-27 12:59:07.560110"], ["updated_at", "2017-03-27 12:59:07.560110"]]
+  [1m[35m (7.5ms)[0m  COMMIT
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 15:59:09 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[36mAdministrator Load (2.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (0.8ms)[0m  SELECT  "form_requests".* FROM "form_requests" LIMIT 20 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "form_requests"[0m
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (27.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 38.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/administrator.self-5d6828fce41dee209d4e4e76e52cdb15e4c9e81effa9ef90a5861373521ff2d8.css?body=1" for 127.0.0.1 at 2017-03-27 15:59:10 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-27 15:59:10 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-27 15:59:10 +0300
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 15:59:33 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[35mAdministrator Load (0.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (0.7ms)[0m  [1mSELECT  "form_requests".* FROM "form_requests" LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "form_requests"
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (15.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/administrator.self-5d6828fce41dee209d4e4e76e52cdb15e4c9e81effa9ef90a5861373521ff2d8.css?body=1" for 127.0.0.1 at 2017-03-27 15:59:33 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-27 15:59:33 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-27 15:59:33 +0300
+
+
+Started DELETE "/administrators/form_requests/21" for 127.0.0.1 at 2017-03-27 15:59:48 +0300
+Processing by Administrators::FormRequestsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J1SNCBoe4EzQxwznkVx2DVbkBwNzNVwAcmqyOacZ34jeFtghhk0SYYOGFod1JmmvVwDQdpxBkNXE0vT2RKCy1g==", "id"=>"21"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (0.5ms)[0m  SELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 21]]
+  [1m[36m (308.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/form_requests
+Completed 302 Found in 338ms (ActiveRecord: 310.1ms)
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 15:59:48 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[35mAdministrator Load (2.0ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (1.0ms)[0m  [1mSELECT  "form_requests".* FROM "form_requests" LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "form_requests"
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (22.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 44.8ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/administrators/form_requests/22" for 127.0.0.1 at 2017-03-27 15:59:51 +0300
+Processing by Administrators::FormRequestsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Gjjok0uD2iwAu4aNyEBpjODgueIG+bOfGU22lF481i/jer2619AoAVP6nO0sOnYu4QRul+mNf0qv9fBbvYW7cQ==", "id"=>"22"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (3.3ms)[0m  SELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 22]]
+  [1m[36m (21.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/form_requests
+Completed 302 Found in 36ms (ActiveRecord: 27.3ms)
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 15:59:51 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[35mAdministrator Load (0.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (0.8ms)[0m  [1mSELECT  "form_requests".* FROM "form_requests" LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "form_requests"
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (13.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 27.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/administrators/form_requests/23" for 127.0.0.1 at 2017-03-27 16:00:10 +0300
+Processing by Administrators::FormRequestsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mAdministrator Load (2.9ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (1.5ms)[0m  SELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1  [["id", 23]]
+  Rendered administrators/form_requests/show.html.erb within layouts/administrator (1.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 35.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 16:00:37 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[36mAdministrator Load (3.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (0.7ms)[0m  SELECT  "form_requests".* FROM "form_requests" LIMIT 20 OFFSET 0
+  [1m[36m (6.0ms)[0m  [1mSELECT COUNT(*) FROM "form_requests"[0m
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (24.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 40.6ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/administrators/form_requests/23" for 127.0.0.1 at 2017-03-27 16:03:38 +0300
+Processing by Administrators::FormRequestsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mAdministrator Load (1.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (6.3ms)[0m  [1mSELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  Rendered administrators/form_requests/show.html.erb within layouts/administrator (8.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 7.9ms)
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/administrators/form_requests/show.html.erb:2:in `_app_views_administrators_form_requests_show_html_erb__4130322445403259583_70161045636480'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/e608551a506dd262/variables" for 127.0.0.1 at 2017-03-27 16:03:39 +0300
+
+
+Started GET "/administrators/form_requests/23" for 127.0.0.1 at 2017-03-27 16:04:03 +0300
+Processing by Administrators::FormRequestsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (0.4ms)[0m  [1mSELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  Rendered administrators/form_requests/show.html.erb within layouts/administrator (3.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 5.5ms)
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"administrators/orders", :id=>nil} missing required keys: [:id]:
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:261:in `raise_generation_error'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:236:in `optimized_helper'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:222:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:347:in `block (2 levels) in define_url_helper'
+  app/views/administrators/form_requests/show.html.erb:26:in `_app_views_administrators_form_requests_show_html_erb__4130322445403259583_70161045636480'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/d3b8aea89714edeb/variables" for 127.0.0.1 at 2017-03-27 16:04:04 +0300
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 16:04:07 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (0.8ms)[0m  [1mSELECT  "form_requests".* FROM "form_requests" LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "form_requests"
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (15.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 27.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/administrator.self-5d6828fce41dee209d4e4e76e52cdb15e4c9e81effa9ef90a5861373521ff2d8.css?body=1" for 127.0.0.1 at 2017-03-27 16:04:07 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-27 16:04:07 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-27 16:04:07 +0300
+
+
+Started DELETE "/administrators/form_requests/23" for 127.0.0.1 at 2017-03-27 16:04:11 +0300
+Processing by Administrators::FormRequestsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rJWcLYlziFIx07yFZZCJJHzEemWKVX6xS3HbakT+8vhV18kEFSB6f2KSpuWB6paGfSCtEGUhsmT9yZ2lp0efpg==", "id"=>"23"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (0.6ms)[0m  SELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "form_requests" WHERE "form_requests"."id" = $1  [["id", 23]]
+  [1m[36m (23.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/form_requests
+Completed 302 Found in 33ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/administrators/form_requests" for 127.0.0.1 at 2017-03-27 16:04:11 +0300
+Processing by Administrators::FormRequestsController#index as HTML
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mFormRequest Load (0.6ms)[0m  [1mSELECT  "form_requests".* FROM "form_requests" LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "form_requests"
+  Rendered administrators/form_requests/index.html.erb within layouts/administrator (11.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/administrators/form_requests/25" for 127.0.0.1 at 2017-03-27 16:04:12 +0300
+Processing by Administrators::FormRequestsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (0.5ms)[0m  SELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered administrators/form_requests/show.html.erb within layouts/administrator (3.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"administrators/orders", :id=>nil} missing required keys: [:id]:
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:261:in `raise_generation_error'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:236:in `optimized_helper'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:222:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:347:in `block (2 levels) in define_url_helper'
+  app/views/administrators/form_requests/show.html.erb:26:in `_app_views_administrators_form_requests_show_html_erb__4130322445403259583_70161045636480'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/ac7bcd4172d86c7b/variables" for 127.0.0.1 at 2017-03-27 16:04:13 +0300
+
+
+Started GET "/administrators/form_requests/25" for 127.0.0.1 at 2017-03-27 16:04:41 +0300
+Processing by Administrators::FormRequestsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mFormRequest Load (0.3ms)[0m  SELECT  "form_requests".* FROM "form_requests" WHERE "form_requests"."id" = $1 LIMIT 1  [["id", 25]]
+  Rendered administrators/form_requests/show.html.erb within layouts/administrator (1.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (3.8ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/administrator.self-5d6828fce41dee209d4e4e76e52cdb15e4c9e81effa9ef90a5861373521ff2d8.css?body=1" for 127.0.0.1 at 2017-03-27 16:04:41 +0300
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for 127.0.0.1 at 2017-03-27 16:04:41 +0300
+
+
+Started GET "/assets/administrator.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-03-27 16:04:41 +0300
+
+
+Started GET "/administrators/orders/" for 127.0.0.1 at 2017-03-27 16:04:51 +0300
+Processing by Administrators::OrdersController#index as HTML
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mOrder Load (1.5ms)[0m  SELECT  "orders".* FROM "orders"  ORDER BY "orders"."created_at" ASC LIMIT 20 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "orders"[0m
+  Rendered administrators/orders/index.html.erb within layouts/administrator (31.0ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 41.8ms | ActiveRecord: 5.0ms)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327073250) do
+ActiveRecord::Schema.define(version: 20170327124817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,18 +79,13 @@ ActiveRecord::Schema.define(version: 20170327073250) do
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "form_requests", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "phone"
-    t.text     "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "name",       default: "", null: false
+    t.string   "email",      default: "", null: false
+    t.string   "phone",      default: "", null: false
+    t.text     "text",       default: "", null: false
   end
-
-  add_index "form_requests", ["email"], name: "index_form_requests_on_email", using: :btree
-  add_index "form_requests", ["name"], name: "index_form_requests_on_name", using: :btree
-  add_index "form_requests", ["phone"], name: "index_form_requests_on_phone", using: :btree
-  add_index "form_requests", ["text"], name: "index_form_requests_on_text", using: :btree
 
   create_table "line_items", force: :cascade do |t|
     t.integer "product_id"
