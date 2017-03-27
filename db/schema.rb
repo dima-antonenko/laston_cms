@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327055445) do
+ActiveRecord::Schema.define(version: 20170327063327) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,20 +129,15 @@ ActiveRecord::Schema.define(version: 20170327055445) do
   add_index "menus", ["name"], name: "index_menus_on_name", using: :btree
 
   create_table "orders", force: :cascade do |t|
-    t.string   "customer_name"
-    t.string   "customer_email"
-    t.string   "customer_phone"
-    t.string   "customer_sity"
-    t.integer  "total_price"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "customer_name",  default: "", null: false
+    t.string   "customer_email", default: "", null: false
+    t.string   "customer_phone", default: "", null: false
+    t.string   "customer_city",  default: "", null: false
+    t.integer  "total_price",    default: 0,  null: false
+    t.json     "products_data",  default: {}, null: false
   end
-
-  add_index "orders", ["customer_email"], name: "index_orders_on_customer_email", using: :btree
-  add_index "orders", ["customer_name"], name: "index_orders_on_customer_name", using: :btree
-  add_index "orders", ["customer_phone"], name: "index_orders_on_customer_phone", using: :btree
-  add_index "orders", ["customer_sity"], name: "index_orders_on_customer_sity", using: :btree
-  add_index "orders", ["total_price"], name: "index_orders_on_total_price", using: :btree
 
   create_table "pages", force: :cascade do |t|
     t.string "name"

@@ -8,9 +8,4 @@ module AdministratorMenuHelper
     end  
   end
 
-
-  def get_patent_menu_items_list
-    MenuItem.all.collect {|item| [item.title, item.id ]} << ['Родитель', 0]
-  end
-
 end

@@ -36,7 +36,8 @@ Rails.application.routes.draw do
     resources :back_calls
     resources :product_questions
     resources :banners
-    resources :form_requests 
+    resources :form_requests
+    resources :orders 
   end
 
 

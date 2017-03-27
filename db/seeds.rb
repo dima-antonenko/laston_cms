@@ -88,4 +88,7 @@ BackCall.destroy_all
 30.times do |i|
   BackCall.create(product_id: Product.last.id, phone: "8-800-555-35-35-#{i}")
 end
+
 =end
+
+Order.create(customer_name: "Олег", customer_email: "1@mail.ru", customer_phone: "+7 123-456-78", customer_city: "Москва", total_price: 1000)

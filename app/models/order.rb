@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
 
   validates :customer_name, presence: true
   validates :customer_phone, presence: true
-  validates :customer_sity, presence: true
+  validates :customer_city, presence: true
 
 
 
