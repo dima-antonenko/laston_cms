@@ -1,0 +1,62 @@
+<div id="page_heading">
+    <h1 id="product_edit_name">Заказ № <%= @order.id %></h1>
+    <span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">Дата создания: <%= @order.created_at %></span>
+</div>
+<div id="page_content_inner">
+    <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
+        <div class="uk-width-xLarge-10-10  uk-width-large-10-10">
+            <h3 class="heading_b uk-margin-bottom">Информация о покупателе</h3>
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-overflow-container uk-margin-bottom">
+
+                        <% if @order.size_type == 0 %>
+                          <p><span class="uk-text-bold">Тип заказа: </span> Обычный заказ</p>
+                          <p><span class="uk-text-bold">Имя: </span> <%= @order.customer_name %></p>
+                          <p><span class="uk-text-bold">Телефон: </span> <%= @order.customer_phone %></p>
+                          <p><span class="uk-text-bold">Email: </span> <%= @order.customer_email %></p>
+                          <p><span class="uk-text-bold">Город: </span> <%= @order.customer_city %></p>
+                          <p><span class="uk-text-bold">Адрес: </span> <%= @order.customer_address %></p>
+                          <p><span class="uk-text-bold">Финальная стоимость: </span> <%= @order.total_price %> р.</p>
+                        <% else %>
+                          <p><span class="uk-text-bold">Тип заказа: </span> Заказ в один клик</p>
+                          <p><span class="uk-text-bold">Телефон: </span> <%= @order.customer_phone %></p>
+                        <% end %>
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <h3 class="heading_b uk-margin-bottom">Содержимое заказа</h3>
+            <div class="md-card">
+                <div class="md-card-content">
+                    <div class="uk-overflow-container uk-margin-bottom">
+                        <table class="uk-table uk-table-nowrap uk-table-hover" id="ts_pager_filter">
+                            <thead>
+                                <tr>
+                                    <th class="uk-text-center">id</th>
+                                    <th class="uk-text-center">Название</th>
+                                    <th class="uk-text-center">Цена за единицу</th>
+                                    <th class="uk-text-center">Количество</th>
+                                    <th class="uk-text-center">Окончательная цена</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% @products.each do |product| %>
+                                <tr>
+                                    <td class="uk-text-center"><%= product.id %></td>
+                                    <td class="uk-text-center"><%= link_to product.name, product_path(product) %></td>
+                                    <td class="uk-text-center"><%= product.price %> р.</td>
+                                    <td class="uk-text-center"> 1 </td>
+                                    <td class="uk-text-center"> 200 р. </td>
+                                </tr>
+                                <% end %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

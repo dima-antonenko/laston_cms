@@ -91,4 +91,9 @@ end
 
 =end
 
-Order.create(customer_name: "Олег", customer_email: "1@mail.ru", customer_phone: "+7 123-456-78", customer_city: "Москва", total_price: 1000)
+Order.destroy_all
+
+30.times do |i|
+  Order.create(customer_name: "Олег", customer_email: "1@mail.ru", customer_phone: "+7 123-456-00-#{i}", customer_city: "Москва",
+   total_price: 1000, customer_address: "ул. Солнечная, дом 11, кв. 5")
+end

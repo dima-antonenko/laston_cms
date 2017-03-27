@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327063327) do
+ActiveRecord::Schema.define(version: 20170327073250) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,14 +129,16 @@ ActiveRecord::Schema.define(version: 20170327063327) do
   add_index "menus", ["name"], name: "index_menus_on_name", using: :btree
 
   create_table "orders", force: :cascade do |t|
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "customer_name",  default: "", null: false
-    t.string   "customer_email", default: "", null: false
-    t.string   "customer_phone", default: "", null: false
-    t.string   "customer_city",  default: "", null: false
-    t.integer  "total_price",    default: 0,  null: false
-    t.json     "products_data",  default: {}, null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "customer_name",    default: "", null: false
+    t.string   "customer_email",   default: "", null: false
+    t.string   "customer_phone",   default: "", null: false
+    t.string   "customer_city",    default: "", null: false
+    t.integer  "total_price",      default: 0,  null: false
+    t.json     "products_data",    default: {}, null: false
+    t.string   "customer_address", default: "", null: false
+    t.integer  "size_type",        default: 0,  null: false
   end
 
   create_table "pages", force: :cascade do |t|
