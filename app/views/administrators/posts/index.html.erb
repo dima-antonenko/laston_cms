@@ -1,5 +1,15 @@
 <div id="page_content_inner">
     <h3 class="heading_b uk-margin-bottom">Записи</h3>
+    <% if @posts.size == 0 %>
+    <div class="md-card">
+        <div class="md-card-content">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-1-1">
+                <center> Отсутствуют элементы для отображения </center></div>
+            </div>
+        </div>
+    </div>
+    <% else %>
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
         <div class="uk-width-xLarge-10-10  uk-width-large-10-10">
             <div class="md-card">
@@ -28,9 +38,8 @@
                                     
                                     <td class="uk-text-center"><%= post.created_at.to_date %></td>
                                     <td class="uk-text-center"><%= post.updated_at.to_date %></td>
-
                                     <td class="uk-text-center">
-                                    <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_post_path(post)%>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_post_path(post)%>
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_post_path(post), method: :delete %>
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, post_path(post) %>
                                     </td>
@@ -38,6 +47,9 @@
                                 <% end %>
                             </tbody>
                         </table>
+                    </div>
+                    <div class="will_paginate_plugin uk-text-center">
+                        <%= will_paginate @posts %>
                     </div>
                 </div>
             </div>
@@ -48,5 +60,5 @@
             </div>
         </div>
     </div>
-    
+    <% end %>
 </div>
