@@ -5,7 +5,7 @@ class Administrators::ProductQuestionsController < AdministratorsController
 
 
   def index
-    @product_questions = ProductQuestion.all
+    @product_questions = ProductQuestion.all.paginate(:page => params[:page], :per_page => 20)
   end
 
   def show

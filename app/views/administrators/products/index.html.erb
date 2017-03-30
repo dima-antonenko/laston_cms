@@ -1,5 +1,16 @@
 <div id="page_content_inner">
 <h3 class="heading_b uk-margin-bottom">Товары</h3>
+<% if @products.size == 0 %>
+    <div class="md-card">
+        <div class="md-card-content">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-1-1">
+                <center> Отсутствуют элементы для отображения </center></div>
+            </div>
+        </div>
+    </div>
+    <% else %>
+
     <%= form_tag({controller: "products", action: "checked"}, method: "post", class: "uk-form-stacked", id: "product_edit_form", :multipart => true) do %>
     <div class="md-card uk-margin-medium-bottom">
         <div class="md-card-content">
@@ -83,5 +94,6 @@
     <div class="md-fab-wrapper">
     <a class="md-btn md-btn-success" href="/administrators/products/new/">Добавить товар</a>
 </div>
+<% end %>
 <% end %>
 </div>

@@ -1,5 +1,15 @@
 <div id="page_content_inner">
     <h3 class="heading_b uk-margin-bottom">Категории товаров</h3>
+    <% if @product_categories.size == 0 %>
+    <div class="md-card">
+        <div class="md-card-content">
+            <div class="uk-grid" data-uk-grid-margin>
+                <div class="uk-width-1-1">
+                <center> Отсутствуют элементы для отображения </center></div>
+            </div>
+        </div>
+    </div>
+    <% else %>
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
         <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
             <div class="md-card">
@@ -65,5 +75,7 @@
                 </div>
             </div>
         </div>
-        
+   
+    <% end %>     
     </div>
+
