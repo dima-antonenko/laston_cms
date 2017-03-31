@@ -2,20 +2,18 @@ class Cart < ActiveRecord::Base
   has_many :line_items
 
   def add_product(product_id)
-    current_item = line_items.find_by(product_id: product_id)
-    if current_item
-      current_item.quantity += 1
-    else
-      current_item = line_items.build(product_id: product_id)
-    end
-    current_item
+    Site::SCart::AddProduct.new(product_id, self).main
+  end
+
+  def delete_item(line_item_id)
+    Site::SCart::DeleteItem.new(line_item_id, self).main
+  end
+
+  def delete_cart
+    Site::SCart::DeleteCart.new(self).main
   end
 
   def total_price
     line_items.to_a.sum { |item| item.total_price }
-  end
-
-  def delete_product(product_id)
-    Line_item.find(product_id).destroy
   end
 end

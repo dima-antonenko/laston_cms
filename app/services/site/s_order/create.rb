@@ -26,7 +26,7 @@ module Site
         @order.customer_name  = @order_params[:customer_name]
         @order.customer_email = @order_params[:customer_email]
         @order.customer_phone = @order_params[:customer_phone]
-        @order.customer_sity  = @order_params[:customer_sity]
+        @order.customer_city  = @order_params[:customer_city]
         @order.total_price    = @cart.total_price      
       end
 

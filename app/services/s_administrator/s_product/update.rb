@@ -29,6 +29,8 @@ module SAdministrator
         @product.description         = @params[:product][:description]
         @product.avatar              = @params[:product][:avatar]
         @product.slug                = @params[:product][:slug]
+        @product.stock               = @params[:product][:stock]
+        @product.qty                 = @params[:product][:qty]
       end
 
       def set_attachments
