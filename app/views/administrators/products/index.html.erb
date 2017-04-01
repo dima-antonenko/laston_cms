@@ -23,6 +23,8 @@
                             <th>Название</th>
                             <th>Категория</th>
                             <th>Цена</th>
+                            <th>Количество</th>
+                            <th>Наличие</th>
                             <th>Создан</th>
                             <th>Обновлен</th>
                             <th class="uk-text-center">Публикация</th>
@@ -41,6 +43,8 @@
                             <%= get_product_category_name(product) %>
                         </td>
                         <td><%= product.price %> р.</td>
+                        <td><%= product.qty %> </td>
+                        <td><%= check_mark(product.stock) %></td>
                         <td><%= product.created_at.to_date %></td>
                         <td><%= product.updated_at.to_date %></td>
                         <td class="uk-text-center"><%= check_mark(product.active) %></td>

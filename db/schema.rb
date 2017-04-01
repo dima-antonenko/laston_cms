@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327124817) do
+ActiveRecord::Schema.define(version: 20170331075013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(version: 20170327124817) do
     t.integer "quantity",      default: 1
     t.integer "order_id"
     t.string  "product_name"
-    t.string  "product_sku"
     t.string  "product_price"
+    t.integer "total_price",   default: 0, null: false
   end
 
   add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
@@ -248,6 +248,8 @@ ActiveRecord::Schema.define(version: 20170327124817) do
     t.text     "meta_description"
     t.text     "meta_keywords"
     t.string   "gallery",             default: [],                array: true
+    t.integer  "qty",                 default: 1,    null: false
+    t.boolean  "stock",               default: true, null: false
   end
 
   add_index "products", ["avatar"], name: "index_products_on_avatar", using: :btree

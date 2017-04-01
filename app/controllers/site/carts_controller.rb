@@ -19,8 +19,7 @@ class Site::CartsController < SiteController
 
   def destroy
     if @cart.id == session[:cart_id]
-      LineItem.where(cart_id: @cart.id).destroy_all
-      @cart.destroy
+      @cart.delete_cart
       session[:cart_id] = nil
     end
     redirect_to '/'

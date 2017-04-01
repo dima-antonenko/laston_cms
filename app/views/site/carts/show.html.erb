@@ -1,20 +1,23 @@
-<br/>
-<%= flash[:notice]  %>
-<br/>
+<h2>This is cart page</h2>
+
+<% @cart.line_items.each do |item| %>
+	<%= item.product.name %> -- <%= item.product.price %>р. x <%= item.quantity %><br/>
+<% end %>
+тотал: <%= @cart.total_price %>
 <hr/>
 <% @cart.line_items.each do |item| %>
-	<%= item.product.name %> x <%= item.quantity %><br/>
+  <%= item.attributes.collect{|attribute| [attribute]} %> <%= link_to "Удалить".html_safe, line_item_path(item), method: :delete %><br/>
 <% end %>
 <hr/>
-тотал: <%= @cart.total_price %>
-<br/>
 <%= form_for @order do |f| %>
 	<%= f.text_field :customer_name, placeholder: "name" %><br/>
 	<%= f.text_field :customer_email, placeholder: "email" %><br/>
 	<%= f.text_field :customer_phone, placeholder: "phone" %><br/>
-	<%= f.text_area :customer_sity, placeholder: "sity" %><br/>
+	<%= f.text_area :customer_city, placeholder: "sity" %><br/>
 	
 	<%= f.submit "create_order" %>
 <% end %>
 
-<%= link_to "destroy_cart", cart_path(@cart)  %>
+<%= link_to "destroy_cart", cart_path(@cart), method: :delete  %>
+
+ <%= @cart.line_items.collect{|item| [item.product_id]} %>

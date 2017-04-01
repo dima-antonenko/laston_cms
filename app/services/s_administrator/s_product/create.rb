@@ -13,7 +13,7 @@ module SAdministrator
           return @product
         else
           false
-        end    
+        end
       end
 
 
@@ -28,7 +28,9 @@ module SAdministrator
         @product.description         = @params[:product][:description]
         @product.avatar              = @params[:product][:avatar]
         @product.slug                = @params[:product][:slug]
-      end   
+        @product.stock               = @params[:product][:stock]
+        @product.qty                 = @params[:product][:qty]
+      end
 
     end
   end

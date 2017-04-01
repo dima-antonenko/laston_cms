@@ -1,18 +1,19 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <%# stylesheet_link_tag 'site', media: 'all' %>
+    <%= stylesheet_link_tag 'site', media: 'all' %>
     <%= csrf_meta_tags %>
   </head>
   <body>
     <ul>
-      <li><a href="/products/1">Категория Товара</li>
-      <li><a href="/products/1">Товар</li>
-      <li><a href="/products/1">Категория записи</li>
-      <li><a href="/products/1">Запись</li>
-      <li><a href="/products/1">Статичная страница</li>
+      <li><a href="/products/1">Категория Товара</a></li>
+      <li><a href="/products/1">Товар</a></li>
+      <li><a href="/products/1">Категория записи</a></li>
+      <li><a href="/products/1">Запись</a></li>
+      <li><a href="/products/1">Статичная страница</a></li>
     </ul>
     <hr/>
     <%= yield %>
+    <%=  javascript_include_tag 'site' %>
   </body>
 </html>
