@@ -3,19 +3,8 @@ class Order < ActiveRecord::Base
 
   validates :customer_name, presence: true
   validates :customer_phone, presence: true
-  validates :customer_city, presence: true
 
 
 
-  def add_line_items_from_cart(cart)
-    cart.line_items.each do |item|
-      item.cart_id = nil
-      line_items << item
-    end
-  end
-
-  def insert_params_data(order)
-    @order = Order.find(id)
-  end
-
+  
 end

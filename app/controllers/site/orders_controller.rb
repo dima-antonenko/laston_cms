@@ -1,19 +1,19 @@
 class Site::OrdersController < SiteController
   include CurrentCart
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart, only: [:create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
 
   def create
-    respond = Site::SOrder::Create.new(params, @cart).main
+    result = Site::SOrder::Create.new(params, @cart).main
     respond_to do |format|
-      if respond[:status] == :success
-       format.html { redirect_to root_path, notice: 'Спасибо за Ваш заказ' }
-       session[:cart_id] = nil
+      if result
+        session[:cart_id] = nil
+        format.html { redirect_to order_path(result), notice: 'Спасибо за Ваш заказ' }
       else
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
-    end 
+    end
   end
 
   def show
@@ -22,7 +22,8 @@ class Site::OrdersController < SiteController
 
 
   private
-  # Use callbacks to share common setup or constraints between actions.
+
+
   def set_order
     @order = Order.find(params[:id])
   end
