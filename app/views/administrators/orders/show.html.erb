@@ -21,6 +21,7 @@
                         <% else %>
                           <p><span class="uk-text-bold">Тип заказа: </span> Заказ в один клик</p>
                           <p><span class="uk-text-bold">Телефон: </span> <%= @order.customer_phone %></p>
+                          <p><span class="uk-text-bold">Финальная стоимость: </span> <%= @order.total_price %> р.</p>
                         <% end %>
 
                     </div>

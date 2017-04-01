@@ -1,9 +1,16 @@
 <h2>This is  product page</h2>
-
 <% @product.attributes.each do |attribute| %>
-  <%= attribute %><br/>
-<% end %>  
-
+<%= attribute %><br/>
+<% end %>
+<hr/>
+<%= button_to 'Купить', line_items_path(product_id: @product), { id: "button-cart", class: "button"} %>
 <hr/>
 
-<%= button_to 'Купить', line_items_path(product_id: @product), { id: "button-cart", class: "button"} %>
+
+<%= form_tag('/orders/create_quick') do %>
+
+  <%= text_field_tag 'customer_phone', 'Номер телефона'  %>
+  <%= hidden_field_tag 'product_id', @product.id %>
+  <%= submit_tag 'Save' %>
+
+<% end %>

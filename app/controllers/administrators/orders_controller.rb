@@ -3,10 +3,11 @@ class Administrators::OrdersController < AdministratorsController
   before_action :set_order, only: [:show, :destroy]
 
   def index
-    @orders = Order.all.order(:created_at).paginate(:page => params[:page], :per_page => 20)
+    @orders = Order.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
+
   end
 
   def destroy

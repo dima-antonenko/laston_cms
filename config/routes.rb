@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  match "/orders/create_quick" => "site/orders#create_quick", via: [:post]
+
   namespace :administrators do
     resources :products
     resources :product_attacments

@@ -21,6 +21,18 @@ class Site::OrdersController < SiteController
   end
 
 
+  def create_quick
+    result = Site::SOrder::CreateQuick.new(params).main
+    respond_to do |format|
+      if result
+        format.html { redirect_to order_path(result), notice: 'Спасибо за Ваш заказ' }
+      else
+        format.html { redirect_to :back, notice: 'Произошла ошибка' }
+      end
+    end
+  end
+
+
   private
 
 

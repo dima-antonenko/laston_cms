@@ -21,7 +21,6 @@
                                     <th>id</th>
                                     <th class="uk-text-center">Имя покупателя</th>
                                     <th class="uk-text-center">Телефон</th>
-                                    <th class="uk-text-center">Кол-во товаров</th>
                                     <th class="uk-text-center">Общая стоимость</th>
                                     <th class="uk-text-center">Дата создания</th>
                                     <th class="uk-text-center">Удалить</th>
@@ -31,9 +30,11 @@
                                 <% @orders.each do |order| %>
                                 <tr>
                                     <td><%= order.id %></td>
-                                    <td class="uk-text-center"><%= link_to order.customer_name, administrators_order_path(order) %></td>
+                                    <td class="uk-text-center">
+                                    <%= link_to order.customer_name, administrators_order_path(order) if order.customer_name != "" %>
+                                    <%= link_to "Заказ в один клик", administrators_order_path(order) if order.customer_name == "" %>    
+                                    </td>
                                     <td class="uk-text-center"><%= order.customer_phone %></td>
-                                    <td class="uk-text-center"><%= "6" %></td>
                                     <td class="uk-text-center"><%= order.total_price %> р.</td>
                                     <td class="uk-text-center"><%= order.created_at %></td>
                                     <td class="uk-text-center">
