@@ -10,7 +10,7 @@
                 <div class="md-card-content">
                     <div class="uk-overflow-container uk-margin-bottom">
 
-                        <% if @order.size_type == 0 %>
+                        <% if @order.normal_order? %>
                           <p><span class="uk-text-bold">Тип заказа: </span> Обычный заказ</p>
                           <p><span class="uk-text-bold">Имя: </span> <%= @order.customer_name %></p>
                           <p><span class="uk-text-bold">Телефон: </span> <%= @order.customer_phone %></p>
@@ -34,7 +34,7 @@
                         <table class="uk-table uk-table-nowrap uk-table-hover" id="ts_pager_filter">
                             <thead>
                                 <tr>
-                                    <th class="uk-text-center">id</th>
+                                    <th class="uk-text-center">Артикул</th>
                                     <th class="uk-text-center">Название</th>
                                     <th class="uk-text-center">Цена за единицу</th>
                                     <th class="uk-text-center">Количество</th>
@@ -42,13 +42,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <% @products.each do |product| %>
+                                <% @order.line_items.each do |line_item| %>
                                 <tr>
-                                    <td class="uk-text-center"><%= product.id %></td>
-                                    <td class="uk-text-center"><%= link_to product.name, product_path(product) %></td>
-                                    <td class="uk-text-center"><%= product.price %> р.</td>
-                                    <td class="uk-text-center"> 1 </td>
-                                    <td class="uk-text-center"> 200 р. </td>
+                                    <td class="uk-text-center"><%= line_item.id %></td>
+                                    <td class="uk-text-center"><%= link_to line_item.product_name, product_path(line_item.product_id) %></td>
+                                    <td class="uk-text-center"><%= line_item.product_price %> р.</td>
+                                    <td class="uk-text-center"> <%= line_item.quantity %> </td>
+                                    <td class="uk-text-center"><%= line_item.total_price %> р </td>
                                 </tr>
                                 <% end %>
                             </tbody>

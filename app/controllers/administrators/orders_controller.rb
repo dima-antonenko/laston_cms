@@ -7,7 +7,6 @@ class Administrators::OrdersController < AdministratorsController
   end
 
   def show
-    @products = Product.all.limit(3)
   end
 
   def destroy

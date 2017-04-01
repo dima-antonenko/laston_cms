@@ -40,6 +40,7 @@ module Site
         @cart.destroy
       end
 
+      
 
 
     end
