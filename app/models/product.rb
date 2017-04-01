@@ -9,8 +9,8 @@ class Product < ActiveRecord::Base
   attr_accessor :checked_products, :checked_action
 
   has_many :product_attacments
-
   has_many :line_items
+  has_many :product_questions
 
 
   validates :name, presence: true

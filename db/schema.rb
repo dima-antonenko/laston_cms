@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401061721) do
+ActiveRecord::Schema.define(version: 20170401112309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -217,17 +217,13 @@ ActiveRecord::Schema.define(version: 20170401061721) do
     t.string   "phone"
     t.text     "text"
     t.string   "product_id"
-    t.string   "product_name"
-    t.string   "product_sku"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_index "product_questions", ["name"], name: "index_product_questions_on_name", using: :btree
   add_index "product_questions", ["phone"], name: "index_product_questions_on_phone", using: :btree
   add_index "product_questions", ["product_id"], name: "index_product_questions_on_product_id", using: :btree
-  add_index "product_questions", ["product_name"], name: "index_product_questions_on_product_name", using: :btree
-  add_index "product_questions", ["product_sku"], name: "index_product_questions_on_product_sku", using: :btree
   add_index "product_questions", ["text"], name: "index_product_questions_on_text", using: :btree
 
   create_table "products", force: :cascade do |t|

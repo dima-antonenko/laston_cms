@@ -100,10 +100,20 @@ Order.destroy_all
   Order.create(customer_name: "Олег", customer_email: "1@mail.ru", customer_phone: "+7 123-456-00-#{i}", customer_city: "Москва",
    total_price: 1000, customer_address: "ул. Солнечная, дом 11, кв. 5")
 end
-=end
+
 
 FormRequest.destroy_all
 
 30.times do |i|
   FormRequest.create(name: "Олег", phone: "+7 123-456-00-#{i}", text: "Здесь текст заявки")
 end
+
+=end
+
+
+
+ProductQuestion.destroy_all
+
+10.times do |i|
+  ProductQuestion.create(name: "Олег", phone: "8-800-555-35-35", product_id: Product.first.id, text: "Здесь текст вопроса")
+end  
