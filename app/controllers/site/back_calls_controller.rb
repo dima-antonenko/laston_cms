@@ -1,9 +1,13 @@
 class Site::BackCallsController < SiteController
 
   def create
-  	notice = Site::SBackCall::Create.new(params).main
+    result = Site::SBackCall::Create.new(params).main
     respond_to do |format|
-     format.html { redirect_to :back, notice: notice }
+      if result
+        format.html { redirect_to :back, notice: "Заявка отправлена" }
+      else
+        format.html { redirect_to :back, notice: "Произошла ошибка" }
+      end  
     end
   end
 

@@ -18,6 +18,7 @@
                         <table class="uk-table uk-table-nowrap uk-table-hover" id="ts_pager_filter">
                             <thead>
                                 <tr>
+                                    <th class="uk-text-center">id</th>
                                     <th class="uk-text-center">Имя</th>
                                     <th class="uk-text-center">Телефон</th>
                                     <th class="uk-text-center">Дата создания</th>
@@ -27,6 +28,7 @@
                             <tbody>
                                 <% @form_requests.each do |item| %>
                                 <tr>
+                                    <td class="uk-text-center"><%= item.id %></td>
                                     <td class="uk-text-center"><%= item.name %></td>
                                     <td class="uk-text-center"><%= item.phone %></td>
                                     <td class="uk-text-center"><%= item.created_at %></td>
