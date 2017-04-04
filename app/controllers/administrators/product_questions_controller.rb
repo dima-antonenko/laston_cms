@@ -9,7 +9,7 @@ class Administrators::ProductQuestionsController < AdministratorsController
   end
 
   def show
-    
+    @product = @product_question.product
   end
 
   def destroy

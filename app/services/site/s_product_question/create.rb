@@ -3,42 +3,20 @@ module Site
     class Create
 
       def initialize(params)
-        @product_id      = params[:product_question][:product_id]
-        @question_params = params[:product_question]
+        @product = Product.find(params[:product_question][:product_id]) rescue nil
+        @product_question_params = params[:product_question]
       end
+
 
       def main
-        if check_product
-          set_static
-        else
-          "произошла ошибка"
-        end
-      end
-
-
-      private
-
-
-      def set_static
-        product = Product.friendly.find(@product_id)
-        question = ProductQuestion.new(product_id: product.id, product_sku: product.sku, product_name: product.name,
-          name: @question_params[:name], phone: @question_params[:phone], text: @question_params[:text])
-        if question.save
-          "Информация сохранена"
-        else
-          "Произошла ошибка, заполнены не все поля"
-        end  
-      end
-
-      def check_product
-        if Product.friendly.find(@product_id)
-          true
+        if @product != nil and @product.active
+          product_question = ProductQuestion.create(product_id: @product.id, name: @product_question_params[:name],
+                                                    phone: @product_question_params[:phone], text: @product_question_params[:text])
+          product_question.save ? product_question : false
         else
           false
         end
       end
-
-      
 
     end
   end
