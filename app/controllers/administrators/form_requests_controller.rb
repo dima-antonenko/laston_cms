@@ -5,7 +5,7 @@ class Administrators::FormRequestsController < AdministratorsController
 
 
   def index
-    @form_requests = FormRequest.all.paginate(:page => params[:page], :per_page => 20)
+    @form_requests = FormRequest.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
   end
 
   def show

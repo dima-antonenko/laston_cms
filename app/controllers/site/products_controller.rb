@@ -5,6 +5,7 @@ class Site::ProductsController < SiteController
     
     @product_question = ProductQuestion.new
     @back_call = BackCall.new
+    @form_request = FormRequest.new
 	end
 
 end

@@ -3,35 +3,15 @@ module Site
     class Create
 
       def initialize(params)
-        @params = params[:form_request]
-        @form_request = FormRequest.new
+        @form_request_params = params[:form_request]
       end
+
 
       def main
-        set_static
-        check_save
+        form_request = FormRequest.create( name: @form_request_params[:name], email: @form_request_params[:email],
+                                           phone: @form_request_params[:phone], text: @form_request_params[:text])
+        form_request.save ? form_request : false
       end
-
-
-      private
-
-
-      def set_static
-        @form_request.name  = @params[:name]
-        @form_request.email = @params[:email]
-        @form_request.phone = @params[:phone]
-        @form_request.text  = @params[:text]
-      end
-
-      def check_save
-        if @form_request.save
-          'Спасибо, ваш запрос сохранен'
-        else
-          'Произошла ошибка'
-        end
-      end
-
-      
 
     end
   end
