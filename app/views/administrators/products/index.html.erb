@@ -33,7 +33,7 @@
                     </thead>
                        <tbody>
                         <% @products.each do |product| %>
-                        <tr>
+                        <tr class="item<%= product.id %>">
                             <td> <!-- <input type="checkbox" data-md-icheck class="ts_checkbox"> -->
                             <%= check_box_tag "checked_products[]", product.id, false,{ class: "check_row", "data-md-icheck" => true}  %>
                         </td>
@@ -50,7 +50,7 @@
                         <td class="uk-text-center"><%= check_mark(product.active) %></td>
                         <td class="uk-text-center">
                             <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_product_path(product)%>
-                            <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_product_path(product), method: :delete %>
+                            <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_product_path(product), method: :delete, remote: true %>
                             <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, product_path(product) %>
                            
                         </td>
