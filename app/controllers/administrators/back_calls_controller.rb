@@ -12,6 +12,7 @@ class Administrators::BackCallsController < AdministratorsController
   def destroy
     @back_call.destroy
     respond_to do |format|
+      format.js {render js: "crud_ui.destroy_list_item(#{@back_call.id});"}
       format.html { redirect_to :back, notice: 'Заявка удалена' }
     end
   end

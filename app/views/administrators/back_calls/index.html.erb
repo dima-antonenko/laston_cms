@@ -17,13 +17,13 @@
                             </thead>
                             <tbody>
                                 <% @back_calls.each do |item| %>
-                                <tr>
+                                <tr class="item<%= item.id %>">
                                     <td><%= item.id %></td>
                                     <td class="uk-text-center"><%= "Название товара" %></td>
                                     <td class="uk-text-center"><%= item.product_id %></td>
                                     <td class="uk-text-center"><%= item.phone %></td>
                                     <td class="uk-text-center"><%= item.created_at %></td>
-                                    <td class="uk-text-center"><%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_back_call_path(item), method: :delete %></td>
+                                    <td class="uk-text-center"><%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_back_call_path(item), method: :delete, remote: true, data: {confirm: "Удалить запись ?"} %></td>
                                 </tr>
                                 <% end %>
                             </tbody>
