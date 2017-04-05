@@ -28,7 +28,7 @@
                             </thead>
                             <tbody>
                                 <% @orders.each do |order| %>
-                                <tr>
+                                <tr class="item<%= order.id %>">
                                     <td><%= order.id %></td>
                                     <td class="uk-text-center">
                                     <%= link_to order.customer_name, administrators_order_path(order) if order.customer_name != "" %>
@@ -39,7 +39,7 @@
                                     <td class="uk-text-center"><%= order.created_at %></td>
                                     <td class="uk-text-center">
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, administrators_order_path(order) %>
-                                        <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_order_path(order), method: :delete %>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_order_path(order), method: :delete, remote: true,  data: { confirm: "удалить запись ?"} %>
                                     </td>
                                 </tr>
                                 <% end %>

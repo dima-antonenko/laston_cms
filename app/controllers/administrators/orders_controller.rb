@@ -13,6 +13,7 @@ class Administrators::OrdersController < AdministratorsController
   def destroy
     @order.destroy
     respond_to do |format|
+      format.js {render js: "crud_ui.destroy_list_item(#{@order.id});"}
       format.html { redirect_to administrators_orders_path, notice: 'Заказ удален' }
     end
   end
