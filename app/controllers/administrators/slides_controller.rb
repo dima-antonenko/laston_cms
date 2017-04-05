@@ -10,7 +10,8 @@ class Administrators::SlidesController < AdministratorsController
   def destroy
     @slide.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Слайд удален' }
+      format.html { redirect_to edit_administrators_slider_path(@slide.slider_id), notice: 'Слайд удален' }
+      format.js {render js: "crud_ui.destroy_list_item(#{@slide.id});"}
     end
   end
 
@@ -26,6 +27,7 @@ class Administrators::SlidesController < AdministratorsController
         format.html { redirect_to edit_administrators_slide_path(@slide), notice: 'Слайд обновлен' }
       else
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
+        format.js {render js: "crud_ui.failed_update();"}
       end  
     end
   end
@@ -34,9 +36,11 @@ class Administrators::SlidesController < AdministratorsController
     @slide.update(slide_params)
     respond_to do |format|
       if @slide.save
+        format.js {render js: "crud_ui.succes_update();"}
         format.html { redirect_to :back, notice: 'Слайд обновлен' }
       else
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
+        format.js {render js: "crud_ui.failed_update();"}
       end  
     end
   end

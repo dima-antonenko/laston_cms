@@ -2,7 +2,7 @@
     <h1 id="product_edit_name"><%= @slide.name %></h1>
 </div>
 <div id="page_content_inner">
-    <%= form_for([:administrators, @slide], class: "uk-form-stacked",  :multipart => true ) do |f| %>
+    <%= form_for([:administrators, @slide], class: "uk-form-stacked", remote: true, authenticity_token: true, :multipart => true ) do |f| %>
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
         <div class="uk-width-xLarge-7-10  uk-width-large-7-10">
             
@@ -45,6 +45,7 @@
         </div>
         <div class="md-fab-wrapper">
             <a class="md-btn" href="<%= edit_administrators_slider_path(@slide.slider_id) %>">Назад</a>
+            <%= link_to "Удалить".html_safe, administrators_slide_path(@slide), method: :delete, data: { confirm: "удалить слайд ?"}, class: "md-btn md-btn-danger" %>
             <%= f.submit(class: "md-btn md-btn-success", value: "Обновить") %>
             <% end %>
         </div>
