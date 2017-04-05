@@ -28,7 +28,7 @@
                             </thead>
                             <tbody>
                                 <% @posts.each do |post| %>
-                                <tr>
+                                <tr class="item<%= post.id %>">
                                     <td><%= post.id %></td>
                                     <td><%= link_to post.name, edit_administrators_post_path(post) %></td>
                                     <td class="uk-text-center">
@@ -40,7 +40,7 @@
                                     <td class="uk-text-center"><%= post.updated_at.to_date %></td>
                                     <td class="uk-text-center">
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_post_path(post)%>
-                                        <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_post_path(post), method: :delete %>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_post_path(post), method: :delete,remote: true, data: { confirm: "удалить запись ?"} %>
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, post_path(post) %>
                                     </td>
                                 </tr>

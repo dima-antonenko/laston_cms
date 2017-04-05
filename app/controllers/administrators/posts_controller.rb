@@ -19,6 +19,7 @@ class Administrators::PostsController < AdministratorsController
       if @post.save
         format.html { redirect_to edit_administrators_post_path(@post), notice: 'Запись сохранена' }
       else
+        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end
@@ -28,8 +29,10 @@ class Administrators::PostsController < AdministratorsController
     @post.update(post_params)
     respond_to do |format|
       if @post.save
+        format.js {render js: "crud_ui.succes_update();"}
         format.html { redirect_to edit_administrators_post_path(@post), notice: 'Информация сохранена' }
       else
+        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to edit_administrators_post_path(@post), notice: 'Произошла ошибка' }
       end
     end
@@ -42,7 +45,8 @@ class Administrators::PostsController < AdministratorsController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to '/administrators/posts', notice: 'Запись удалена' }
+      format.js {render js: "crud_ui.destroy_list_item(#{@post.id});"}
+      format.html { redirect_to administrators_posts_path, notice: 'Запись удалена' }
     end
   end
 
