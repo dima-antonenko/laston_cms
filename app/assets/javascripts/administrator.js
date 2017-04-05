@@ -5,7 +5,7 @@ crud_ui = {
   succes_update: function() {
   	console.log("succes_update");
     UIkit.notify({
-      message: 'Товар обновлен',
+      message: 'Запись обновлена',
       status: 'success',
       timeout: 2000,
       pos: 'top-right'

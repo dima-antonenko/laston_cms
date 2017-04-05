@@ -2,7 +2,7 @@
     <h1 id="product_edit_name"><%= @product_category.name %></h1>
 </div>
 <div id="page_content_inner">
-    <%= form_for([:administrators, @product_category], class: "uk-form-stacked", id: "product_edit_form", :multipart => true ) do |f| %>
+    <%= form_for([:administrators, @product_category], class: "uk-form-stacked", id: "product_edit_form", :multipart => true, remote: true, authenticity_token: true ) do |f| %>
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
         <div class="uk-width-xLarge-7-10  uk-width-large-7-10">
             <div class="md-card">
@@ -78,6 +78,7 @@
         </div>
         <div class="md-fab-wrapper">
             <a class="md-btn" href="/administrators/product_categories">Назад</a>
+            <%= link_to "Удалить".html_safe, administrators_product_category_path(@product_category), method: :delete,data: { confirm: "удалить категорию ?"}, class: "md-btn md-btn-danger" %>
             <%= f.submit(class: "md-btn md-btn-success", value: "Обновить") %>
         </div>
     </div>

@@ -30,8 +30,10 @@ class Administrators::ProductCategoriesController < AdministratorsController
     @product_category.update(product_category_params)
     respond_to do |format|
       if @product_category.save
+        format.js {render js: "crud_ui.succes_update();"}
         format.html { redirect_to edit_administrators_product_category_path(@product_category), notice: 'Информация сохранена' }
       else
+        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to edit_administrators_product_category_path(@product_category), notice: 'Произошла ошибка' }
       end
     end
@@ -44,7 +46,8 @@ class Administrators::ProductCategoriesController < AdministratorsController
   def destroy
     @product_category.destroy
     respond_to do |format|
-      format.html { redirect_to :back, notice: 'Категория удалена' }
+      format.html { redirect_to administrators_product_categories_path, notice: 'Категория удалена' }
+      format.js {render js: "crud_ui.destroy_list_item(#{@product_category.id});"}
     end
   end
 
