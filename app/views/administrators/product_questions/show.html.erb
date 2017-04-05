@@ -21,9 +21,9 @@
             <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-overflow-container uk-margin-bottom">
-                          <p><span class="uk-text-bold">Имя: </span> <%= link_to @product.name, product_path(@product) %></p>
-                          <p><span class="uk-text-bold">Цена: </span> <%= @product.price %> р.</p>
-                          <p><span class="uk-text-bold">Категория: </span> <%= @product.product_category.name %></p>            
+                          <p><span class="uk-text-bold">Имя: </span> <%= link_to @product_question.product.name, product_path(@product_question.product) %></p>
+                          <p><span class="uk-text-bold">Цена: </span> <%= @product_question.product.price %> р.</p>
+                          <p><span class="uk-text-bold">Категория: </span> <%= @product_question.product.product_category.name if @product_question.product.product_category %></p>            
                     </div>
                 </div>
             </div>

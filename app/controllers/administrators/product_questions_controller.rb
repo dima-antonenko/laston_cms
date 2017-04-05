@@ -9,12 +9,13 @@ class Administrators::ProductQuestionsController < AdministratorsController
   end
 
   def show
-    @product = @product_question.product
+ 
   end
 
   def destroy
     @product_question.destroy
     respond_to do |format|
+      format.js {render js: "crud_ui.destroy_list_item(#{@product_question.id});"}
       format.html { redirect_to :back, notice: 'Вопрос удален' }
     end
   end

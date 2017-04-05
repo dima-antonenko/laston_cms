@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  
   extend FriendlyId
   friendly_id :slug, use: :slugged
 
@@ -9,8 +10,8 @@ class Product < ActiveRecord::Base
   attr_accessor :checked_products, :checked_action
 
   has_many :product_attacments
-  has_many :line_items
-  has_many :product_questions
+  has_many :line_items, dependent: :destroy
+  has_many :product_questions, dependent: :destroy
 
 
   validates :name, presence: true

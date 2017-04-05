@@ -29,7 +29,7 @@
                             </thead>
                             <tbody>
                                 <% @product_questions.each do |question| %>
-                                <tr>
+                                <tr class="item<%= question.id %>">
                                     <td class="uk-text-center"><%= question.id %></td>
                                     <td class="uk-text-center"><%= question.product.id %></td>
                                     <td class="uk-text-center"><%= question.product.name %></td>
@@ -39,7 +39,7 @@
                                     
                                     <td class="uk-text-center">
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, administrators_product_question_path(question) %>
-                                        <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_product_question_path(question), method: :delete %>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_product_question_path(question), method: :delete, remote: true, data: {confirm: "Удалить запись? "} %>
                                     </td>
                                 </tr>
                                 <% end %>
