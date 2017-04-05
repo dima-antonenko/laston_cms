@@ -36,6 +36,7 @@ class Administrators::ProductsController < AdministratorsController
       if result
         format.html { redirect_to edit_administrators_product_path(result), notice: 'Товар создан' }
       else
+        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end
