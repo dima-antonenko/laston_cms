@@ -16,9 +16,10 @@ class Administrators::ProductsController < AdministratorsController
     result = SAdministrator::SProduct::Update.new(@product, params).main
     respond_to do |format|
       if result
+        format.html { redirect_to :back, notice: 'Товар обновлен' }
         format.js {render js: "crud_ui.succes_update();"}
       else
-        format.js {render js: "crud_ui.failed_update();"}
+        format.html { redirect_to edit_administrators_product_path(result), notice: 'Произошла ошибка' }
       end
     end
   end
@@ -42,7 +43,8 @@ class Administrators::ProductsController < AdministratorsController
   def destroy
     @product.destroy
     respond_to do |format|
-     format.js {render js: "crud_ui.destroy_list_item(#{@product.id});"}
+      format.html { redirect_to administrators_products_path, notice: "товар удален" }
+      format.js {render js: "crud_ui.destroy_list_item(#{@product.id});"}
     end
   end
 

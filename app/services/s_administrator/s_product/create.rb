@@ -4,7 +4,7 @@ module SAdministrator
 
       def initialize(params)
         @product = Product.new
-        @params  = params
+        @params  = params[:product]
       end
 
       def main
@@ -21,15 +21,15 @@ module SAdministrator
 
 
       def set_static
-        @product.active              = @params[:product][:active].to_i
-        @product.name                = @params[:product][:name]
-        @product.product_category_id = @params[:product][:product_category_id].to_i
-        @product.price               = @params[:product][:price].to_i
-        @product.description         = @params[:product][:description]
-        @product.avatar              = @params[:product][:avatar]
-        @product.slug                = @params[:product][:slug]
-        @product.stock               = @params[:product][:stock]
-        @product.qty                 = @params[:product][:qty]
+        @product.active              = @params[:active].to_i
+        @product.name                = @params[:name]
+        @product.product_category_id = @params[:product_category_id].to_i
+        @product.price               = @params[:price].to_i
+        @product.description         = @params[:description]
+        @product.avatar              = @params[:avatar]
+        @product.slug                = @params[:slug]
+        @product.stock               = @params[:stock]
+        @product.qty                 = @params[:qty]
       end
 
     end

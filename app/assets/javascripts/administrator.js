@@ -3,10 +3,11 @@
 
 crud_ui = {
   succes_update: function() {
+  	console.log("succes_update");
     UIkit.notify({
       message: 'Товар обновлен',
       status: 'success',
-      timeout: 1000,
+      timeout: 2000,
       pos: 'top-right'
     });
   },
@@ -15,7 +16,7 @@ crud_ui = {
     UIkit.notify({
       message: 'Произошла ошибка',
       status: 'danger',
-      timeout: 1000,
+      timeout: 2000,
       pos: 'top-right'
     });
   },
@@ -23,7 +24,6 @@ crud_ui = {
   destroy_list_item: function(item_id) {
     element = ".item" + item_id;
     $(element).remove();
-    console.log(item_id);
   } 
 
 };
