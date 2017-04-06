@@ -13,9 +13,9 @@ class Administrators::SiteVariablesController < AdministratorsController
     @site_variable.update(site_variable_params)
     respond_to do |format|
       if @site_variable.save
-        format.html { redirect_to edit_administrators_site_variable_path(@site_variable), notice: 'Информация сохранена' }
+        format.js {render js: "crud_ui.succes_update();"}
       else
-        format.html { redirect_to edit_administrators_site_variable_path(@site_variable), notice: 'Произошла ошибка' }
+        format.js {render js: "crud_ui.failed_update();"}
       end
     end
   end
