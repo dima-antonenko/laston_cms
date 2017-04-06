@@ -1,7 +1,7 @@
 class Administrators::PagesController < AdministratorsController
 
 
-  before_action :set_page, only: [:edit, :update, :destroy]
+  before_action :set_page, only: [:edit, :update]
 
 
   def index
@@ -13,9 +13,9 @@ class Administrators::PagesController < AdministratorsController
     @page.update(page_params)
     respond_to do |format|
       if @page.save
-        format.html { redirect_to edit_administrators_page_path(@page), notice: 'Информация сохранена' }
+        format.js {render js: "crud_ui.succes_update();"}
       else
-        format.html { redirect_to edit_administrators_page_path(@page), notice: 'Произошла ошибка' }
+        format.js {render js: "crud_ui.failed_update();"}
       end
     end
   end
