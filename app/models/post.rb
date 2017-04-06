@@ -10,4 +10,6 @@ class Post < ActiveRecord::Base
   validates :content, presence: true, length: { minimum: 10 }
   validates :lead, presence: true
 
+  validates_uniqueness_of :slug
+
 end

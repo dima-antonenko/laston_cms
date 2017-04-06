@@ -18,5 +18,7 @@ class Product < ActiveRecord::Base
   validates :price, presence: true
   validates :product_category_id, presence: true
 
+  validates_uniqueness_of :slug
+
 
 end

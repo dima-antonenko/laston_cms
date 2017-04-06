@@ -12,4 +12,6 @@ class PostCategory < ActiveRecord::Base
   validates :name, presence: true
   validates :post_category_id, presence: true
 
+  validates_uniqueness_of :slug
+  
 end
