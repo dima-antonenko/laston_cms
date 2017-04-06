@@ -9665,3 +9665,398 @@ Processing by Administrators::ProductCategoriesController#index as HTML
   Rendered layouts/administrator/_header.html.erb (0.1ms)
   Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
 Completed 200 OK in 144ms (Views: 95.5ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/administrators/menus" for 127.0.0.1 at 2017-04-06 10:12:36 +0300
+Processing by Administrators::MenusController#index as HTML
+  [1m[36mAdministrator Load (1.8ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenu Load (182.0ms)[0m  SELECT "menus".* FROM "menus"
+  [1m[36m (39.1ms)[0m  [1mSELECT COUNT(*) FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 3]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "menu_items" WHERE "menu_items"."menu_id" = $1  [["menu_id", 4]]
+  Rendered administrators/menus/index.html.erb within layouts/administrator (312.0ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 389ms (Views: 101.5ms | ActiveRecord: 258.8ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-06 10:12:38 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenu Load (0.5ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 19]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 20]]
+  [1m[35mMenuItem Load (0.5ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 21]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 22]]
+  [1m[35mMenuItem Load (3.1ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1  ORDER BY "menu_items"."position" ASC  [["menu_id", 3]]
+  [1m[36mMenuItem Load (2.7ms)[0m  [1mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (40.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 59.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-06 10:14:09 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mAdministrator Load (1.7ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mMenu Load (6.3ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mMenuItem Load (0.7ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  ORDER BY "menu_items"."position" ASC  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.4ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 19]]
+  [1m[35mMenuItem Load (1.5ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 20]]
+  [1m[36mMenuItem Load (0.4ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 21]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 22]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1  ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3]]
+  [1m[35mMenuItem Load (0.6ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 22]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (24.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 43.8ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-06 10:14:43 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenu Load (0.5ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 19]]
+  [1m[36mMenuItem Load (0.3ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 20]]
+  [1m[35mMenuItem Load (0.5ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 21]]
+  [1m[36mMenuItem Load (0.4ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 22]]
+  [1m[35mMenuItem Load (0.8ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1  ORDER BY "menu_items"."position" ASC  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (22.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 31.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-06 10:15:46 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mAdministrator Load (0.3ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mMenu Load (0.5ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mMenuItem Load (0.7ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  ORDER BY "menu_items"."position" ASC  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.3ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 19]]
+  [1m[35mMenuItem Load (0.3ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 20]]
+  [1m[36mMenuItem Load (0.3ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 21]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 22]]
+  [1m[36mMenuItem Load (2.2ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1  ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3]]
+  [1m[35mMenuItem Load (1.2ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 22]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (29.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 36.2ms | ActiveRecord: 13.3ms)
+
+
+Started DELETE "/administrators/menu_items/22" for 127.0.0.1 at 2017-04-06 10:15:51 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mAdministrator Load (0.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.8ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mMenuItem Load (0.3ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 22]]
+  [1m[36mMenuItem Load (0.2ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 23]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "menu_items" WHERE "menu_items"."id" = $1  [["id", 23]]
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 22]]
+  [1m[35m (22.6ms)[0m  COMMIT
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 25.5ms)
+
+
+Started DELETE "/administrators/menu_items/21" for 127.0.0.1 at 2017-04-06 10:15:54 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"21"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.7ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 21]]
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 21]]
+  [1m[35m (18.9ms)[0m  COMMIT
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/administrators/menu_items/20/edit" for 127.0.0.1 at 2017-04-06 10:15:55 +0300
+Processing by Administrators::MenuItemsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mMenu Load (0.5ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mMenuItem Load (1.2ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (1.7ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 19]]
+  [1m[35mMenuItem Load (1.3ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 20]]
+  Rendered administrators/menu_items/edit.html.erb within layouts/administrator (166.0ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 5.6ms)
+
+NameError - undefined local variable or method `get_patent_menu_items_list' for #<#<Class:0x007feaf9fa4100>:0x007feaf9fa2be8>
+Did you mean?  get_paret_menu_item:
+  app/views/administrators/menu_items/edit.html.erb:49:in `block in _app_views_administrators_menu_items_edit_html_erb__582540237313803247_70323596494280'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:38:in `block in capture'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:202:in `with_output_buffer'
+  actionview (4.2.3) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  actionview (4.2.3) lib/action_view/helpers/form_helper.rb:444:in `form_for'
+  app/views/administrators/menu_items/edit.html.erb:6:in `_app_views_administrators_menu_items_edit_html_erb__582540237313803247_70323596494280'
+  actionview (4.2.3) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.3) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.3) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.3) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.3) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.3) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:115:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:553:in `block (2 levels) in compile'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:503:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  bullet (5.0.0) lib/bullet/rack.rb:10:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/afdd04e8f9331324/variables" for 127.0.0.1 at 2017-04-06 10:15:56 +0300
+
+
+Started POST "/__better_errors/afdd04e8f9331324/variables" for 127.0.0.1 at 2017-04-06 10:16:01 +0300
+
+
+Started GET "/administrators/menu_items/20/edit" for 127.0.0.1 at 2017-04-06 10:18:39 +0300
+Processing by Administrators::MenuItemsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.3ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1mSELECT "menu_items".* FROM "menu_items"[0m
+  [1m[35mMenu Load (0.4ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mMenuItem Load (0.4ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2[0m  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 19]]
+  [1m[36mMenuItem Load (0.3ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 20]]
+  Rendered administrators/menu_items/edit.html.erb within layouts/administrator (47.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 136ms (Views: 63.3ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/administrators/menu_items/20/edit" for 127.0.0.1 at 2017-04-06 10:19:27 +0300
+Processing by Administrators::MenuItemsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mAdministrator Load (2.8ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35mMenuItem Load (1.7ms)[0m  SELECT "menu_items".* FROM "menu_items"
+  [1m[36mMenu Load (1.0ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mMenuItem Load (1.7ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.4ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 19]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 20]]
+  Rendered administrators/menu_items/edit.html.erb within layouts/administrator (27.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 37.3ms | ActiveRecord: 17.9ms)
+
+
+Started PATCH "/administrators/menu_items/20" for 127.0.0.1 at 2017-04-06 10:19:29 +0300
+Processing by Administrators::MenuItemsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EN4KbuobQz8FW6AjUu8fEwoEkVNpPyzuXISk5f8D/8AmKXmC5qHT32XK5e27UHtZsRgdZhJq3iUMyCJzCXgT2Q==", "menu_item"=>{"title"=>"Контакты", "url"=>"/contacts", "menu_item_id"=>"0", "position"=>"2"}, "commit"=>"Обновить", "id"=>"20"}
+  [1m[36mAdministrator Load (0.8ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (1.0ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started PATCH "/administrators/menu_items/20" for 127.0.0.1 at 2017-04-06 10:19:33 +0300
+Processing by Administrators::MenuItemsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EN4KbuobQz8FW6AjUu8fEwoEkVNpPyzuXISk5f8D/8AmKXmC5qHT32XK5e27UHtZsRgdZhJq3iUMyCJzCXgT2Q==", "menu_item"=>{"title"=>"", "url"=>"/contacts", "menu_item_id"=>"0", "position"=>"2"}, "commit"=>"Обновить", "id"=>"20"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (2.2ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (1.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 4.3ms)
+
+
+Started PATCH "/administrators/menu_items/20" for 127.0.0.1 at 2017-04-06 10:19:34 +0300
+Processing by Administrators::MenuItemsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EN4KbuobQz8FW6AjUu8fEwoEkVNpPyzuXISk5f8D/8AmKXmC5qHT32XK5e27UHtZsRgdZhJq3iUMyCJzCXgT2Q==", "menu_item"=>{"title"=>"", "url"=>"/contacts", "menu_item_id"=>"0", "position"=>"2"}, "commit"=>"Обновить", "id"=>"20"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35m (5.1ms)[0m  ROLLBACK
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 6.9ms)
+
+
+Started PATCH "/administrators/menu_items/20" for 127.0.0.1 at 2017-04-06 10:19:42 +0300
+Processing by Administrators::MenuItemsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EN4KbuobQz8FW6AjUu8fEwoEkVNpPyzuXISk5f8D/8AmKXmC5qHT32XK5e27UHtZsRgdZhJq3iUMyCJzCXgT2Q==", "menu_item"=>{"title"=>"Контакты", "url"=>"/contacts", "menu_item_id"=>"0", "position"=>"2"}, "commit"=>"Обновить", "id"=>"20"}
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/administrators/menu_items/20" for 127.0.0.1 at 2017-04-06 10:20:40 +0300
+Processing by Administrators::MenuItemsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EN4KbuobQz8FW6AjUu8fEwoEkVNpPyzuXISk5f8D/8AmKXmC5qHT32XK5e27UHtZsRgdZhJq3iUMyCJzCXgT2Q==", "menu_item"=>{"title"=>"Контакты", "url"=>"/contacts", "menu_item_id"=>"0", "position"=>"2"}, "commit"=>"Обновить", "id"=>"20"}
+  [1m[36mAdministrator Load (0.6ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.7ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.9ms)
+
+
+Started PATCH "/administrators/menu_items/20" for 127.0.0.1 at 2017-04-06 10:21:45 +0300
+Processing by Administrators::MenuItemsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EN4KbuobQz8FW6AjUu8fEwoEkVNpPyzuXISk5f8D/8AmKXmC5qHT32XK5e27UHtZsRgdZhJq3iUMyCJzCXgT2Q==", "menu_item"=>{"title"=>"Контакты", "url"=>"/contacts", "menu_item_id"=>"0", "position"=>"2"}, "commit"=>"Обновить", "id"=>"20"}
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-06 10:21:46 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenu Load (0.3ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[35mMenuItem Load (0.3ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 19]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 20]]
+  [1m[35mMenuItem Load (0.8ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1  ORDER BY "menu_items"."position" ASC  [["menu_id", 3]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (19.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 39.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/administrators/menu_items/20/edit" for 127.0.0.1 at 2017-04-06 10:22:38 +0300
+Processing by Administrators::MenuItemsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mAdministrator Load (0.8ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mMenuItem Load (2.3ms)[0m  SELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1  [["id", 20]]
+  [1m[36mMenuItem Load (1.3ms)[0m  [1mSELECT "menu_items".* FROM "menu_items"[0m
+  [1m[35mMenu Load (5.8ms)[0m  SELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mMenuItem Load (2.2ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2[0m  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[35mMenuItem Load (0.4ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1  [["menu_item_id", 19]]
+  [1m[36mMenuItem Load (0.3ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 20]]
+  Rendered administrators/menu_items/edit.html.erb within layouts/administrator (20.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 29.2ms | ActiveRecord: 13.2ms)
+
+
+Started DELETE "/administrators/menu_items/20" for 127.0.0.1 at 2017-04-06 10:22:41 +0300
+Processing by Administrators::MenuItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"olqIEllke1PB1V5AQKXAbtR++tT6Ub4xXy46WMZeJciUrfv+Vd7rs6FEG46pGqQkb2J24YEETPoPYrzOMCXJ0Q==", "id"=>"20"}
+  [1m[35mAdministrator Load (0.8ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mMenuItem Load (1.1ms)[0m  [1mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mMenuItem Load (0.4ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 20]]
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "menu_items" WHERE "menu_items"."id" = $1  [["id", 20]]
+  [1m[36m (37.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/menus/3/edit
+Completed 302 Found in 51ms (ActiveRecord: 41.4ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-06 10:22:41 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mMenu Load (0.4ms)[0m  [1mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mMenuItem Load (1.9ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2  ORDER BY "menu_items"."position" ASC  [["menu_id", 3], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 19]]
+  [1m[35mMenuItem Load (0.6ms)[0m  SELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1  ORDER BY "menu_items"."position" ASC  [["menu_id", 3]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (6.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 24.9ms | ActiveRecord: 3.8ms)

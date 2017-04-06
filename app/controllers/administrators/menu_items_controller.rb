@@ -5,15 +5,16 @@ class Administrators::MenuItemsController < AdministratorsController
 
   def edit
     @parent_menu_parent_items = MenuItem.where(menu_id: @menu_item.menu_id, menu_item_id: 0)
+    @patent_menu_items_list =  MenuItem.all.collect {|item| [item.title, item.id ]} << ['Родитель', 0]
   end
 
   def update
     result = SAdministrator::SMenuItem::Update.new(@menu_item, params).main
     respond_to do |format|
       if result
-        format.html { redirect_to :back, notice: 'Информация обновлена' }
+        format.js {render js: "crud_ui.succes_update();"}
       else
-        format.html { redirect_to :back, notice: 'Произошла ошибка' }
+        format.js {render js: "crud_ui.failed_update();"}
       end
     end
   end
@@ -37,7 +38,8 @@ class Administrators::MenuItemsController < AdministratorsController
   def destroy
     @menu_item.destroy
     respond_to do |format|
-      format.html { redirect_to edit_administrators_menu_path(@menu_item.menu_id), notice: 'Пункт меню удален' }
+      format.html { redirect_to edit_administrators_menu_path(@menu_item.menu_id), notice: 'Элемент удален' }
+      format.js {render js: "crud_ui.destroy_list_item(#{@menu_item.id});"}
     end
   end
 
