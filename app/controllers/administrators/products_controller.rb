@@ -4,7 +4,7 @@ class Administrators::ProductsController < AdministratorsController
 
   def index
     @actions = [['Удалить', 0], ['Опубликовать', 1], ['Снять с публикации', 2]]
-    @products = Product.order(:name).paginate(:page => params[:page], :per_page => 20)
+    @products = Product.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
   end
 
   def edit
@@ -36,7 +36,6 @@ class Administrators::ProductsController < AdministratorsController
       if result
         format.html { redirect_to edit_administrators_product_path(result), notice: 'Товар создан' }
       else
-        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end

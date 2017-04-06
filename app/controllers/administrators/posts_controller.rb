@@ -19,7 +19,6 @@ class Administrators::PostsController < AdministratorsController
       if @post.save
         format.html { redirect_to edit_administrators_post_path(@post), notice: 'Запись сохранена' }
       else
-        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end

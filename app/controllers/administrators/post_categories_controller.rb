@@ -18,8 +18,10 @@ class Administrators::PostCategoriesController < AdministratorsController
     @post_category = PostCategory.new(post_category_params)
     respond_to do |format|
       if @post_category.save
+        format.js {render js: "console.log('zzz');"}
         format.html { redirect_to edit_administrators_post_category_path(@post_category), notice: 'Информация сохранена' }
       else
+        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end
@@ -29,8 +31,10 @@ class Administrators::PostCategoriesController < AdministratorsController
     @post_category.update(post_category_params)
     respond_to do |format|
       if @post_category.save
+        format.js {render js: "crud_ui.succes_update();"}
         format.html { redirect_to edit_administrators_post_category_path(@post_category), notice: 'Информация сохранена' }
       else
+        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to edit_administrators_post_category_path(@post_category), notice: 'Произошла ошибка' }
       end
     end
@@ -43,7 +47,8 @@ class Administrators::PostCategoriesController < AdministratorsController
   def destroy
     @post_category.destroy
     respond_to do |format|
-      format.html { redirect_to '/administrators/post_categories', notice: 'Категория удалена' }
+      format.js {render js: "crud_ui.destroy_list_item(#{@post_category.id});"}
+      format.html { redirect_to administrators_post_categories_path, notice: 'Категория удалена' }
     end
   end
 
