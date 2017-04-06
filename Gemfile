@@ -17,6 +17,7 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'friendly_id', '~> 5.1.0'
 gem 'roo', '~> 2.1.0'
 gem 'simple-spreadsheet'
+gem 'ckeditor'
 
 group :development, :test do
   gem 'byebug'

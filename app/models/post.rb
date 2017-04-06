@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   belongs_to :post_category
 
   validates :name, presence: true
-  validates :content, presence: true
+  validates :content, presence: true, length: { minimum: 10 }
   validates :lead, presence: true
 
 end
