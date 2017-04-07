@@ -30,10 +30,8 @@ class Administrators::ProductCategoriesController < AdministratorsController
     @product_category.update(product_category_params)
     respond_to do |format|
       if @product_category.save
-        format.js {render js: "crud_ui.succes_update();"}
         format.html { redirect_to edit_administrators_product_category_path(@product_category), notice: 'Информация сохранена' }
       else
-        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to edit_administrators_product_category_path(@product_category), notice: 'Произошла ошибка' }
       end
     end

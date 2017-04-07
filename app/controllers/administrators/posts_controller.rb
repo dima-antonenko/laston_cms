@@ -28,10 +28,8 @@ class Administrators::PostsController < AdministratorsController
     @post.update(post_params)
     respond_to do |format|
       if @post.save
-        format.js {render js: "crud_ui.succes_update();"}
         format.html { redirect_to edit_administrators_post_path(@post), notice: 'Информация сохранена' }
       else
-        format.js {render js: "crud_ui.failed_update();"}
         format.html { redirect_to edit_administrators_post_path(@post), notice: 'Произошла ошибка' }
       end
     end

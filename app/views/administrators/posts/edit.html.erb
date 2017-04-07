@@ -3,7 +3,7 @@
     <span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">редактирование записи ленты новостей</span>
 </div>
 <div id="page_content_inner">
-    <%= form_for([:administrators, @post], class: "uk-form-stacked", :multipart => true, remote: true, authenticity_token: true ) do |f| %>
+    <%= form_for([:administrators, @post], class: "uk-form-stacked", :multipart => true ) do |f| %>
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
         <div class="uk-width-xLarge-7-10  uk-width-large-7-10">
             <div class="md-card">

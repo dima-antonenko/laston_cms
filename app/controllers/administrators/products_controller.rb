@@ -17,10 +17,8 @@ class Administrators::ProductsController < AdministratorsController
     respond_to do |format|
       if result
         format.html { redirect_to :back, notice: 'Товар обновлен' }
-        format.js {render js: "crud_ui.succes_update();"}
       else
-        format.html { redirect_to edit_administrators_product_path(result), notice: 'Произошла ошибка' }
-        format.js {render js: "crud_ui.failed_update();"}
+        format.html { redirect_to :back, notice: 'Произошла ошибка' }
       end
     end
   end

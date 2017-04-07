@@ -27,10 +27,15 @@ module SAdministrator
         @product.product_category_id = @params[:product][:product_category_id].to_i
         @product.price               = @params[:product][:price].to_i
         @product.description         = @params[:product][:description]
+        @product.short_description   = @params[:product][:short_description]
         @product.avatar              = @params[:product][:avatar]
         @product.slug                = @params[:product][:slug]
         @product.stock               = @params[:product][:stock]
         @product.qty                 = @params[:product][:qty]
+
+        @product.meta_title          = @params[:product][:meta_title]
+        @product.meta_description    = @params[:product][:meta_description]
+        @product.meta_keywords       = @params[:product][:meta_keywords]
       end
 
       def set_attachments

@@ -26,6 +26,7 @@ module SAdministrator
         @product.product_category_id = @params[:product_category_id].to_i
         @product.price               = @params[:price].to_i
         @product.description         = @params[:description]
+        @product.short_description   = @params[:short_description]
         @product.avatar              = @params[:avatar]
         @product.slug                = @params[:slug]
         @product.stock               = @params[:stock]
