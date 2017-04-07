@@ -31,6 +31,10 @@ module SAdministrator
         @product.slug                = @params[:slug]
         @product.stock               = @params[:stock]
         @product.qty                 = @params[:qty]
+
+        @product.meta_title          = @params[:meta_title]
+        @product.meta_description    = @params[:meta_description]
+        @product.meta_keywords       = @params[:meta_keywords]
       end
 
     end

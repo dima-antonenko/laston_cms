@@ -19250,3 +19250,409 @@ Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 1
 
 
 Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:01:11 +0300
+
+
+Started GET "/administrators/products/new" for 127.0.0.1 at 2017-04-07 10:06:35 +0300
+Processing by Administrators::ProductsController#new as HTML
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProductCategory Load (4.8ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendered administrators/products/new.html.erb within layouts/administrator (18.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 65.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:06:37 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:06:37 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:06:37 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:06:37 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:06:38 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:06:38 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:06:38 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:06:38 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:06:38 +0300
+
+
+Started GET "/administrators/products/new" for 127.0.0.1 at 2017-04-07 10:07:00 +0300
+Processing by Administrators::ProductsController#new as HTML
+  [1m[35mAdministrator Load (2.1ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProductCategory Load (8.3ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendered administrators/products/new.html.erb within layouts/administrator (17.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 58.6ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:01 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:07:02 +0300
+
+
+Started POST "/administrators/products" for 127.0.0.1 at 2017-04-07 10:07:33 +0300
+Processing by Administrators::ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nebUZ55HbZp5A/jtA71JCsTm3gkPRXcpiDEKJOPUlKgEZ/hHelNakeBq69aOCG9q7PiNE+n/5qclrkSJR0Pjbg==", "product"=>{"active"=>"1", "stock"=>"1", "name"=>"111", "product_category_id"=>"542", "qty"=>"222", "price"=>"333", "slug"=>"444", "short_description"=>"555", "description"=>"<p>666</p>\r\n", "meta_title"=>"777", "meta_description"=>"888", "meta_keywords"=>"999"}, "commit"=>"Сохранить"}
+  [1m[35mAdministrator Load (0.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mProduct Exists (0.8ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."slug" = '444' LIMIT 1
+  [1m[36mSQL (98.6ms)[0m  [1mINSERT INTO "products" ("name", "product_category_id", "price", "description", "short_description", "avatar", "slug", "qty", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "111"], ["product_category_id", 542], ["price", "333.0"], ["description", "<p>666</p>\r\n"], ["short_description", "555"], ["avatar", nil], ["slug", "444"], ["qty", 222], ["created_at", "2017-04-07 07:07:33.057786"], ["updated_at", "2017-04-07 07:07:33.057786"]]
+  [1m[35m (19.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/products/444/edit
+Completed 302 Found in 139ms (ActiveRecord: 120.1ms)
+
+
+Started GET "/administrators/products/444/edit" for 127.0.0.1 at 2017-04-07 10:07:33 +0300
+Processing by Administrators::ProductsController#edit as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.7ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."slug" = $1  ORDER BY "products"."id" ASC LIMIT 1  [["slug", "444"]]
+  [1m[36mProductCategory Load (0.7ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  [1m[35mProductAttachment Load (0.5ms)[0m  SELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1  [["product_id", 223]]
+  Rendered administrators/products/edit.html.erb within layouts/administrator (10.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 33.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:07:34 +0300
+
+
+Started PATCH "/administrators/products/444" for 127.0.0.1 at 2017-04-07 10:07:53 +0300
+Processing by Administrators::ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XRlSUktsWd4NlGmskk4YsWGSnLSXeCyHKxVmygUQErXEmH5yr3hu1ZT9epcf+z7RSYzPrnHCvQmGiihnoYdlcw==", "product"=>{"active"=>"1", "stock"=>"1", "name"=>"111", "product_category_id"=>"542", "qty"=>"222", "price"=>"333.0", "slug"=>"444", "short_description"=>"555", "description"=>"<p>666</p>\r\n", "meta_title"=>"77", "meta_description"=>"888", "meta_keywords"=>"999"}, "commit"=>"Обновить", "id"=>"444"}
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mProduct Load (0.8ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."slug" = $1  ORDER BY "products"."id" ASC LIMIT 1  [["slug", "444"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mProduct Exists (4.3ms)[0m  SELECT  1 AS one FROM "products" WHERE ("products"."slug" = '444' AND "products"."id" != 223) LIMIT 1
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT 1[0m  [["id", 223]]
+  [1m[35mSQL (0.6ms)[0m  UPDATE "products" SET "avatar" = $1, "meta_title" = $2, "meta_description" = $3, "meta_keywords" = $4, "updated_at" = $5 WHERE "products"."id" = $6  [["avatar", nil], ["meta_title", "77"], ["meta_description", "888"], ["meta_keywords", "999"], ["updated_at", "2017-04-07 07:07:53.401435"], ["id", 223]]
+  [1m[36m (33.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/administrators/products/444/edit
+Completed 302 Found in 63ms (ActiveRecord: 40.3ms)
+
+
+Started GET "/administrators/products/444/edit" for 127.0.0.1 at 2017-04-07 10:07:53 +0300
+Processing by Administrators::ProductsController#edit as HTML
+  Parameters: {"id"=>"444"}
+  [1m[35mAdministrator Load (1.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1  ORDER BY "products"."id" ASC LIMIT 1[0m  [["slug", "444"]]
+  [1m[35mProductCategory Load (0.8ms)[0m  SELECT "product_categories".* FROM "product_categories"
+  [1m[36mProductAttachment Load (0.5ms)[0m  [1mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 223]]
+  Rendered administrators/products/edit.html.erb within layouts/administrator (8.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 30.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:54 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:07:55 +0300
+
+
+Started GET "/administrators/products/" for 127.0.0.1 at 2017-04-07 10:08:05 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[35mAdministrator Load (1.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (3.2ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products"  ORDER BY created_at DESC LIMIT 20 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35mProductCategory Load (0.6ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mProductCategory Load (0.5ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 486]]
+  [1m[36mProductCategory Load (0.4ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 486]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 486]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  Rendered administrators/products/index.html.erb within layouts/administrator (68.0ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 98ms (Views: 84.8ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/administrators/products/new/" for 127.0.0.1 at 2017-04-07 10:08:07 +0300
+Processing by Administrators::ProductsController#new as HTML
+  [1m[35mAdministrator Load (6.2ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProductCategory Load (0.7ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendered administrators/products/new.html.erb within layouts/administrator (17.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 50.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:08 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:08:09 +0300
+
+
+Started POST "/administrators/products" for 127.0.0.1 at 2017-04-07 10:08:18 +0300
+Processing by Administrators::ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6SQz1vldX+h9X3ydrHPHE/x05mi4Pe++xcwIDI0LjYxwpR/2HUlo4+Q2b6YhxuFz1Gq1cl6HfjBoU0ahKZz6Sg==", "product"=>{"active"=>"1", "stock"=>"1", "name"=>"11", "product_category_id"=>"542", "qty"=>"1", "price"=>"11", "slug"=>"", "short_description"=>"", "description"=>"", "meta_title"=>"231123", "meta_description"=>"213123", "meta_keywords"=>"213123"}, "commit"=>"Сохранить"}
+  [1m[35mAdministrator Load (2.6ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mProduct Exists (0.5ms)[0m  SELECT  1 AS one FROM "products" WHERE "products"."slug" = '' LIMIT 1
+  [1m[36m (1.9ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/administrators/products/new/
+Completed 302 Found in 17ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/administrators/products/new/" for 127.0.0.1 at 2017-04-07 10:08:18 +0300
+Processing by Administrators::ProductsController#new as HTML
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProductCategory Load (1.3ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendered administrators/products/new.html.erb within layouts/administrator (5.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 27.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:19 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:19 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:19 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:19 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:08:20 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:08:20 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:08:20 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:20 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:08:20 +0300
+
+
+Started GET "/administrators/products/new/" for 127.0.0.1 at 2017-04-07 10:08:48 +0300
+Processing by Administrators::ProductsController#new as HTML
+  [1m[35mAdministrator Load (0.8ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProductCategory Load (0.7ms)[0m  [1mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendered administrators/products/new.html.erb within layouts/administrator (6.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.4ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 44.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:49 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:08:50 +0300
+
+
+Started GET "/administrators/products/" for 127.0.0.1 at 2017-04-07 10:08:51 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (2.4ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35mProduct Load (1.2ms)[0m  SELECT  "products".* FROM "products"  ORDER BY created_at DESC LIMIT 20 OFFSET 0
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "products"[0m
+  [1m[35mProductCategory Load (5.1ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mProductCategory Load (3.3ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 486]]
+  [1m[36mProductCategory Load (2.2ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 486]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 486]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  Rendered administrators/products/index.html.erb within layouts/administrator (128.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 158ms (Views: 139.9ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/administrators/products/444/edit" for 127.0.0.1 at 2017-04-07 10:08:59 +0300
+Processing by Administrators::ProductsController#edit as HTML
+  Parameters: {"id"=>"444"}
+  [1m[35mAdministrator Load (0.7ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1  ORDER BY "products"."id" ASC LIMIT 1[0m  [["slug", "444"]]
+  [1m[35mProductCategory Load (1.4ms)[0m  SELECT "product_categories".* FROM "product_categories"
+  [1m[36mProductAttachment Load (0.5ms)[0m  [1mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 223]]
+  Rendered administrators/products/edit.html.erb within layouts/administrator (8.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 31.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
