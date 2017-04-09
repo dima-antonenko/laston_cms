@@ -19656,3 +19656,216 @@ Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-07 1
 
 
 Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-07 10:09:00 +0300
+
+
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-07 10:52:04 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[35mAdministrator Load (1.4ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered administrators/dashboard.html.erb within layouts/administrator (0.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-09 08:46:22 +0300
+Processing by Site::StaticPagesController#home as HTML
+  Rendered site/static_pages/home.html.erb within layouts/site (3.4ms)
+Completed 200 OK in 2920ms (Views: 2919.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-04-09 08:46:25 +0300
+
+
+Started GET "/assets/site.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2017-04-09 08:46:25 +0300
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for 127.0.0.1 at 2017-04-09 08:46:25 +0300
+
+
+Started GET "/administrators" for 127.0.0.1 at 2017-04-09 08:46:32 +0300
+
+ActionController::RoutingError (No route matches [GET] "/administrators"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  request_store (1.3.0) lib/request_store/middleware.rb:9:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (17.9ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (28.3ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (335.3ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.6ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (33.7ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (69.5ms)
+
+
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-09 08:46:36 +0300
+Processing by AdministratorsController#dashboard as HTML
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/administrators/sign_in" for 127.0.0.1 at 2017-04-09 08:46:37 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/shared/_links.html.erb (2.4ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/sessions/new.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 491ms (Views: 99.0ms | ActiveRecord: 339.8ms)
+
+
+Started POST "/administrators/sign_in" for 127.0.0.1 at 2017-04-09 08:46:40 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LO2vJdqRALp//m/u+zSzrLVbA806Nj+bbOiUEap8Q2o/MX0m0MeE51og5bLoJ7KhXJQNAvX1GkWy6I8EfKuMbw==", "administrator"=>{"email"=>"1@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mAdministrator Load (44.7ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."email" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["email", "1@mail.ru"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "administrators" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "administrators"."id" = $5[0m  [["last_sign_in_at", "2017-04-07 06:57:24.338703"], ["current_sign_in_at", "2017-04-09 05:46:40.687621"], ["sign_in_count", 12], ["updated_at", "2017-04-09 05:46:40.689088"], ["id", 1]]
+  [1m[35m (8.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/dashboard
+Completed 302 Found in 419ms (ActiveRecord: 54.5ms)
+
+
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-09 08:46:40 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered administrators/dashboard.html.erb within layouts/administrator (0.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.6ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 199ms (Views: 196.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-09 08:48:34 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[35mAdministrator Load (0.5ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered administrators/dashboard.html.erb within layouts/administrator (0.2ms)
+  Rendered layouts/administrator/_header.html.erb (2.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-09 08:48:53 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[36mAdministrator Load (12.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered administrators/dashboard.html.erb within layouts/administrator (0.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.6ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 27.6ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-09 08:49:06 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[35mAdministrator Load (1.9ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered administrators/dashboard.html.erb within layouts/administrator (0.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.6ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 63.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-09 08:50:51 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[36mAdministrator Load (0.5ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered administrators/dashboard.html.erb within layouts/administrator (0.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 53.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/administrators/sign_out" for 127.0.0.1 at 2017-04-09 08:51:01 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8mtYhPHtfJBSpWU/w+ABafmhZudo8uZSK6GHkF46XBD3j+mUX3SyzTl9axNLw6ugoSLO7NbVn4/ogPk01KKNPQ=="}
+  [1m[35mAdministrator Load (0.7ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "administrators" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "administrators"."id" = $3  [["remember_created_at", nil], ["updated_at", "2017-04-09 05:51:01.257054"], ["id", 1]]
+  [1m[36m (40.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 52ms (ActiveRecord: 42.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-09 08:51:01 +0300
+Processing by Site::StaticPagesController#home as HTML
+  Rendered site/static_pages/home.html.erb within layouts/site (0.1ms)
+Completed 200 OK in 19ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-09 08:51:09 +0300
+Processing by Administrators::ProductsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/administrators/sign_in" for 127.0.0.1 at 2017-04-09 08:51:09 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/devise-3.5.4/app/views/devise/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/administrators/sign_in" for 127.0.0.1 at 2017-04-09 08:51:14 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tSTwoWxm0zAIxqQWNGtOX9EsOSR7HOB/qhWZ74qBZkPq8W6aLARSkgGLS6bJLYzxNxWKL/G1827vHPmy+G+p8w==", "administrator"=>{"email"=>"1@mail.ru", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[35mAdministrator Load (1.8ms)[0m  SELECT  "administrators".* FROM "administrators" WHERE "administrators"."email" = $1  ORDER BY "administrators"."id" ASC LIMIT 1  [["email", "1@mail.ru"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "administrators" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "administrators"."id" = $3  [["remember_created_at", "2017-04-09 05:51:14.969268"], ["updated_at", "2017-04-09 05:51:14.970174"], ["id", 1]]
+  [1m[36m (17.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "administrators" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "administrators"."id" = $5[0m  [["last_sign_in_at", "2017-04-09 05:46:40.687621"], ["current_sign_in_at", "2017-04-09 05:51:14.990455"], ["sign_in_count", 13], ["updated_at", "2017-04-09 05:51:14.991716"], ["id", 1]]
+  [1m[35m (7.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/administrators/products
+Completed 302 Found in 198ms (ActiveRecord: 27.5ms)
+
+
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-09 08:51:15 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (0.4ms)[0m  [1mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1  ORDER BY "administrators"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (153.5ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mProduct Load (3.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY created_at DESC LIMIT 20 OFFSET 0[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "products"
+  [1m[36mProductCategory Load (40.2ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 486]]
+  [1m[35mProductCategory Load (0.7ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 486]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 486]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 0]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1[0m  [["id", 542]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = $1 LIMIT 1  [["id", 542]]
+  Rendered administrators/products/index.html.erb within layouts/administrator (439.1ms)
+  Rendered layouts/administrator/_header.html.erb (0.3ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.1ms)
+Completed 200 OK in 556ms (Views: 224.2ms | ActiveRecord: 255.7ms)
