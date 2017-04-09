@@ -5,4 +5,5 @@ class ProductQuestion < ActiveRecord::Base
 	validates :phone, presence: true
 	validates :text, presence: true
 	validates :product_id, presence: true
+  
 end

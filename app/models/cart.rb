@@ -14,7 +14,6 @@ class Cart < ActiveRecord::Base
     Site::SCart::DeleteCart.new(self).main
   end
 
-
   def total_price
     line_items.to_a.sum { |item| item.total_price }
   end
