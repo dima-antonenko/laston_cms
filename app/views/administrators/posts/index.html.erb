@@ -41,7 +41,7 @@
                                     <td class="uk-text-center">
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_post_path(post)%>
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_post_path(post), method: :delete,remote: true, data: { confirm: "удалить запись ?"} %>
-                                        <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, post_path(post) %>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, post_path(post), target: "_blank" %>
                                     </td>
                                 </tr>
                                 <% end %>

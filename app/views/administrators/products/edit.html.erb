@@ -183,7 +183,7 @@
 <div class="md-fab-wrapper">
     <a class="md-btn" href="/administrators/products/">Назад</a>
     <%= link_to "Удалить".html_safe, administrators_product_path(@product), method: :delete,data: { confirm: "удалить товар ?"}, class: "md-btn md-btn-danger" %>
-    <a class="md-btn md-btn-warning" href="<%= product_path(@product) %>">Посмотреть</a>
+    <a class="md-btn md-btn-warning" href="<%= product_path(@product) %>"  target="_blank">Посмотреть</a>
     <%= f.submit(class: "md-btn md-btn-success", value: "Обновить") %>
 </div>
 <% end %>

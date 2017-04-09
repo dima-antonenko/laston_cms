@@ -79,7 +79,7 @@
         <div class="md-fab-wrapper">
             <a class="md-btn" href="/administrators/post_categories/">Назад</a>
             <%= link_to "Удалить".html_safe, administrators_post_category_path(@post_category), method: :delete, class: "md-btn md-btn-danger" %>
-            <a class="md-btn md-btn-warning" href="<%= post_category_path(@post_category) %>">Посмотреть</a>
+            <a class="md-btn md-btn-warning" href="<%= post_category_path(@post_category) %>" target="_blank" >Посмотреть</a>
             <%= f.submit(class: "md-btn md-btn-success", value: "Обновить") %>
         </div>
     </div>

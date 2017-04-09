@@ -82,7 +82,7 @@
         <div class="md-fab-wrapper">
             <a class="md-btn" href="/administrators/posts/">Назад</a>
             <%= link_to "Удалить".html_safe, administrators_post_path(@post), method: :delete, class: "md-btn md-btn-danger", data: {confirm: "Удалить запись ?"} %>
-            <a class="md-btn md-btn-warning" href="<%= post_path(@post) %>">Посмотреть</a>
+            <a class="md-btn md-btn-warning" href="<%= post_path(@post) %>" target="_blank">Посмотреть</a>
             <%= f.submit(class: "md-btn md-btn-success", value: "Обновить") %>
         </div>
     </div>

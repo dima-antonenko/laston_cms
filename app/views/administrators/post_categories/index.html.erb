@@ -59,7 +59,7 @@
                                         
                                         
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_post_category_path(category)%>
-                                        <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, post_category_path(category) %>
+                                        <%= link_to "<i class=\"material-icons md-24\">&#xE88F;</i>".html_safe, post_category_path(category), target: "_blank" %>
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_post_category_path(category), method: :delete, remote: true, data: { confirm: "Удалить категорию ?"} %>
                                     </td>
                                 </tr>
