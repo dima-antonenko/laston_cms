@@ -1,4 +1,5 @@
 class Site::ProductQuestionsController < SiteController
+  
 
   def create
     notice = Site::SProductQuestion::Create.new(params).main

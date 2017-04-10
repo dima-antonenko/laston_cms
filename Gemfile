@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rake', '~> 11.2.2'
-gem 'rails', '4.2.3'
+gem 'rake', '~> 10.4', '>= 10.4.2'
+gem 'rails', github: 'rails/rails', branch: "5-0-stable"
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '~> 2.7', '>= 2.7.2'
 gem 'coffee-rails', '~> 4.1'
@@ -18,14 +18,17 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'roo', '~> 2.1.0'
 gem 'simple-spreadsheet'
 gem 'ckeditor'
+gem 'ruby-growl'
+gem 'pg', '~> 0.18.4'
+gem 'activesupport', '~> 5.0.0'
 
 group :development, :test do
+  gem 'bullet'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'bullet'
   gem "letter_opener"
   gem 'capistrano'
   gem 'capistrano-rails'
@@ -34,7 +37,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '0.15.1'
+  #gem 'pg', '0.15.1'
   gem 'unicorn'
 end
 

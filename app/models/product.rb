@@ -21,4 +21,9 @@ class Product < ActiveRecord::Base
   validates_uniqueness_of :slug
 
 
+  def in_cart?(cart)
+    line_items = cart.line_items
+    this_product = cart.line_items.find_by(product_id: self.id)
+  end
+
 end
