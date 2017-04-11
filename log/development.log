@@ -30273,3 +30273,844 @@ Processing by Administrators::ProductCategoriesController#index as HTML
 Completed 200 OK in 143ms (Views: 77.2ms | ActiveRecord: 33.3ms)
 
 
+Started GET "/product_categories/21312312" for 127.0.0.1 at 2017-04-11 12:55:58 +0300
+
+ActionController::RoutingError - uninitialized constant Site::ProductCategoriesController:
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:46:in `rescue in controller'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:44:in `controller'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:30:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:725:in `call'
+  bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/migration.rb:553:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+Started POST "/__better_errors/b7c73da98126dbe2/variables" for 127.0.0.1 at 2017-04-11 12:55:59 +0300
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-11 12:56:22 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (2.4ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (0.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" IN (542, 486, 0)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (59.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.8ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.6ms)
+Completed 200 OK in 93ms (Views: 83.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 12:56:24 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (3.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (62.7ms)
+Completed 200 OK in 725ms (Views: 582.5ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/assets/site.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-04-11 12:56:25 +0300
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-04-11 12:56:25 +0300
+Started GET "/assets/site.self-75a11da44c802486bc6f65640aa48a730f0f684c5c07a42ba3cd1735eb3fb070.js?body=1" for 127.0.0.1 at 2017-04-11 12:56:25 +0300
+Started POST "/line_items?product_id=444" for 127.0.0.1 at 2017-04-11 12:56:29 +0300
+Processing by Site::LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"3I7aBN8oxSH40uBAeW13OntitJHL062UoIc/KiGB59BM++XOXJ7dR+/1VgX1w71odXsTmKTi6J5l6GIYdi8DLA==", "product_id"=>"444"}
+  [1m[36mCart Load (30.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (23.3ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-04-11 09:56:29 UTC], ["updated_at", 2017-04-11 09:56:29 UTC]]
+  [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 444], ["LIMIT", 1]]
+Redirected to http://localhost:3000/carts/17
+Completed 302 Found in 154ms (ActiveRecord: 78.0ms)
+
+
+Started GET "/carts/17" for 127.0.0.1 at 2017-04-11 12:56:30 +0300
+Processing by Site::CartsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering site/carts/show.html.erb within layouts/site
+  [1m[36mLineItem Load (26.3ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 17]]
+  Rendered site/carts/show.html.erb within layouts/site (78.3ms)
+Completed 200 OK in 149ms (Views: 66.2ms | ActiveRecord: 37.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:01:07 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (5.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (8.1ms)
+Completed 200 OK in 28ms (Views: 16.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/products/assets/data/product-s3-420x512.jpg" for 127.0.0.1 at 2017-04-11 13:01:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-420x512.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (168.6ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (6.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (16.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (356.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_70073165907520 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (131.0ms)
+Started GET "/products/assets/data/product-s3-850x1036.jpg" for 127.0.0.1 at 2017-04-11 13:01:08 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-850x1036.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (109.1ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (5.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (199.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_47177282596600 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.5ms)
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:08:32 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (10.6ms)
+Completed 200 OK in 28ms (Views: 18.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/products/assets/data/product-s3-420x512.jpg" for 127.0.0.1 at 2017-04-11 13:08:32 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-420x512.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (103.5ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (6.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (195.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_70073110233860 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.7ms)
+Started GET "/products/assets/data/product-s3-850x1036.jpg" for 127.0.0.1 at 2017-04-11 13:08:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-850x1036.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (102.9ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (186.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_70073172037800 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (71.6ms)
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:08:45 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (12.4ms)
+Completed 200 OK in 34ms (Views: 24.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products/assets/data/product-s3-420x512.jpg" for 127.0.0.1 at 2017-04-11 13:08:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-420x512.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (96.6ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (3.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (182.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_47177291408960 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.7ms)
+Started GET "/products/assets/data/product-s3-420x512.jpg" for 127.0.0.1 at 2017-04-11 13:08:46 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-420x512.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (115.5ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (5.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (237.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_70073104265260 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.8ms)
+Started GET "/products/assets/data/product-s3-850x1036.jpg" for 127.0.0.1 at 2017-04-11 13:08:47 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-850x1036.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (111.2ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (3.0ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (198.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_47177276795640 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.1ms)
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:09:05 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (27.1ms)
+Completed 200 OK in 43ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/assets/data/product-s3-850x1036.jpg" for 127.0.0.1 at 2017-04-11 13:09:06 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-850x1036.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (106.7ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (3.3ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (196.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_70073100518900 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.0ms)
+Started GET "/products/assets/data/product-s3-850x1036.jpg" for 127.0.0.1 at 2017-04-11 13:09:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/products/assets/data/product-s3-850x1036.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [228 times] (111.0ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (193.0ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb__4056165498936679637_70073115681160 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (31.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (62.7ms)
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:10:13 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (11.3ms)
+Completed 200 OK in 51ms (Views: 40.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:23:09 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (12.5ms)
+  Rendered layouts/site/_header.html.erb (1.9ms)
+Completed 200 OK in 30ms (Views: 21.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:23:47 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (13.5ms)
+  Rendered layouts/site/_header.html.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:27:07 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.1ms)
+  Rendered layouts/site/_header.html.erb (2.1ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:29:04 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.1ms)
+  Rendered layouts/site/_header.html.erb (2.5ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 48.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:29:08 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (1.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (5.1ms)
+  Rendered layouts/site/_header.html.erb (2.2ms)
+  Rendered layouts/site/_header.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 31.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:29:12 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (2.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (3.7ms)
+  Rendered layouts/site/_header.html.erb (1.9ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 28.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:31:27 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.4ms)
+  Rendered layouts/site/_header.html.erb (2.4ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 70.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/site.self-62c385abad6734e74fe69a3af488c9c42ebecdc9291650065198f7c883ae0c51.js?body=1" for 127.0.0.1 at 2017-04-11 13:31:27 +0300
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:31:46 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (7.8ms)
+  Rendered layouts/site/_header.html.erb (6.4ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 62.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:32:59 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (12.2ms)
+  Rendered layouts/site/_header.html.erb (10.2ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 60.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:34:17 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.2ms)
+  Rendered layouts/site/_header.html.erb (1.5ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 54.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:34:41 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (7.0ms)
+  Rendered layouts/site/_header.html.erb (2.2ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 34.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:34:48 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (6.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.1ms)
+  Rendered layouts/site/_header.html.erb (1.3ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 34.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:35:27 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.1ms)
+  Rendered layouts/site/_header.html.erb (0.9ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 24.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:35:48 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (4.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.1ms)
+  Rendered layouts/site/_header.html.erb (0.7ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 43.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:36:08 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (4.4ms)
+  Rendered layouts/site/_header.html.erb (0.8ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 35.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:36:29 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.4ms)
+  Rendered layouts/site/_header.html.erb (0.8ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 22.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/444" for 127.0.0.1 at 2017-04-11 13:36:45 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"444"}
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "444"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  Rendered site/products/show.html.erb within layouts/site (2.7ms)
+  Rendered layouts/site/_header.html.erb (2.8ms)
+  Rendered layouts/site/_header.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 37.1ms | ActiveRecord: 4.4ms)
+
+

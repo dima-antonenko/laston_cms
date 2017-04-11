@@ -1,22 +1,44 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-  111
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/lib/select2/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/lib/jquery.bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/lib/owl.carousel/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/lib/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/lib/fancyBox/jquery.fancybox.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/site_theme/assets/css/responsive.css" />
     <%= stylesheet_link_tag 'site', media: 'all' %>
     <%= csrf_meta_tags %>
-  </head>
-  <body>
-  <%= flash[:notice]  %>
-  <br/>
-    <ul>
-      <li><a href="/products/1">Категория Товара</a></li>
-      <li><a href="/products/1">Товар</a></li>
-      <li><a href="/products/1">Категория записи</a></li>
-      <li><a href="/products/1">Запись</a></li>
-      <li><a href="/products/1">Статичная страница</a></li>
-    </ul>
-    <hr/>
-    <%= yield %>
-    <%=  javascript_include_tag 'site' %>
-  </body>
+    <title>Kute shop</title>
+</head>
+<body class="<%= yield(:class) %>">
+
+<%= render '/layouts/site/header' %>
+<%= yield %>
+<%= render '/layouts/site/header' %>
+
+<a href="#" class="scroll_top" title="Вверх" style="display: inline;">Вверх</a>
+<!-- Script-->
+<script type="text/javascript" src="/site_theme/assets/lib/jquery/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/select2/js/select2.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/jquery.bxslider/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/owl.carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/jquery.countdown/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/jquery.elevatezoom.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/lib/fancyBox/jquery.fancybox.js"></script>
+<script type="text/javascript" src="/site_theme/assets/js/jquery.actual.min.js"></script>
+<script type="text/javascript" src="/site_theme/assets/js/theme-script.js"></script>
+
+<%=  javascript_include_tag 'site' %>
+
+</body>
 </html>
