@@ -20,9 +20,12 @@ gem 'simple-spreadsheet'
 gem 'ckeditor'
 gem 'ruby-growl'
 gem 'pg', '~> 0.18.4'
-gem 'activesupport', '~> 5.0.0'
+gem 'activesupport'
 
 group :development, :test do
+  #gem 'quiet_assets'
+  gem "awesome_print", require:"ap"
+  gem 'meta_request'
   gem 'bullet'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -37,7 +40,6 @@ group :development, :test do
 end
 
 group :production do
-  #gem 'pg', '0.15.1'
   gem 'unicorn'
 end
 

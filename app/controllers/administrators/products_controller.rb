@@ -4,7 +4,7 @@ class Administrators::ProductsController < AdministratorsController
 
   def index
     @actions = [['Удалить', 0], ['Опубликовать', 1], ['Снять с публикации', 2]]
-    @products = Product.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
+    @products = Product.all.order('created_at DESC').includes(:product_category).paginate(:page => params[:page], :per_page => 20)
   end
 
   def edit

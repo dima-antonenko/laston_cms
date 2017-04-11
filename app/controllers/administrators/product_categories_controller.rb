@@ -5,8 +5,7 @@ class Administrators::ProductCategoriesController < AdministratorsController
 
 
   def index
-    @product_categories = ProductCategory.all.order(:name).paginate(:page => params[:page], :per_page => 20)
-    @parent_product_categories = @product_categories.where(product_category_id: 0).order(:name)
+    @product_categories = ProductCategory.includes(:product_category).order(:name).paginate(:page => params[:page], :per_page => 20)
   end
 
   def new

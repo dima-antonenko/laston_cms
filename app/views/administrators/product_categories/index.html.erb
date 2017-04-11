@@ -11,27 +11,8 @@
     </div>
     <% else %>
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
-        <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
-            <div class="md-card">
-                <div class="md-card-content">
-                    <ul>
-                        <% @parent_product_categories.each do |category| %>
-                        <li class="item<%= category.id %>"><%= link_to category.name, edit_administrators_product_category_path(category) %>
-                        <% if category.product_categories %>
-                        <ul>
-                            <% category.product_categories.each do |category| %>
-                            <li class="item<%= category.id %>"><%= link_to category.name, edit_administrators_product_category_path(category) %></li>
-                            <% end %>
-                        </ul>
-                        <% end %>
-                        <% end %>
-                        </li>
-                    </ul>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="uk-width-xLarge-8-10  uk-width-large-7-10">
+
+        <div class="uk-width-xLarge-10-10  uk-width-large-10-10">
             <div class="md-card">
                 <div class="md-card-content">
                     <div class="uk-overflow-container uk-margin-bottom">

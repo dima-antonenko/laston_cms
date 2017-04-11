@@ -5,8 +5,7 @@ class Administrators::PostCategoriesController < AdministratorsController
 
 
   def index
-    @post_categories = PostCategory.all.order(:name).paginate(:page => params[:page], :per_page => 20)
-    @parent_post_categories = PostCategory.where(post_category_id: 0)
+    @post_categories = PostCategory.includes(:post_category).order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
   end
 
   def new

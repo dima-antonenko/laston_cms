@@ -3,7 +3,7 @@ class Administrators::MenusController < AdministratorsController
   include AdministratorMenuHelper	
 
   def index
-    @menus = Menu.all
+    @menus = Menu.includes(:menu_items)
   end
 
   def edit
