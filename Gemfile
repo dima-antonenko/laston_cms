@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rake', '~> 10.4', '>= 10.4.2'
+gem 'rake', '>= 12.0.0'
 gem 'rails', github: 'rails/rails', branch: "5-0-stable"
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '~> 2.7', '>= 2.7.2'

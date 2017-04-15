@@ -11,4 +11,12 @@ class PostAvatarUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [240,240]
   end
   
+  version :page_show do
+    process resize_to_fill: [1170,610]
+  end 
+
+ version :page_show_related_items do
+    process resize_to_fill: [345,243]
+  end  
+
 end

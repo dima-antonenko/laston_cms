@@ -16,13 +16,17 @@
     <link rel="stylesheet" type="text/css" href="/site_theme/assets/css/responsive.css" />
     <%= stylesheet_link_tag 'site', media: 'all' %>
     <%= csrf_meta_tags %>
-    <title>Kute shop</title>
+    <title><%= yield(:seo_title) %></title>
+    <meta name="description" content="<%= yield(:seo_description) %>">
+    <meta name="keywords" content="<%= yield(:seo_keywords) %>">
 </head>
 <body class="<%= yield(:class) %>">
 
+
+
 <%= render '/layouts/site/header' %>
 <%= yield %>
-<%= render '/layouts/site/header' %>
+<%= render '/layouts/site/footer' %>
 
 <a href="#" class="scroll_top" title="Вверх" style="display: inline;">Вверх</a>
 <!-- Script-->
