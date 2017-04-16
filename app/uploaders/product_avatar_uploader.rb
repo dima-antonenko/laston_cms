@@ -12,4 +12,9 @@ class ProductAvatarUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [300,300]
   end
 
+  #страница категории
+  version :page_category do
+    process resize_to_fill: [300,366]
+  end
+
 end

@@ -111,7 +111,7 @@ end
 
 
 
-=end
+
 
 lead_text = "Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel."
 content_text = "Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.
@@ -130,4 +130,55 @@ last_category_id = PostCategory.last.id
     post.avatar = f
   end
   post.save
+end
+
+
+
+
+
+
+
+ProductCategory.destroy_all
+
+10.times do |i|
+  category =  ProductCategory.new(name: "Категория #{i}", description: "this is description", slug:"slug-category-#{i}")
+
+  File.open("public/demo/product_categories/avatar#{rand(1..5)}.jpg") do |f|
+    category.avatar = f
+  end
+  category.save
+end
+
+
+ProductCategory.all.each do |product_category|
+  5.times do |i|
+    category = ProductCategory.new(product_category_id: product_category.id, name: "Категория #{i}",
+                                   description: "this is description", slug: "category-#{i}")
+
+    File.open("public/demo/product_categories/avatar#{rand(1..5)}.jpg") do |f|
+      category.avatar = f
+    end
+    category.save
+  end
+end
+
+
+
+=end
+
+Product.destroy_all
+
+#first_category_id = ProductCategory.first.id
+categories = ProductCategory.all
+
+categories.each do |product_category|
+  4.times do |t|
+    product = Product.new(product_category_id: product_category.id, name: "Товар #{t}", description: "описание", price: t * 100,
+                          slug: "product#{t}", short_description: "zzz")
+    File.open("public/demo/products/avatar#{rand(1..8)}.jpg") do |f|
+      product.avatar = f
+    end
+    product.save
+  end
+
 end

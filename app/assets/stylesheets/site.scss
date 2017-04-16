@@ -1,1 +1,6 @@
 //= require_directory ./site/theme
+
+.product-list li .add-to-cart a {
+  background: none;
+  padding-left: 0;
+}
