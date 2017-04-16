@@ -10,13 +10,23 @@ class PostAvatarUploader < CarrierWave::Uploader::Base
   version :edit_thumb do
     process resize_to_fill: [240,240]
   end
-  
+
   version :page_show do
     process resize_to_fill: [1170,610]
-  end 
+  end
 
- version :page_show_related_items do
+  version :page_show_related_items do
     process resize_to_fill: [345,243]
-  end  
+  end
+
+  #случайные записи на странице категории
+  version :page_category_related_items do
+    process resize_to_fill: [70,49]
+  end
+  
+  #страница категории
+  version :page_category do
+    process resize_to_fill: [345,243]
+  end
 
 end
