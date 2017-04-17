@@ -8,7 +8,7 @@ class Site::BackCallsController < SiteController
       if result
         format.js {render js: "product_ui.success_create_back_call();"}
       else
-        format.js {render js: "crud_ui.failed();"}
+        format.js {render js: "crud_ui.failed_update();"}
       end  
     end
   end

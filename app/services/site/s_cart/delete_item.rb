@@ -21,7 +21,7 @@ module Site
 
 
       def update_product
-        product = Product.find(@line_item.product_id)
+        product = Product.friendly.find(@line_item.product_id)
         product.stock = true if product.qty == 0
         product.qty += @line_item.quantity
         product.save

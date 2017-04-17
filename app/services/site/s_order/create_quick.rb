@@ -8,7 +8,7 @@ module Site
       end
 
       def main
-        if @product != nil and @product.qty > 0 and @product.active and @product.stock and @params[:customer_phone] != nil
+        if @product != nil and @product.qty > 0 and @product.active and @product.stock and @params[:customer_phone].size > 4
           update_product
           create_order
         else

@@ -6,7 +6,7 @@ class Site::FormRequestsController < SiteController
       if result
         format.js {render js: "product_ui.success_create_form_request();"}
       else
-        format.js {render js: "crud_ui.failed();"}
+        format.js {render js: "crud_ui.failed_update();"}
       end
     end
   end

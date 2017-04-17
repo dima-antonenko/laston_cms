@@ -3,15 +3,19 @@ module Site
     class AddProduct
 
       def initialize(product_id, cart)
-        @product = Product.find(product_id) rescue nil
-        @line_items = cart.line_items
+        @product = Product.friendly.find(product_id) rescue nil
         @cart = cart
+        @line_items = @cart.line_items
       end
 
       def main
         if @product != nil and @product.qty > 0 and @product.stock and @product.active
           current_item = @line_items.find_by(product_id: @product.id)
-          current_item ? update_current_line_item(current_item) : add_new_line_item
+          if current_item
+            update_current_line_item(current_item)
+          else
+            add_new_line_item
+          end
           update_product
           current_item
         else

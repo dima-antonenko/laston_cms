@@ -28,7 +28,7 @@ module SAdministrator
         @product.price               = @params[:product][:price].to_i
         @product.description         = @params[:product][:description]
         @product.short_description   = @params[:product][:short_description]
-        @product.avatar              = @params[:product][:avatar]
+        @product.avatar              = @params[:product][:avatar] if @params[:product][:avatar]
         @product.slug                = @params[:product][:slug]
         @product.stock               = @params[:product][:stock]
         @product.qty                 = @params[:product][:qty]

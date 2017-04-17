@@ -7,7 +7,7 @@ class Site::ProductQuestionsController < SiteController
       if result
         format.js {render js: "product_ui.success_create_product_question();"}
       else
-        format.js {render js: "crud_ui.failed();"}
+        format.js {render js: "crud_ui.failed_update();"}
       end
     end
   end

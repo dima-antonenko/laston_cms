@@ -42,6 +42,7 @@
                             </div>
                             <div class="product-desc">
                                 <%= @product.short_description %>
+
                             </div>
                             
                             <div class="form-action buy_area">
@@ -51,8 +52,8 @@
                                 </div>
                                 <div class="col-xs-6 col-sm-6 buy_for_phone">
                                     
-                                    <%= form_tag('/orders/create_quick') do %>
-                                    <%= text_field_tag 'customer_phone', 'Номер телефона', class: 'form-control input', width: 10  %>
+                                    <%= form_tag('/orders/create_quick', remote: true, authenticity_token: true) do %>
+                                    <%= text_field_tag 'customer_phone', '', class: 'form-control input', width: 10, placeholder: "Номер телефона"  %>
                                     <%= hidden_field_tag 'product_id', @product.id %>
                                     <%= submit_tag 'Купить в один клик', class: "btn-add-cart" %>
                                     <% end %>

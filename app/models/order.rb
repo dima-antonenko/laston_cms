@@ -6,6 +6,6 @@ class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
 
 
-  validates :customer_phone, presence: true
-  
+  validates :customer_phone, presence: true, length: { minimum: 5 }
+
 end

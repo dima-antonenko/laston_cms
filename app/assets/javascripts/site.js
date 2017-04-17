@@ -5,11 +5,11 @@
 
 
 crud_ui = {
-  success: function() {
+  success_update: function() {
     $.notify("Запрос отправлен", "success");
   },
 
-  failed: function() {
+  failed_update: function() {
     $.notify("Произошла ошибка", "error");
   }
 };
@@ -26,13 +26,18 @@ product_ui = {
     $('#product_question_phone').val('');
     $('#product_question_text').val('');
   },
+
   success_create_form_request: function() {
   	$.notify("Заявка отправлена", "success");
     $('#form_request_name').val('');
     $('#form_request_email').val('');
     $('#form_request_phone').val('');
     $('#form_request_text').val('');
+  }, 
 
+  success_create_quick_order: function() {
+    $.notify("Заказ отправлен, спасибо", "success");
+    $('#customer_phone').val('');
   }
 };
 
