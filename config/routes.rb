@@ -11,14 +11,23 @@ Rails.application.routes.draw do
 
   scope module: 'site' do
     resources :products, only: [:show]
+
     resources :product_categories, only: [:show]
+
     resources :post_categories, only: [:show]
+
     resources :posts, only: [:show]
+
     resources :back_calls, only: [:create]
+
     resources :product_questions, only: [:create]
+
     resources :form_requests, only: [:create]
+
     resources :carts, only: [:show, :create, :destroy]
+
     resources :line_items, only: [:create, :destroy]
+    
     resources :orders, only: [:create]
   end
 

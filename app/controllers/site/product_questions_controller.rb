@@ -1,10 +1,14 @@
 class Site::ProductQuestionsController < SiteController
-  
+
 
   def create
-    notice = Site::SProductQuestion::Create.new(params).main
+    result = Site::SProductQuestion::Create.new(params).main
     respond_to do |format|
-     format.html { redirect_to :back, notice: notice }
+      if result
+        format.js {render js: "product_ui.success_create_product_question();"}
+      else
+        format.js {render js: "crud_ui.failed();"}
+      end
     end
   end
 

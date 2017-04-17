@@ -1,12 +1,14 @@
 class Site::BackCallsController < SiteController
 
+  respond_to :js
+
   def create
     result = Site::SBackCall::Create.new(params).main
     respond_to do |format|
       if result
-        format.html { redirect_to :back, notice: "Заявка отправлена" }
+        format.js {render js: "product_ui.success_create_back_call();"}
       else
-        format.html { redirect_to :back, notice: "Произошла ошибка" }
+        format.js {render js: "crud_ui.failed();"}
       end  
     end
   end
