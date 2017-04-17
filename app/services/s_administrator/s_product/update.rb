@@ -42,11 +42,7 @@ module SAdministrator
         if @params[:images]
           @params[:images].each do |image|
             ProductAttachment.create(product_id: @product.id, image: image)
-          end
-          attachments = ProductAttachment.where(product_id: @product.id)
-          attachments.each do |attachment|
-            @product.gallery << attachment.image
-          end  
+          end 
         end
       end
 

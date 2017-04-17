@@ -10,16 +10,16 @@ Rails.application.routes.draw do
   match "/administrators/products/checked" => "administrators/products#checked", via: [:get, :post]
 
   scope module: 'site' do
-    resources :products
-    resources :product_categories
-    resources :post_categories
-    resources :posts
-    resources :back_calls
-    resources :product_questions
-    resources :form_requests
-    resources :carts
-    resources :line_items
-    resources :orders
+    resources :products, only: [:show]
+    resources :product_categories, only: [:show]
+    resources :post_categories, only: [:show]
+    resources :posts, only: [:show]
+    resources :back_calls, only: [:create]
+    resources :product_questions, only: [:create]
+    resources :form_requests, only: [:create]
+    resources :carts, only: [:show, :create, :destroy]
+    resources :line_items, only: [:create, :destroy]
+    resources :orders, only: [:create]
   end
 
   match "/orders/create_quick" => "site/orders#create_quick", via: [:post]

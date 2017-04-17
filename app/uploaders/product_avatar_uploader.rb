@@ -17,4 +17,11 @@ class ProductAvatarUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [300,366]
   end
 
+  #страница товара основное изображение
+  version :page_product_main do
+    process resize_to_fill: [420,512]
+  end  
+
+  
+
 end
