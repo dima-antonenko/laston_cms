@@ -46,4 +46,6 @@ product_ui = {
       window.location.href = "/";
     }, 2000);
   }
+
+  
 };
