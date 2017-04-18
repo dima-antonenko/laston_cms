@@ -3,6 +3,7 @@ class Site::CartsController < SiteController
 
   def show
     @order = Order.new
+    @line_items = @cart.line_items.includes(:product)
   end
 
 

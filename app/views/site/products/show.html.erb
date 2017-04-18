@@ -38,7 +38,7 @@
                             <div class="info-orther">
                                 <p>Артикул: <%= @product.id %></p>
                                 <p>Наличие: <%= @product.stock ? "В наличии" : "Под заказ"%></p>
-                                
+                                <p>Количество на складе: <%= @product.qty %></p>
                             </div>
                             <div class="product-desc">
                                 <%= @product.short_description %>

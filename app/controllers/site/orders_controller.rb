@@ -9,9 +9,9 @@ class Site::OrdersController < SiteController
     respond_to do |format|
       if result
         session[:cart_id] = nil
-        format.html { redirect_to order_path(result), notice: 'Спасибо за Ваш заказ' }
+        format.js { render js: "product_ui.success_create_order();" }
       else
-        format.html { redirect_to :back, notice: 'Произошла ошибка' }
+        format.js { render js: "crud_ui.failed_update();" }
       end
     end
   end
