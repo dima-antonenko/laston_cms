@@ -21,37 +21,11 @@ first_category_id = ProductCategory.first.id
 end
 
 
-Menu.destroy_all
-MenuItem.destroy_all
-Menu.create(name: "Главное меню", descriptor: "main_menu")
-Menu.create(name: "Меню в футоре", descriptor: "footer_menu")
-
-MenuItem.create(title: "Главная", menu_id: Menu.first.id, url: '/', position: 1)
-MenuItem.create(title: "Контакты", menu_id: Menu.first.id, url: '/contacts', position: 2)
-MenuItem.create(title: "О Компании", menu_id: Menu.first.id, url: '/about', position: 3)
-MenuItem.create(title: "Тестовая страница", menu_id: Menu.first.id, url: '/', position: 4)
-MenuItem.create(title: "Тестовая страница2", menu_id: Menu.first.id, menu_item_id: MenuItem.last.id, url: '/', position: 1)
-
-MenuItem.create(title: "Главная", menu_id: Menu.last.id, url: '/', position: 1)
-MenuItem.create(title: "Контакты", menu_id: Menu.last.id, url: '/contacts', position: 2)
-MenuItem.create(title: "О Компании", menu_id: Menu.last.id, url: '/about', position: 3)
-MenuItem.create(title: "Тестовая страница", menu_id: Menu.last.id, url: '/', position: 4)
-MenuItem.create(title: "Тестовая страница2", menu_id: Menu.last.id, menu_item_id: MenuItem.last.id, url: '/', position: 1)
-
-
-
 PostCategory.destroy_all
 
 40.times do |i|
   PostCategory.create!(name: "Категория #{i}", description: "this is a description")
 end  
-
-
-Page.destroy_all(
-
-Page.create(name: "Главная", descriptor: "main")
-Page.create(name: "Контакты", descriptor: "contacts")
-Page.create(name: "Доставка и оплата", descriptor: "delive-and-chip")
 
 
 
@@ -164,7 +138,6 @@ end
 
 
 
-=end
 
 Product.destroy_all
 
@@ -182,3 +155,49 @@ categories.each do |product_category|
   end
 
 end
+
+
+
+
+description_page = "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>
+
+<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>
+
+<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>
+
+<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>
+
+<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>
+
+<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque egeteque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>"
+
+Page.destroy_all
+
+Page.create(name: "Главная", descriptor: "home", description: description_page)
+Page.create(name: "Контакты", descriptor: "contacts", description: description_page)
+Page.create(name: "Информаци о доставке", descriptor: "delivery_info", description: description_page)
+Page.create(name: "Информаци о оплате", descriptor: "payment_info", description: description_page)
+Page.create(name: "Условия обслуживания", descriptor: "terms_of_service", description: description_page)
+
+
+Menu.destroy_all
+MenuItem.destroy_all
+Menu.create(name: "Главное меню", descriptor: "main_menu")
+Menu.create(name: "Меню в футоре", descriptor: "footer_menu")
+
+
+MenuItem.create(title: "Главная", menu_id: Menu.first.id, url: '/', position: 1)
+MenuItem.create(title: "Контакты", menu_id: Menu.first.id, url: '/contacts', position: 2)
+MenuItem.create(title: "О Компании", menu_id: Menu.first.id, url: '/about', position: 3)
+MenuItem.create(title: "Тестовая страница", menu_id: Menu.first.id, url: '/', position: 4)
+MenuItem.create(title: "Тестовая страница2", menu_id: Menu.first.id, menu_item_id: MenuItem.last.id, url: '/', position: 1)
+=end
+
+last_menu_id = Menu.last.id
+MenuItem.create(title: "Главная", menu_id: last_menu_id, url: '/', position: 1)
+MenuItem.create(title: "Контакты", menu_id: last_menu_id, url: '/contacts', position: 2)
+MenuItem.create(title: "Доставка", menu_id: last_menu_id, url: '/delivery_info', position: 3)
+MenuItem.create(title: "Оплата", menu_id: last_menu_id, url: '/payment_info', position: 3)
+MenuItem.create(title: "Условия обслуживания", menu_id: last_menu_id, url: '/terms_of_service', position: 4)
+
+

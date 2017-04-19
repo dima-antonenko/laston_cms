@@ -12112,3 +12112,1140 @@ rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
   Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
   Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (276.9ms)
 DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/dima/Rails/laston_cms/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2017-04-19 10:31:14 +0300
+Processing by Site::StaticPagesController#home as HTML
+  Rendering site/static_pages/home.html.erb within layouts/site
+  Rendered site/static_pages/home.html.erb within layouts/site (0.5ms)
+  Rendered layouts/site/_header.html.erb (0.9ms)
+  Rendered layouts/site/_footer.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site_theme/assets/css/animate.css" for 127.0.0.1 at 2017-04-19 10:31:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/animate.css"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/site_theme/assets/css/reset.css" for 127.0.0.1 at 2017-04-19 10:31:14 +0300
+Started GET "/site_theme/assets/css/style.css" for 127.0.0.1 at 2017-04-19 10:31:14 +0300
+Started GET "/site_theme/assets/css/responsive.css" for 127.0.0.1 at 2017-04-19 10:31:14 +0300
+Started GET "/assets/site.self-ff739f2ad77d763cba3c69d1b65691cd527d83575e2a06ffdec2dc6a5f5a50b8.css?body=1" for 127.0.0.1 at 2017-04-19 10:31:14 +0300
+  
+  
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/responsive.css"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/style.css"):
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/reset.css"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (73.3ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (83.4ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (75.1ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.8ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (92.6ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.4ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (711.4ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.8ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (593.1ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (538.0ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (586.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (163.0ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (118.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (107.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (122.4ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (223.3ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (341.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (248.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (261.8ms)
+Started GET "/" for 127.0.0.1 at 2017-04-19 10:31:23 +0300
+Processing by Site::StaticPagesController#home as HTML
+  Rendering site/static_pages/home.html.erb within layouts/site
+  Rendered site/static_pages/home.html.erb within layouts/site (0.8ms)
+  Rendered layouts/site/_header.html.erb (1.0ms)
+  Rendered layouts/site/_footer.html.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site_theme/assets/css/animate.css" for 127.0.0.1 at 2017-04-19 10:31:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/animate.css"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/site_theme/assets/css/reset.css" for 127.0.0.1 at 2017-04-19 10:31:23 +0300
+Started GET "/site_theme/assets/css/responsive.css" for 127.0.0.1 at 2017-04-19 10:31:23 +0300
+Started GET "/site_theme/assets/css/style.css" for 127.0.0.1 at 2017-04-19 10:31:23 +0300
+  
+Started GET "/assets/site.self-ff739f2ad77d763cba3c69d1b65691cd527d83575e2a06ffdec2dc6a5f5a50b8.css?body=1" for 127.0.0.1 at 2017-04-19 10:31:23 +0300
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/reset.css"):
+  
+  
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/style.css"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/css/responsive.css"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (109.2ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.8ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (67.0ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (66.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.7ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [161 times] (76.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (746.1ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (593.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (474.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (465.2ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (155.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (132.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (121.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (122.1ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (2.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (297.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (280.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (259.4ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (246.3ms)
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-04-19 10:31:24 +0300
+Started GET "/assets/site/notify.self-d63ec3ed8c7330a9902dbe1590c349abfd17691458f868c805d4c334946bdc17.js?body=1" for 127.0.0.1 at 2017-04-19 10:31:24 +0300
+Started GET "/assets/site.self-51373e4e11ab5a7876eb940a29f1dc32f67bd06e264779cfbeb80ef65f97b93c.js?body=1" for 127.0.0.1 at 2017-04-19 10:31:24 +0300
+Started GET "/" for 127.0.0.1 at 2017-04-19 10:32:07 +0300
+Processing by Site::StaticPagesController#home as HTML
+  Rendering site/static_pages/home.html.erb within layouts/site
+  Rendered site/static_pages/home.html.erb within layouts/site (0.5ms)
+  Rendered layouts/site/_header.html.erb (0.8ms)
+  Rendered layouts/site/_footer.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 10:55:50 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Site::StaticPagesController::StaticPage:
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:550:in `load_missing_constant'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:203:in `const_missing'
+  app/controllers/site/static_pages_controller.rb:8:in `contacts'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:188:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:126:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:455:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rescue.rb:20:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:126:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:30:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:190:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:262:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:725:in `call'
+  bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/migration.rb:553:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+Started POST "/__better_errors/85b93a6bb3fe9c84/variables" for 127.0.0.1 at 2017-04-19 10:55:51 +0300
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 10:56:15 +0300
+
+LoadError - Unable to autoload constant Site::StaticPagesController, expected /home/dima/Rails/laston_cms/app/controllers/site/static_pages_controller.rb to define it:
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:512:in `load_missing_constant'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:203:in `const_missing'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/inflector/methods.rb:270:in `block in constantize'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/inflector/methods.rb:266:in `constantize'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:583:in `get'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:614:in `constantize'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/http/request.rb:81:in `controller_class'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:44:in `controller'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:30:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:725:in `call'
+  bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/migration.rb:553:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+Started POST "/__better_errors/71c5a46ef6d564be/variables" for 127.0.0.1 at 2017-04-19 10:56:16 +0300
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 10:57:05 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+  [1m[36mPage Load (2.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "contacts"], ["LIMIT", 1]]
+  Rendering site/static_pages/contacts.html.erb within layouts/site
+  Rendered site/static_pages/contacts.html.erb within layouts/site (0.5ms)
+  Rendered layouts/site/_header.html.erb (0.7ms)
+  Rendered layouts/site/_footer.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 20.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 10:58:41 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+  [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "contacts"], ["LIMIT", 1]]
+  Rendering site/static_pages/contacts.html.erb within layouts/site
+  Rendered site/static_pages/contacts.html.erb within layouts/site (0.7ms)
+  Rendered layouts/site/_header.html.erb (1.4ms)
+  Rendered layouts/site/_footer.html.erb (3.7ms)
+Completed 200 OK in 69ms (Views: 57.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/site_theme/assets/data/about-us.jpg" for 127.0.0.1 at 2017-04-19 10:58:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/site_theme/assets/data/about-us.jpg"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.2ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [166 times] (88.5ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (5.0ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (186.9ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (4.4ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (101.6ms)
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 11:00:13 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+  [1m[36mPage Load (1.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "contacts"], ["LIMIT", 1]]
+  Rendering site/static_pages/contacts.html.erb within layouts/site
+  Rendered site/static_pages/contacts.html.erb within layouts/site (0.8ms)
+  Rendered layouts/site/_header.html.erb (0.7ms)
+  Rendered layouts/site/_footer.html.erb (0.6ms)
+Completed 200 OK in 33ms (Views: 23.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-19 11:00:49 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (1.3ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "administrators" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "administrators"."id" = $5[0m  [["current_sign_in_at", 2017-04-19 08:00:49 UTC], ["last_sign_in_at", 2017-04-19 07:09:32 UTC], ["sign_in_count", 28], ["updated_at", 2017-04-19 08:00:49 UTC], ["id", 1]]
+  [1m[35m (35.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (1.0ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (94.1ms)
+  Rendered layouts/administrator/_header.html.erb (1.4ms)
+  Rendered layouts/administrator/_sidebar.html.erb (1.4ms)
+Completed 200 OK in 259ms (Views: 126.2ms | ActiveRecord: 61.8ms)
+
+
+Started GET "/assets/administrator.self-5d6828fce41dee209d4e4e76e52cdb15e4c9e81effa9ef90a5861373521ff2d8.css?body=1" for 127.0.0.1 at 2017-04-19 11:00:49 +0300
+Started GET "/assets/ckeditor/init.self-2f3e80b764bc18c9362e6f3326e1f32d4a8bdceff67345a3453a93b111626ff3.js?body=1" for 127.0.0.1 at 2017-04-19 11:00:50 +0300
+Started GET "/assets/ckeditor/ckeditor.self-e0b9bfe15298d2b2dd388960b27d35e6a18c89b2390f8986d398c30da5496e4b.js?body=1" for 127.0.0.1 at 2017-04-19 11:00:50 +0300
+Started GET "/assets/administrator.self-67de2e9383442493b12f15986c95c060b5c92002b86a547798f001a65fd4c6ba.js?body=1" for 127.0.0.1 at 2017-04-19 11:00:50 +0300
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-19 11:00:51 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[36mAdministrator Load (2.8ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/dashboard.html.erb within layouts/administrator
+  Rendered administrators/dashboard.html.erb within layouts/administrator (1.1ms)
+  Rendered layouts/administrator/_header.html.erb (1.0ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 67.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/administrators/pages" for 127.0.0.1 at 2017-04-19 11:00:54 +0300
+Processing by Administrators::PagesController#index as HTML
+  [1m[36mAdministrator Load (2.5ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/pages/index.html.erb within layouts/administrator
+  [1m[36mPage Load (2.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  Rendered administrators/pages/index.html.erb within layouts/administrator (6.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.7ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 30.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/administrators/pages/2/edit" for 127.0.0.1 at 2017-04-19 11:00:59 +0300
+Processing by Administrators::PagesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdministrator Load (1.3ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering administrators/pages/edit.html.erb within layouts/administrator
+  Rendered administrators/pages/edit.html.erb within layouts/administrator (70.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 144ms (Views: 98.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-19 11:00:59 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-19 11:01:00 +0300
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-19 11:01:05 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-19 11:01:05 +0300
+Started PATCH "/administrators/pages/2" for 127.0.0.1 at 2017-04-19 11:01:06 +0300
+Processing by Administrators::PagesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uNVxt5v4rkYch1tXbbcMmMQtAC5nIfvFYXp+gAD0n1/PqtylyIewgYnFoCkDvNA0XWHTlaaAZ0BHv/WUZPCOEg==", "page"=>{"name"=>"Контакты", "description"=>"<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\r\n\r\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\r\n\r\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, <a href=\"#\">malesuada at</a>, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\r\n\r\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\r\n\r\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\r\n\r\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, <a href=\"#\">malesuada at</a>, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\r\n", "meta_title"=>"11", "meta_description"=>"22", "meta_keywords"=>"33"}, "commit"=>"Обновить", "id"=>"2"}
+  [1m[36mAdministrator Load (4.4ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPage Load (1.0ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "pages" SET "description" = $1 WHERE "pages"."id" = $2[0m  [["description", "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\r\n\r\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\r\n\r\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, <a href=\"#\">malesuada at</a>, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\r\n\r\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\r\n\r\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\r\n\r\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, <a href=\"#\">malesuada at</a>, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\r\n"], ["id", 2]]
+  [1m[35m (21.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 64ms (Views: 0.1ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 11:01:09 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+  [1m[36mPage Load (2.5ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "contacts"], ["LIMIT", 1]]
+  Rendering site/static_pages/contacts.html.erb within layouts/site
+  Rendered site/static_pages/contacts.html.erb within layouts/site (1.0ms)
+  Rendered layouts/site/_header.html.erb (0.7ms)
+  Rendered layouts/site/_footer.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 22.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 11:01:30 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+  [1m[36mPage Load (2.4ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "contacts"], ["LIMIT", 1]]
+  Rendering site/static_pages/contacts.html.erb within layouts/site
+  Rendered site/static_pages/contacts.html.erb within layouts/site (0.9ms)
+  Rendered layouts/site/_header.html.erb (0.8ms)
+  Rendered layouts/site/_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 50.7ms | ActiveRecord: 2.4ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/dima/Rails/laston_cms/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (40.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "pages" WHERE "pages"."id" = $1[0m  [["id", 3]]
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "pages" WHERE "pages"."id" = $1[0m  [["id", 1]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "pages" WHERE "pages"."id" = $1[0m  [["id", 2]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (52.2ms)[0m  [1m[32mINSERT INTO "pages" ("name", "descriptor", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Главная"], ["descriptor", "home"], ["description", "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\n\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque egeteque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>"]]
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "pages" ("name", "descriptor", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Контакты"], ["descriptor", "contacts"], ["description", "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\n\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque egeteque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "pages" ("name", "descriptor", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Информаци о доставке"], ["descriptor", "delivery_info"], ["description", "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\n\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque egeteque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "pages" ("name", "descriptor", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Информаци о оплате"], ["descriptor", "payment_info"], ["description", "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\n\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque egeteque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>"]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "pages" ("name", "descriptor", "description") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Условия обслуживания"], ["descriptor", "terms_of_service"], ["description", "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>\n\n<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>\n\n<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>\n\n<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque egeteque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>"]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/administrators/pages/" for 127.0.0.1 at 2017-04-19 11:05:25 +0300
+Processing by Administrators::PagesController#index as HTML
+  [1m[36mAdministrator Load (12.4ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/pages/index.html.erb within layouts/administrator
+  [1m[36mPage Load (3.2ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  Rendered administrators/pages/index.html.erb within layouts/administrator (7.2ms)
+  Rendered layouts/administrator/_header.html.erb (0.8ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 43.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/administrators/pages/4/edit" for 127.0.0.1 at 2017-04-19 11:05:27 +0300
+Processing by Administrators::PagesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdministrator Load (1.5ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPage Load (1.0ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering administrators/pages/edit.html.erb within layouts/administrator
+  Rendered administrators/pages/edit.html.erb within layouts/administrator (3.9ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (3.7ms)
+Completed 200 OK in 74ms (Views: 62.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-19 11:05:28 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-19 11:05:28 +0300
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-19 11:05:28 +0300
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-19 11:05:28 +0300
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-19 11:05:28 +0300
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-19 11:05:28 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-19 11:05:29 +0300
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-19 11:05:29 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-19 11:05:29 +0300
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 11:05:34 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "contacts"], ["LIMIT", 1]]
+  Rendering site/static_pages/contacts.html.erb within layouts/site
+  Rendered site/static_pages/contacts.html.erb within layouts/site (1.1ms)
+  Rendered layouts/site/_header.html.erb (1.0ms)
+  Rendered layouts/site/_footer.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-04-19 11:06:50 +0300
+Processing by Site::StaticPagesController#contacts as HTML
+  [1m[36mPage Load (1.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "contacts"], ["LIMIT", 1]]
+  Rendering site/static_pages/static_page.html.erb within layouts/site
+  Rendered site/static_pages/static_page.html.erb within layouts/site (0.9ms)
+  Rendered layouts/site/_header.html.erb (0.7ms)
+  Rendered layouts/site/_footer.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 25.3ms | ActiveRecord: 1.7ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/dima/Rails/laston_cms/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMenu Load (31.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" ORDER BY "menus"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (49.4ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Главная"], ["url", "/"], ["menu_id", 4]]
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/administrators/pages" for 127.0.0.1 at 2017-04-19 11:15:25 +0300
+Processing by Administrators::PagesController#index as HTML
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/pages/index.html.erb within layouts/administrator
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT "pages".* FROM "pages"[0m
+  Rendered administrators/pages/index.html.erb within layouts/administrator (17.4ms)
+  Rendered layouts/administrator/_header.html.erb (1.0ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 44.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/administrators/menus" for 127.0.0.1 at 2017-04-19 11:15:26 +0300
+Processing by Administrators::MenusController#index as HTML
+  [1m[36mAdministrator Load (0.8ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/menus/index.html.erb within layouts/administrator
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT "menus".* FROM "menus"[0m
+  [1m[36mMenuItem Load (1.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" IN (3, 4)[0m
+  Rendered administrators/menus/index.html.erb within layouts/administrator (60.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 127ms (Views: 75.7ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/administrators/menus/4/edit" for 127.0.0.1 at 2017-04-19 11:15:31 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdministrator Load (0.8ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (2.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (1.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 24]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 25]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 26]]
+  [1m[36mMenuItem Load (1.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 27]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (62.5ms)
+  Rendered layouts/administrator/_header.html.erb (1.3ms)
+  Rendered layouts/administrator/_sidebar.html.erb (1.1ms)
+Completed 200 OK in 135ms (Views: 103.4ms | ActiveRecord: 8.1ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/dima/Rails/laston_cms/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" ORDER BY "menus"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Главная"], ["url", "/"], ["menu_id", 4]]
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Контакты"], ["url", "/contacts"], ["menu_id", 4], ["position", 2]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Доставка"], ["url", "/delivery_info"], ["menu_id", 4], ["position", 3]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Оплата"], ["url", "/payment_info"], ["menu_id", 4], ["position", 3]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Условия обслуживания"], ["url", "/terms_of_service"], ["menu_id", 4], ["position", 4]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/administrators/menus/4/edit" for 127.0.0.1 at 2017-04-19 11:16:44 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (1.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 24]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 30]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 31]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 25]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 26]]
+  [1m[36mMenuItem Load (2.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 32]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 33]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 34]]
+  [1m[36mMenuItem Load (3.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 27]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4]]
+  [1m[36mMenuItem Load (3.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (80.3ms)
+  Rendered layouts/administrator/_header.html.erb (0.8ms)
+  Rendered layouts/administrator/_sidebar.html.erb (2.6ms)
+Completed 200 OK in 162ms (Views: 92.3ms | ActiveRecord: 23.8ms)
+
+
+Started DELETE "/administrators/menu_items/24" for 127.0.0.1 at 2017-04-19 11:16:50 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"24"}
+  [1m[36mAdministrator Load (0.8ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.7ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (1.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 24]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 24]]
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 16.6ms)
+
+
+Started DELETE "/administrators/menu_items/28" for 127.0.0.1 at 2017-04-19 11:16:52 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"28"}
+  [1m[36mAdministrator Load (1.4ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (2.3ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (2.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 28]]
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 28]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 15.2ms)
+
+
+Started DELETE "/administrators/menu_items/30" for 127.0.0.1 at 2017-04-19 11:16:54 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"30"}
+  [1m[36mAdministrator Load (2.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.7ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (3.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 30]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 30]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 52ms (Views: 0.2ms | ActiveRecord: 17.9ms)
+
+
+Started DELETE "/administrators/menu_items/31" for 127.0.0.1 at 2017-04-19 11:16:55 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"31"}
+  [1m[36mAdministrator Load (3.5ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.9ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 31]]
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 31]]
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 24.7ms)
+
+
+Started DELETE "/administrators/menu_items/25" for 127.0.0.1 at 2017-04-19 11:16:57 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"25"}
+  [1m[36mAdministrator Load (5.0ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (2.5ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (2.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 25]]
+  [1m[35mSQL (2.9ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 25]]
+  [1m[35m (20.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 57ms (Views: 0.1ms | ActiveRecord: 33.2ms)
+
+
+Started DELETE "/administrators/menu_items/32" for 127.0.0.1 at 2017-04-19 11:16:59 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"32"}
+  [1m[36mAdministrator Load (1.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.4ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (2.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 32]]
+  [1m[35mSQL (3.8ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 32]]
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 31.9ms)
+
+
+Started DELETE "/administrators/menu_items/26" for 127.0.0.1 at 2017-04-19 11:17:01 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"26"}
+  [1m[36mAdministrator Load (1.2ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (4.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 26]]
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 26]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 43ms (Views: 0.1ms | ActiveRecord: 13.0ms)
+
+
+Started DELETE "/administrators/menu_items/33" for 127.0.0.1 at 2017-04-19 11:17:03 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"33"}
+  [1m[36mAdministrator Load (2.4ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (1.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 33]]
+  [1m[35mSQL (2.3ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 33]]
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 41ms (Views: 0.2ms | ActiveRecord: 21.2ms)
+
+
+Started DELETE "/administrators/menu_items/34" for 127.0.0.1 at 2017-04-19 11:17:05 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"34"}
+  [1m[36mAdministrator Load (1.1ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.1ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (1.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 34]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 34]]
+  [1m[35m (23.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 27.9ms)
+
+
+Started DELETE "/administrators/menu_items/27" for 127.0.0.1 at 2017-04-19 11:17:07 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"27"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (2.3ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 27]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 27]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/administrators/menus/4/edit" for 127.0.0.1 at 2017-04-19 11:17:08 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdministrator Load (2.0ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (18.3ms)
+  Rendered layouts/administrator/_header.html.erb (3.8ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 104ms (Views: 78.3ms | ActiveRecord: 3.9ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/dima/Rails/laston_cms/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" ORDER BY "menus"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Главная"], ["url", "/"], ["menu_id", 4]]
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Контакты"], ["url", "/contacts"], ["menu_id", 4], ["position", 2]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Доставка"], ["url", "/delivery_info"], ["menu_id", 4], ["position", 3]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Оплата"], ["url", "/payment_info"], ["menu_id", 4], ["position", 3]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url", "menu_id", "position") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Условия обслуживания"], ["url", "/terms_of_service"], ["menu_id", 4], ["position", 4]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/administrators/menus/4/edit" for 127.0.0.1 at 2017-04-19 11:18:23 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."menu_item_id" = $2 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4], ["menu_item_id", 0]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 35]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 36]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 37]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 38]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 39]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (36.4ms)
+  Rendered layouts/administrator/_header.html.erb (1.0ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 65.5ms | ActiveRecord: 5.6ms)
+
+
