@@ -3,15 +3,9 @@
      <div class="container">
                 <div class="col-sm-12">
                     <ul class="footer-menu-list">
-                        <li><a href="#" >Terms & Conditions</a></li>
-                        <li><a href="#" >Policy</a></li>
-                        <li><a href="#" >Shipping</a></li>
-                        <li><a href="#" >Payments</a></li>
-                        <li><a href="#" >Returns</a></li>
-                        <li><a href="#" >Refunds</a></li>
-                        <li><a href="#" >Warrantee</a></li>
-                        <li><a href="#" >FAQ</a></li>
-                        <li><a href="#" >Contact</a></li>
+                    <% @footer_menu_items.each do |item| %>
+                        <li><%= link_to item.title, item.url %></li>
+                    <% end %>
                     </ul>
                 </div>
             </div>

@@ -1,5 +1,8 @@
 class SiteController < ApplicationController
 
+  before_action  :all_pages_data
+
+
   layout "site"
 
   def all_pages_data
