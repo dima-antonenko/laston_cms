@@ -1,4 +1,8 @@
 class MenuItem < ActiveRecord::Base
+  extend ActsAsTree::TreeView
+
+  acts_as_tree order: 'position'
+  acts_as_tree foreign_key: "menu_item_id"
   
   has_many :menu_items, dependent: :destroy  
 

@@ -2,6 +2,7 @@ class Site::StaticPagesController < SiteController
 
   def home
     @page = Page.find_by(descriptor: 'home')
+    @slides = Slider.find_by(descriptor: 'main').slides
   end
 
   def contacts

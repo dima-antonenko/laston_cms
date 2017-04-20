@@ -21,6 +21,7 @@ gem 'ckeditor'
 gem 'ruby-growl'
 gem 'pg', '~> 0.18.4'
 gem 'activesupport'
+gem 'acts_as_tree', '~> 2.4'
 
 group :development, :test do
   #gem 'quiet_assets'

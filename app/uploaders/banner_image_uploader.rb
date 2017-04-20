@@ -13,4 +13,9 @@ class BannerImageUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [100,100]
   end
 
+  version :site_normal do
+    process resize_to_fill: [271,346]
+  end
+
+
 end

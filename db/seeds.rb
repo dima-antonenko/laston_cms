@@ -29,20 +29,6 @@ end
 
 
 
-
-Slider.destroy_all
-Slide.destroy_all
-
-Slider.create(name: "Главный", descriptor: "main")
-
-
-
-
-Banner.destroy_all
-Banner.create(title: "Первый баннер", descriptor: "first_banner", link: "/")
-
-
-
 SiteVariable.destroy_all
 SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in_head", content: "8-800-555-35-35")
 
@@ -191,7 +177,7 @@ MenuItem.create(title: "Контакты", menu_id: Menu.first.id, url: '/contac
 MenuItem.create(title: "О Компании", menu_id: Menu.first.id, url: '/about', position: 3)
 MenuItem.create(title: "Тестовая страница", menu_id: Menu.first.id, url: '/', position: 4)
 MenuItem.create(title: "Тестовая страница2", menu_id: Menu.first.id, menu_item_id: MenuItem.last.id, url: '/', position: 1)
-=end
+
 
 last_menu_id = Menu.last.id
 MenuItem.create(title: "Главная", menu_id: last_menu_id, url: '/', position: 1)
@@ -201,3 +187,26 @@ MenuItem.create(title: "Оплата", menu_id: last_menu_id, url: '/payment_inf
 MenuItem.create(title: "Условия обслуживания", menu_id: last_menu_id, url: '/terms_of_service', position: 4)
 
 
+Banner.destroy_all
+banner = Banner.new(title: "Первый баннер", descriptor: "first_banner", link: "/")
+File.open("public/demo/banners/banner1.jpg") do |f|
+  banner.image = f
+end
+banner.save
+
+=end
+
+
+Slider.destroy_all
+Slide.destroy_all
+
+Slider.create(name: "Главный", descriptor: "main")
+slider_id = Slider.first.id
+
+3.times do |t|
+  slide = Slide.new(slider_id: slider_id, name: "слайд#{t}")
+  File.open("public/demo/slides/slide1.jpg") do |f|
+    slide.image = f
+  end
+  slide.save
+end

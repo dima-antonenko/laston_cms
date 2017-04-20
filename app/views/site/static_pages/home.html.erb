@@ -1,1 +1,15 @@
-<h3>this is home page</h3>
+<div id="home-slider">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 header-top-right">
+                <div class="homeslider">
+                    <ul id="contenhomeslider">
+                    <% @slides.each do |slide| %>
+                      <li><img alt="Funky roots" src="<%= slide.image.main_page %>" title="Funky roots" /></li>
+                     <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
