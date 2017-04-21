@@ -125,22 +125,7 @@ end
 
 
 
-Product.destroy_all
 
-#first_category_id = ProductCategory.first.id
-categories = ProductCategory.all
-
-categories.each do |product_category|
-  4.times do |t|
-    product = Product.new(product_category_id: product_category.id, name: "Товар #{t}", description: "описание", price: t * 100,
-                          slug: "product#{t}", short_description: "zzz")
-    File.open("public/demo/products/avatar#{rand(1..8)}.jpg") do |f|
-      product.avatar = f
-    end
-    product.save
-  end
-
-end
 
 
 
@@ -194,7 +179,7 @@ File.open("public/demo/banners/banner1.jpg") do |f|
 end
 banner.save
 
-=end
+
 
 
 Slider.destroy_all
@@ -209,4 +194,23 @@ slider_id = Slider.first.id
     slide.image = f
   end
   slide.save
+end
+=end
+
+
+Product.destroy_all
+
+#first_category_id = ProductCategory.first.id
+categories = ProductCategory.all
+
+categories.each do |product_category|
+  4.times do |t|
+    product = Product.new(product_category_id: product_category.id, name: "Товар #{t}", description: "описание", price: t * 100,
+                          slug: "product#{t}", short_description: "zzz")
+    File.open("public/demo/products/avatar#{rand(1..8)}.jpg") do |f|
+      product.avatar = f
+    end
+    product.save
+  end
+
 end

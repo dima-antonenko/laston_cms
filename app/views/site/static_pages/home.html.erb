@@ -1,15 +1,111 @@
+<% provide(:class, 'home') %>
+
+<div id="header" class="header">
+  
 <div id="home-slider">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 header-top-right">
+        <div class="homeslider">
+          <ul id="contenhomeslider">
+            <% @slides.each do |slide| %>
+            <li><img src="<%= slide.image.main_page %>" title="Funky roots" /></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+</div>
+
+
+<div class="page-top">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 header-top-right">
-                <div class="homeslider">
-                    <ul id="contenhomeslider">
-                    <% @slides.each do |slide| %>
-                      <li><img alt="Funky roots" src="<%= slide.image.main_page %>" title="Funky roots" /></li>
-                     <% end %>
-                    </ul>
+            <div class="col-xs-12 col-sm-12 page-top-left">
+                <div class="popular-tabs">
+                      <ul class="nav-tab">
+                        <li class="active"><a data-toggle="tab" href="#tab-1">Новые товары</a></li>
+                        <li><a data-toggle="tab" href="#tab-2">Лучшие предложения</a></li>
+                      </ul>
+                      <div class="tab-container">
+                            <div id="tab-1" class="tab-panel active">
+                                <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav = "true" data-margin = "30" data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":3}}'>
+                                    <% @new_products.each do |product| %>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<%= product.avatar.main_page %>" />
+                                            </a>
+                                           
+                                            <div class="add-to-cart">
+                                                <%= link_to 'Посмотреть', product_path(product) %>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><%= link_to product.name, product_path(product) %></h5>
+                                            <div class="content_price">
+                                                <span class="price product-price"><%= product.price %> р.</span>
+                                            </div>
+                                           
+                                          
+                                        </div>
+                                    </li>
+                                   <% end %>
+                                </ul>
+                            </div>
+                            <div id="tab-2" class="tab-panel">
+                                <ul class="product-list owl-carousel"  data-dots="false" data-loop="true" data-nav = "true" data-margin = "30"  data-autoplayTimeout="1000" data-autoplayHoverPause = "true" data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":3}}'>
+                                     <% @cheap_products.each do |product| %>
+                                    <li>
+                                        <div class="left-block">
+                                            <a href="#">
+                                                <img class="img-responsive" src="<%= product.avatar.main_page %>" />
+                                            </a>
+                                           
+                                            <div class="add-to-cart">
+                                                <%= link_to 'Посмотреть', product_path(product) %>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="right-block">
+                                            <h5 class="product-name"><%= link_to product.name, product_path(product) %></h5>
+                                            <div class="content_price">
+                                                <span class="price product-price"><%= product.price %> р.</span>
+                                            </div>
+                                           
+                                          
+                                        </div>
+                                    </li>
+                                   <% end %>
+                                </ul>
+                            </div>
+                      </div>
                 </div>
-            </div>
+            </div>          
         </div>
     </div>
+</div>
+<div id="content-wrap">
+    <div class="container">
+       <br/>
+        
+    </div> <!-- /.container -->
+</div>
+
+<div id="content-wrap">
+    <div class="container">
+        <%= @page.description.html_safe %>
+        
+    </div> <!-- /.container -->
+</div>
+
+<div id="content-wrap">
+    <div class="container">
+       <br/>
+        
+    </div> <!-- /.container -->
 </div>

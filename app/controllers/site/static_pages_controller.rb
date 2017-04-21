@@ -3,6 +3,8 @@ class Site::StaticPagesController < SiteController
   def home
     @page = Page.find_by(descriptor: 'home')
     @slides = Slider.find_by(descriptor: 'main').slides
+    @new_products = Product.last(5)
+    @cheap_products = Product.order(:price).limit(5)
   end
 
   def contacts
