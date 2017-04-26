@@ -195,7 +195,7 @@ slider_id = Slider.first.id
   end
   slide.save
 end
-=end
+
 
 
 Product.destroy_all
@@ -214,3 +214,21 @@ categories.each do |product_category|
   end
 
 end
+=end
+
+MenuItem.destroy_all
+
+parent_item1 = MenuItem.create(title: 'Главный 1', url: '/', position: 1, menu_id: 3)
+parent_item2 = MenuItem.create(title: 'Главный 2', url: '/', position: 2, menu_id: 3)
+parent_item3 = MenuItem.create(title: 'Главный 3', url: '/', position: 3, menu_id: 3)
+
+
+
+MenuItem.create(title: 'Подпункт 1', url: '/', position: 1, menu_id: 3, parent:  parent_item1)
+MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, parent:  parent_item1)
+
+MenuItem.create(title: 'Подпункт 1', url: '/', position: 1, menu_id: 3, parent:  parent_item2)
+MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, parent:  parent_item2)
+
+MenuItem.create(title: 'Подпункт 1', url: '/', position: 1, menu_id: 3, parent:  parent_item3)
+MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, parent:  parent_item3)

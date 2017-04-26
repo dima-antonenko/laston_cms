@@ -1,5 +1,5 @@
 <div id="header" class="header">
-   
+    
     <!-- MAIN HEADER -->
     <div class="container main-header">
         <div class="row">
@@ -8,16 +8,16 @@
             </div>
             <div class="col-xs-7 col-sm-7 header-search-box">
                 <form class="form-inline">
-                      <div class="form-group form-category">
+                    <div class="form-group form-category">
                         <select class="select-category">
                             <option value="2">По артикулу</option>
                             <option value="1">По названию</option>
                         </select>
-                      </div>
-                      <div class="form-group input-serach">
+                    </div>
+                    <div class="form-group input-serach">
                         <input type="text"  placeholder="Поиск">
-                      </div>
-                      <button type="submit" class="pull-right btn-search"></button>
+                    </div>
+                    <button type="submit" class="pull-right btn-search"></button>
                 </form>
             </div>
             <div id="cart-block" class="col-xs-5 col-sm-2 shopping-cart-box">
@@ -35,7 +35,7 @@
                                     <div class="p-left">
                                         <a href="#" class="remove_link"></a>
                                         <a href="#">
-                                        <img class="img-responsive" src="/site_theme/assets/data/product-100x122.jpg" alt="p10">
+                                            <img class="img-responsive" src="/site_theme/assets/data/product-100x122.jpg" alt="p10">
                                         </a>
                                     </div>
                                     <div class="p-right">
@@ -47,7 +47,7 @@
                                     <div class="p-left">
                                         <a href="#" class="remove_link"></a>
                                         <a href="#">
-                                        <img class="img-responsive" src="/site_theme/assets/data/product-s5-100x122.jpg" alt="p10">
+                                            <img class="img-responsive" src="/site_theme/assets/data/product-s5-100x122.jpg" alt="p10">
                                         </a>
                                     </div>
                                     <div class="p-right">
@@ -73,36 +73,38 @@
     <div id="nav-top-menu" class="nav-top-menu">
         <div class="container">
             <div class="row">
-              
+                
                 <div id="main-menu" class="col-sm-9 main-menu">
                     <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a href="/">Главная</a></li>
+                                    <% @main_menu_items.each do |item| %>
+                                    <% if item.has_children? == false %>
+                                    <li><%= link_to item.title, item.url %></li>
+                                    <% else %>
                                     <li class="dropdown">
-                                        <a href="category.html" class="dropdown-toggle" data-toggle="dropdown">Digital</a>
+                                        <a href="<%= item.path %>" class="dropdown-toggle" data-toggle="dropdown"><%= item.title %></a>
                                         <ul class="dropdown-menu container-fluid">
                                             <li class="block-container">
                                                 <ul class="block">
-                                                    <li class="link_container"><a href="#">Mobile</a></li>
-                                                    <li class="link_container"><a href="#">Tablets</a></li>
-                                                    <li class="link_container"><a href="#">Laptop</a></li>
-                                                    <li class="link_container"><a href="#">Memory Cards</a></li>
-                                                    <li class="link_container"><a href="#">Accessories</a></li>
+                                                    <% item.children.each do |children_item| %>
+                                                    <li class="link_container"><%= link_to children_item.title, children_item.url %></li>
+                                                    <% end %>
                                                 </ul>
                                             </li>
-                                        </ul> 
+                                        </ul>
                                     </li>
-                                    <li><a href="/">Some link</a></li>
+                                    <% end %>
+                                    <% end %>
                                 </ul>
-                            </div><!--/.nav-collapse -->
-                        </div>
-                    </nav>
+                                </div><!--/.nav-collapse -->
+                            </div>
+                        </nav>
+                    </div>
                 </div>
+                
             </div>
-            
         </div>
     </div>
-</div>

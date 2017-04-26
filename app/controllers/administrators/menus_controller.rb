@@ -1,6 +1,5 @@
 class Administrators::MenusController < AdministratorsController
   
-  include AdministratorMenuHelper	
 
   def index
     @menus = Menu.includes(:menu_items)
@@ -8,8 +7,9 @@ class Administrators::MenusController < AdministratorsController
 
   def edit
     @menu = Menu.find(params[:id])
-  	@menu_items    = @menu.menu_items.all.order(:position)
-  	@parents_items = @menu_items.where(menu_item_id: 0).order(:position)
+    @menu_items = @menu.menu_items
+    @parent_items = @menu_items.where(ancestry: nil).order(:position)
+
   end
 
 end

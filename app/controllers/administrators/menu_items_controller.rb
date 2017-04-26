@@ -1,11 +1,12 @@
 class Administrators::MenuItemsController < AdministratorsController
 
-  include AdministratorMenuHelper
   before_action :set_menu_item, only: [:edit, :update, :destroy]
 
   def edit
-    @parent_menu_parent_items = MenuItem.where(menu_id: @menu_item.menu_id, menu_item_id: 0)
-    @patent_menu_items_list =  MenuItem.all.collect {|item| [item.title, item.id ]} << ['Родитель', 0]
+    @parent_items = @menu_item.menu.menu_items.where(ancestry: nil).order(:position)
+    @children_items = @menu_item.children.order(:position)
+    @parent_menu = @menu_item.menu
+    
   end
 
   def update
@@ -43,6 +44,11 @@ class Administrators::MenuItemsController < AdministratorsController
     end
   end
 
+
+  def add_children
+    @parent_menu_item = MenuItem.find(params[:id])
+    @menu_item = MenuItem.new()
+  end
 
   private
 

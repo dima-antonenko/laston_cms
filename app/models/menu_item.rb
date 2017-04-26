@@ -1,8 +1,10 @@
 class MenuItem < ActiveRecord::Base
-  extend ActsAsTree::TreeView
+  # extend ActsAsTree::TreeView
 
-  acts_as_tree order: 'position'
-  acts_as_tree foreign_key: "menu_item_id"
+  has_ancestry    
+
+  # acts_as_tree order: 'position'
+  # acts_as_tree foreign_key: 'menu_item_id'
   
   has_many :menu_items, dependent: :destroy  
 
@@ -16,3 +18,5 @@ class MenuItem < ActiveRecord::Base
   validates :position, presence: true
 
 end
+
+MenuItem.create(title: 'zz', url: '/', position: 1)

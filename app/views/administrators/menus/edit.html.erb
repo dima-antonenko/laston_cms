@@ -7,16 +7,21 @@
             <div class="md-card">
                 <div class="md-card-content">
                     <ul>
-                        <% @parents_items.each do |item| %>
-                        <li><%=  link_to item.title, edit_administrators_menu_item_path(item) %></li>
-                        <% if item.menu_items %>
-                        <ul>
-                            <% item.menu_items.each do |item| %>
-                            <li><%=  link_to item.title, edit_administrators_menu_item_path(item) %></li>
+                        <% @parent_items.each do |item| %>
+                        <li class="item<%= item.id %>"><%=  link_to item.title, edit_administrators_menu_item_path(item) %>
+                            <%= link_to "<i class=\"material-icons\">trending_up</i>".html_safe, add_children_administrators_menu_item_path(item)%>
+                            <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_menu_item_path(item), method: :delete, remote: true, data: { confirm: "Удалить элемент ?"} %>
+                            <% if item.children %>
+                            <ul>
+                                <% item.children.each do |item| %>
+                                <li class="item<%= item.id %>"><%=  link_to item.title, edit_administrators_menu_item_path(item) %>
+                                    <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_menu_item_path(item), method: :delete, remote: true, data: { confirm: "Удалить элемент ?"} %>
+                                </li>
+                                <% end %>
+                            </ul>
                             <% end %>
-                        </ul>
-                        <% end %>
-                        <% end %>
+                            <% end %>
+                        </li>
                     </ul>
                     
                 </div>
@@ -39,18 +44,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <% @menu_items.each do |item| %>
+                                <% @menu_items.each do |item| %>
                                 <tr class="item<%= item.id %>">
                                     
                                     <td><%= item.position %></td>
                                     <td><%= link_to item.title, edit_administrators_menu_item_path(item) %></td>
                                     <td><%= item.url %></td>
-                                    <td><%= get_paret_menu_item(item) %></td>
+                                    <td><%= link_to item.parent.title, edit_administrators_menu_item_path(item) if item.parent %></td>
                                     <td class="uk-text-center">
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE254;</i>".html_safe, edit_administrators_menu_item_path(item)%>
+                                        <%= link_to "<i class=\"material-icons\">trending_up</i>".html_safe, add_children_administrators_menu_item_path(item)%>
                                         <%= link_to "<i class=\"material-icons md-24\">&#xE872;</i>".html_safe, administrators_menu_item_path(item), method: :delete, remote: true, data: { confirm: "Удалить элемент ?"} %>
-                                        
-                                        
                                     </td>
                                 </tr>
                                 <% end %>
@@ -59,9 +63,7 @@
                     </div>
                 </div>
             </div>
-            <hr/>
-
-            <%= @menu_items.tree_view(:position) %>
+            
             <div class="md-fab-wrapper">
                 <a class="md-btn md-btn-success" href="/administrators/menu_items/new">Добавить</a>
                 

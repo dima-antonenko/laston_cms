@@ -68,6 +68,8 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     airbrussh (1.1.2)
       sshkit (>= 1.6.1, != 1.7.0)
+    ancestry (2.2.2)
+      activerecord (>= 3.0.0)
     arel (7.1.4)
     autoparse (0.3.3)
       addressable (>= 2.3.1)
@@ -341,6 +343,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   acts_as_tree (~> 2.4)
+  ancestry
   awesome_print
   better_errors
   binding_of_caller

@@ -46,7 +46,9 @@ Rails.application.routes.draw do
     resources :post_categories
     resources :posts
     resources :menus
-    resources :menu_items
+    resources :menu_items do
+      get 'add_children', on: :member,  via: [:get]   
+    end  
     resources :sliders
     resources :slides
     resources :site_variables

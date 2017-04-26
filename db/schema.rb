@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406143229) do
+ActiveRecord::Schema.define(version: 20170421065520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,10 +28,9 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["email"], name: "index_administrators_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_administrators_on_reset_password_token", unique: true, using: :btree
   end
-
-  add_index "administrators", ["email"], name: "index_administrators_on_email", unique: true, using: :btree
-  add_index "administrators", ["reset_password_token"], name: "index_administrators_on_reset_password_token", unique: true, using: :btree
 
   create_table "back_calls", force: :cascade do |t|
     t.string   "phone"
@@ -40,22 +38,20 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.json     "product_data", default: {}, null: false
+    t.index ["phone"], name: "index_back_calls_on_phone", using: :btree
+    t.index ["product_id"], name: "index_back_calls_on_product_id", using: :btree
   end
-
-  add_index "back_calls", ["phone"], name: "index_back_calls_on_phone", using: :btree
-  add_index "back_calls", ["product_id"], name: "index_back_calls_on_product_id", using: :btree
 
   create_table "banners", force: :cascade do |t|
     t.string "title"
     t.string "descriptor"
     t.string "image"
     t.string "link"
+    t.index ["descriptor"], name: "index_banners_on_descriptor", using: :btree
+    t.index ["image"], name: "index_banners_on_image", using: :btree
+    t.index ["link"], name: "index_banners_on_link", using: :btree
+    t.index ["title"], name: "index_banners_on_title", using: :btree
   end
-
-  add_index "banners", ["descriptor"], name: "index_banners_on_descriptor", using: :btree
-  add_index "banners", ["image"], name: "index_banners_on_image", using: :btree
-  add_index "banners", ["link"], name: "index_banners_on_link", using: :btree
-  add_index "banners", ["title"], name: "index_banners_on_title", using: :btree
 
   create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -71,9 +67,8 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.integer  "height"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type", using: :btree
   end
-
-  add_index "ckeditor_assets", ["type"], name: "index_ckeditor_assets_on_type", using: :btree
 
   create_table "form_requests", force: :cascade do |t|
     t.datetime "created_at",              null: false
@@ -92,12 +87,11 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.string  "product_name"
     t.string  "product_price"
     t.integer "total_price",   default: 0, null: false
+    t.index ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
+    t.index ["order_id"], name: "index_line_items_on_order_id", using: :btree
+    t.index ["product_id"], name: "index_line_items_on_product_id", using: :btree
+    t.index ["quantity"], name: "index_line_items_on_quantity", using: :btree
   end
-
-  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id", using: :btree
-  add_index "line_items", ["order_id"], name: "index_line_items_on_order_id", using: :btree
-  add_index "line_items", ["product_id"], name: "index_line_items_on_product_id", using: :btree
-  add_index "line_items", ["quantity"], name: "index_line_items_on_quantity", using: :btree
 
   create_table "menu_items", force: :cascade do |t|
     t.string  "title"
@@ -105,20 +99,19 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.integer "menu_id",      default: 0
     t.integer "position",     default: 1
     t.integer "menu_item_id", default: 0, null: false
+    t.string  "ancestry"
+    t.index ["menu_id"], name: "index_menu_items_on_menu_id", using: :btree
+    t.index ["position"], name: "index_menu_items_on_position", using: :btree
+    t.index ["title"], name: "index_menu_items_on_title", using: :btree
+    t.index ["url"], name: "index_menu_items_on_url", using: :btree
   end
-
-  add_index "menu_items", ["menu_id"], name: "index_menu_items_on_menu_id", using: :btree
-  add_index "menu_items", ["position"], name: "index_menu_items_on_position", using: :btree
-  add_index "menu_items", ["title"], name: "index_menu_items_on_title", using: :btree
-  add_index "menu_items", ["url"], name: "index_menu_items_on_url", using: :btree
 
   create_table "menus", force: :cascade do |t|
     t.string "name"
     t.string "descriptor"
+    t.index ["descriptor"], name: "index_menus_on_descriptor", using: :btree
+    t.index ["name"], name: "index_menus_on_name", using: :btree
   end
-
-  add_index "menus", ["descriptor"], name: "index_menus_on_descriptor", using: :btree
-  add_index "menus", ["name"], name: "index_menus_on_name", using: :btree
 
   create_table "orders", force: :cascade do |t|
     t.datetime "created_at",                    null: false
@@ -139,10 +132,9 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.string "meta_title",       default: "", null: false
     t.text   "meta_description", default: "", null: false
     t.text   "meta_keywords",    default: "", null: false
+    t.index ["descriptor"], name: "index_pages_on_descriptor", using: :btree
+    t.index ["name"], name: "index_pages_on_name", using: :btree
   end
-
-  add_index "pages", ["descriptor"], name: "index_pages_on_descriptor", using: :btree
-  add_index "pages", ["name"], name: "index_pages_on_name", using: :btree
 
   create_table "post_categories", force: :cascade do |t|
     t.string   "name"
@@ -155,12 +147,11 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.string   "meta_title",       default: "", null: false
     t.text     "meta_description", default: "", null: false
     t.text     "meta_keywords",    default: "", null: false
+    t.index ["avatar"], name: "index_post_categories_on_avatar", using: :btree
+    t.index ["description"], name: "index_post_categories_on_description", using: :btree
+    t.index ["name"], name: "index_post_categories_on_name", using: :btree
+    t.index ["slug"], name: "index_post_categories_on_slug", using: :btree
   end
-
-  add_index "post_categories", ["avatar"], name: "index_post_categories_on_avatar", using: :btree
-  add_index "post_categories", ["description"], name: "index_post_categories_on_description", using: :btree
-  add_index "post_categories", ["name"], name: "index_post_categories_on_name", using: :btree
-  add_index "post_categories", ["slug"], name: "index_post_categories_on_slug", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "name"
@@ -174,23 +165,21 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.string   "meta_title",       default: "", null: false
     t.text     "meta_description", default: "", null: false
     t.text     "meta_keywords",    default: "", null: false
+    t.index ["avatar"], name: "index_posts_on_avatar", using: :btree
+    t.index ["content"], name: "index_posts_on_content", using: :btree
+    t.index ["name"], name: "index_posts_on_name", using: :btree
+    t.index ["post_category_id"], name: "index_posts_on_post_category_id", using: :btree
+    t.index ["slug"], name: "index_posts_on_slug", using: :btree
   end
-
-  add_index "posts", ["avatar"], name: "index_posts_on_avatar", using: :btree
-  add_index "posts", ["content"], name: "index_posts_on_content", using: :btree
-  add_index "posts", ["name"], name: "index_posts_on_name", using: :btree
-  add_index "posts", ["post_category_id"], name: "index_posts_on_post_category_id", using: :btree
-  add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
 
   create_table "product_attachments", force: :cascade do |t|
     t.integer  "product_id"
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["image"], name: "index_product_attachments_on_image", using: :btree
+    t.index ["product_id"], name: "index_product_attachments_on_product_id", using: :btree
   end
-
-  add_index "product_attachments", ["image"], name: "index_product_attachments_on_image", using: :btree
-  add_index "product_attachments", ["product_id"], name: "index_product_attachments_on_product_id", using: :btree
 
   create_table "product_categories", force: :cascade do |t|
     t.string  "name"
@@ -202,12 +191,11 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.string  "meta_title",          default: ""
     t.text    "meta_description",    default: ""
     t.text    "meta_keywords",       default: ""
+    t.index ["avatar"], name: "index_product_categories_on_avatar", using: :btree
+    t.index ["description"], name: "index_product_categories_on_description", using: :btree
+    t.index ["name"], name: "index_product_categories_on_name", using: :btree
+    t.index ["slug"], name: "index_product_categories_on_slug", using: :btree
   end
-
-  add_index "product_categories", ["avatar"], name: "index_product_categories_on_avatar", using: :btree
-  add_index "product_categories", ["description"], name: "index_product_categories_on_description", using: :btree
-  add_index "product_categories", ["name"], name: "index_product_categories_on_name", using: :btree
-  add_index "product_categories", ["slug"], name: "index_product_categories_on_slug", using: :btree
 
   create_table "product_questions", force: :cascade do |t|
     t.string   "name"
@@ -216,12 +204,11 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.string   "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_product_questions_on_name", using: :btree
+    t.index ["phone"], name: "index_product_questions_on_phone", using: :btree
+    t.index ["product_id"], name: "index_product_questions_on_product_id", using: :btree
+    t.index ["text"], name: "index_product_questions_on_text", using: :btree
   end
-
-  add_index "product_questions", ["name"], name: "index_product_questions_on_name", using: :btree
-  add_index "product_questions", ["phone"], name: "index_product_questions_on_phone", using: :btree
-  add_index "product_questions", ["product_id"], name: "index_product_questions_on_product_id", using: :btree
-  add_index "product_questions", ["text"], name: "index_product_questions_on_text", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -243,45 +230,41 @@ ActiveRecord::Schema.define(version: 20170406143229) do
     t.integer  "qty",                 default: 1,    null: false
     t.boolean  "stock",               default: true, null: false
     t.text     "short_description",   default: "",   null: false
+    t.index ["avatar"], name: "index_products_on_avatar", using: :btree
+    t.index ["description"], name: "index_products_on_description", using: :btree
+    t.index ["name"], name: "index_products_on_name", using: :btree
+    t.index ["price"], name: "index_products_on_price", using: :btree
+    t.index ["seo_description"], name: "index_products_on_seo_description", using: :btree
+    t.index ["seo_keywords"], name: "index_products_on_seo_keywords", using: :btree
+    t.index ["seo_title"], name: "index_products_on_seo_title", using: :btree
+    t.index ["slug"], name: "index_products_on_slug", using: :btree
   end
-
-  add_index "products", ["avatar"], name: "index_products_on_avatar", using: :btree
-  add_index "products", ["description"], name: "index_products_on_description", using: :btree
-  add_index "products", ["name"], name: "index_products_on_name", using: :btree
-  add_index "products", ["price"], name: "index_products_on_price", using: :btree
-  add_index "products", ["seo_description"], name: "index_products_on_seo_description", using: :btree
-  add_index "products", ["seo_keywords"], name: "index_products_on_seo_keywords", using: :btree
-  add_index "products", ["seo_title"], name: "index_products_on_seo_title", using: :btree
-  add_index "products", ["slug"], name: "index_products_on_slug", using: :btree
 
   create_table "site_variables", force: :cascade do |t|
     t.string "title"
     t.string "descriptor"
     t.string "content"
+    t.index ["content"], name: "index_site_variables_on_content", using: :btree
+    t.index ["descriptor"], name: "index_site_variables_on_descriptor", using: :btree
+    t.index ["title"], name: "index_site_variables_on_title", using: :btree
   end
-
-  add_index "site_variables", ["content"], name: "index_site_variables_on_content", using: :btree
-  add_index "site_variables", ["descriptor"], name: "index_site_variables_on_descriptor", using: :btree
-  add_index "site_variables", ["title"], name: "index_site_variables_on_title", using: :btree
 
   create_table "sliders", force: :cascade do |t|
     t.string "name"
     t.string "descriptor"
+    t.index ["descriptor"], name: "index_sliders_on_descriptor", using: :btree
+    t.index ["name"], name: "index_sliders_on_name", using: :btree
   end
-
-  add_index "sliders", ["descriptor"], name: "index_sliders_on_descriptor", using: :btree
-  add_index "sliders", ["name"], name: "index_sliders_on_name", using: :btree
 
   create_table "slides", force: :cascade do |t|
     t.string  "name"
     t.string  "image"
     t.integer "slider_id"
     t.text    "description"
+    t.index ["description"], name: "index_slides_on_description", using: :btree
+    t.index ["image"], name: "index_slides_on_image", using: :btree
+    t.index ["name"], name: "index_slides_on_name", using: :btree
+    t.index ["slider_id"], name: "index_slides_on_slider_id", using: :btree
   end
-
-  add_index "slides", ["description"], name: "index_slides_on_description", using: :btree
-  add_index "slides", ["image"], name: "index_slides_on_image", using: :btree
-  add_index "slides", ["name"], name: "index_slides_on_name", using: :btree
-  add_index "slides", ["slider_id"], name: "index_slides_on_slider_id", using: :btree
 
 end
