@@ -29031,3 +29031,253 @@ Processing by Site::StaticPagesController#home as HTML
 Completed 200 OK in 206ms (Views: 76.5ms | ActiveRecord: 29.0ms)
 
 
+Started POST "/line_items?product_id=product1" for 127.0.0.1 at 2017-04-26 15:44:59 +0300
+Processing by Site::LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"fN2/BpCewwKfBRHlRnqN27zjJB7mVAvmfCC/2c1Y0ZeUPZqJCO+3DiaN5jPjbsw3rrIdG84daipg3yxa/hjs8g==", "product_id"=>"product1"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (64.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (27.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.9ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-04-26 12:44:59 UTC], ["updated_at", 2017-04-26 12:44:59 UTC]]
+  [1m[35m (27.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product1"], ["LIMIT", 1]]
+  [1m[36mLineItem Load (26.5ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 23], ["product_id", 243], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (26.1ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "product_name", "product_price", "total_price") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 243], ["cart_id", 23], ["product_name", "Товар 1"], ["product_price", "100.0"], ["total_price", 100]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."slug" = $1 AND ("products"."id" != $2) LIMIT $3[0m  [["slug", "product1"], ["id", 243], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "products" SET "qty" = $1, "stock" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["qty", 0], ["stock", false], ["updated_at", 2017-04-26 12:44:59 UTC], ["id", 243]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/carts/23
+Completed 302 Found in 459ms (ActiveRecord: 256.8ms)
+
+
+Started GET "/carts/23" for 127.0.0.1 at 2017-04-26 15:44:59 +0300
+Processing by Site::CartsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering site/carts/show.html.erb within layouts/site
+  [1m[36mLineItem Load (1.1ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 243[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  Rendered site/carts/show.html.erb within layouts/site (43.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (32.7ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.4ms)
+Completed 200 OK in 158ms (Views: 92.4ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-26 15:46:14 +0300
+Processing by Site::StaticPagesController#home as HTML
+  [1m[36mMenu Load (1.3ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (2.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "home"], ["LIMIT", 1]]
+  [1m[36mSlider Load (0.7ms)[0m  [1m[34mSELECT  "sliders".* FROM "sliders" WHERE "sliders"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendering site/static_pages/home.html.erb within layouts/site
+  [1m[36mSlide Load (0.7ms)[0m  [1m[34mSELECT "slides".* FROM "slides" WHERE "slides"."slider_id" = $1[0m  [["slider_id", 10]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."price" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/static_pages/home.html.erb within layouts/site (37.5ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (59.8ms)
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.2ms)
+Completed 200 OK in 344ms (Views: 112.1ms | ActiveRecord: 68.4ms)
+
+
+Started GET "/carts/23" for 127.0.0.1 at 2017-04-26 15:46:27 +0300
+Processing by Site::CartsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering site/carts/show.html.erb within layouts/site
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 243[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  Rendered site/carts/show.html.erb within layouts/site (20.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.3ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (31.2ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (3.8ms)
+Completed 200 OK in 113ms (Views: 68.0ms | ActiveRecord: 9.4ms)
+
+
+Started DELETE "/carts/23" for 127.0.0.1 at 2017-04-26 15:46:30 +0300
+Processing by Site::CartsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pTZIt1IVefr0Ot93v3k9bjUc8Ep8bA8ONdNm5sMhpmtN1m04ymQN9k2yKKEabXyCJ03JT1QlbsIpLPVl8GGbDg==", "id"=>"23"}
+  [1m[36mMenu Load (1.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.9ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mCart Load (0.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 23]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."id" = $2 LIMIT $3[0m  [["cart_id", 23], ["id", 71], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 71]]
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 243], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."slug" = $1 AND ("products"."id" != $2) LIMIT $3[0m  [["slug", "product1"], ["id", 243], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "products" SET "qty" = $1, "stock" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["qty", 1], ["stock", true], ["updated_at", 2017-04-26 12:46:30 UTC], ["id", 243]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 23]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 101ms (ActiveRecord: 39.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-26 15:46:30 +0300
+Processing by Site::StaticPagesController#home as HTML
+  [1m[36mMenu Load (0.9ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "home"], ["LIMIT", 1]]
+  [1m[36mSlider Load (0.6ms)[0m  [1m[34mSELECT  "sliders".* FROM "sliders" WHERE "sliders"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendering site/static_pages/home.html.erb within layouts/site
+  [1m[36mSlide Load (0.6ms)[0m  [1m[34mSELECT "slides".* FROM "slides" WHERE "slides"."slider_id" = $1[0m  [["slider_id", 10]]
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."price" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/static_pages/home.html.erb within layouts/site (21.7ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (25.5ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (3.5ms)
+Completed 200 OK in 87ms (Views: 59.3ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-26 15:46:33 +0300
+Processing by Site::StaticPagesController#home as HTML
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mPage Load (3.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "home"], ["LIMIT", 1]]
+  [1m[36mSlider Load (0.6ms)[0m  [1m[34mSELECT  "sliders".* FROM "sliders" WHERE "sliders"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendering site/static_pages/home.html.erb within layouts/site
+  [1m[36mSlide Load (0.7ms)[0m  [1m[34mSELECT "slides".* FROM "slides" WHERE "slides"."slider_id" = $1[0m  [["slider_id", 10]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."price" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/static_pages/home.html.erb within layouts/site (24.4ms)
+  [1m[36mMenuItem Load (2.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (24.9ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.5ms)
+Completed 200 OK in 95ms (Views: 66.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/products/product1" for 127.0.0.1 at 2017-04-26 15:46:39 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product1"}
+  [1m[36mMenu Load (1.2ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.4ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product1"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 243]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/products/show.html.erb within layouts/site (24.3ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (25.1ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.5ms)
+Completed 200 OK in 182ms (Views: 86.4ms | ActiveRecord: 26.7ms)
+
+
+Started POST "/line_items?product_id=product1" for 127.0.0.1 at 2017-04-26 15:46:41 +0300
+Processing by Site::LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"4hnImIR3aHK9pr09z3Q796+lhEqEDdFykBSyabKec4cK+e0XHAYcfgQuSutqYHobvfS9T6xEsL6M6yHqgd5O4g==", "product_id"=>"product1"}
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-04-26 12:46:41 UTC], ["updated_at", 2017-04-26 12:46:41 UTC]]
+  [1m[35m (42.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product1"], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 243], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "product_name", "product_price", "total_price") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 243], ["cart_id", 24], ["product_name", "Товар 1"], ["product_price", "100.0"], ["total_price", 100]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."slug" = $1 AND ("products"."id" != $2) LIMIT $3[0m  [["slug", "product1"], ["id", 243], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "products" SET "qty" = $1, "stock" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["qty", 0], ["stock", false], ["updated_at", 2017-04-26 12:46:42 UTC], ["id", 243]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/carts/24
+Completed 302 Found in 107ms (ActiveRecord: 64.9ms)
+
+
+Started GET "/carts/24" for 127.0.0.1 at 2017-04-26 15:46:42 +0300
+Processing by Site::CartsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering site/carts/show.html.erb within layouts/site
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 243[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  Rendered site/carts/show.html.erb within layouts/site (16.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (2.9ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (31.6ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.1ms)
+Completed 200 OK in 84ms (Views: 59.6ms | ActiveRecord: 12.3ms)
+
+
