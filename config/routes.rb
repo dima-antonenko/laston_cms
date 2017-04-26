@@ -37,6 +37,8 @@ Rails.application.routes.draw do
   get "/payment_info"      => "site/static_pages#payment_info", via: [:get]
   get "/terms_of_service"  => "site/static_pages#terms_of_service", via: [:get]
 
+  get "/search_product"  => "site#search_product", via: [:get]
+
   match "/orders/create_quick" => "site/orders#create_quick", via: [:post]
 
   namespace :administrators do

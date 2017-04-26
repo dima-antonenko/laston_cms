@@ -4,21 +4,21 @@
     <div class="container main-header">
         <div class="row">
             <div class="col-xs-12 col-sm-3 logo">
-                <a href="index.html"><img alt="Kute Shop" src="/site_theme/assets/images/logo.png" /></a>
+                <a href="/"><img alt="Kute Shop" src="/site_theme/assets/images/logo.png" /></a>
             </div>
             <div class="col-xs-7 col-sm-7 header-search-box">
-                <form class="form-inline">
+            
+                <%= form_tag('/search_product', class: 'form-inline', method: :get) do %>
                     <div class="form-group form-category">
-                        <select class="select-category">
-                            <option value="2">По артикулу</option>
-                            <option value="1">По названию</option>
-                        </select>
+                    
+                       <%= select_tag "type", "<option value=\"product_sku\">По артикулу</option><option value=\"product_name\">По названию</option>".html_safe, class: 'select-category' %>
                     </div>
                     <div class="form-group input-serach">
-                        <input type="text"  placeholder="Поиск">
+                       <!-- <input type="text"  placeholder="Поиск"> -->
+                        <%= text_field_tag 'search_value', '', class: 'form-control input', placeholder: "Поиск"  %>
                     </div>
                     <button type="submit" class="pull-right btn-search"></button>
-                </form>
+                <% end %>
             </div>
             <div id="cart-block" class="col-xs-5 col-sm-2 shopping-cart-box">
                 <a class="cart-link" href="order.html">
@@ -99,12 +99,12 @@
                                     <% end %>
                                     <% end %>
                                 </ul>
-                                </div><!--/.nav-collapse -->
                             </div>
-                        </nav>
-                    </div>
+                        </div>
+                    </nav>
                 </div>
-                
             </div>
+            
         </div>
     </div>
+</div>
