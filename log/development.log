@@ -29281,3 +29281,595 @@ Processing by Site::CartsController#show as HTML
 Completed 200 OK in 84ms (Views: 59.6ms | ActiveRecord: 12.3ms)
 
 
+Started GET "/administrators/product_categories" for 127.0.0.1 at 2017-04-26 15:49:46 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:AdministratorsController> at /home/dima/Rails/laston_cms/app/controllers/administrators_controller.rb:2)
+Processing by Administrators::ProductCategoriesController#index as HTML
+  [1m[36mAdministrator Load (0.8ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/product_categories/index.html.erb within layouts/administrator
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "product_categories"[0m
+  [1m[36mProductCategory Load (2.3ms)[0m  [1m[34mSELECT  "product_categories".* FROM "product_categories" ORDER BY "product_categories"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" IN (0, 597)[0m
+  Rendered administrators/product_categories/index.html.erb within layouts/administrator (79.0ms)
+  Rendered layouts/administrator/_header.html.erb (1.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 175ms (Views: 97.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/administrators/posts" for 127.0.0.1 at 2017-04-26 15:49:54 +0300
+Processing by Administrators::PostsController#index as HTML
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/posts/index.html.erb within layouts/administrator
+  [1m[35m (77.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (4.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPostCategory Load (19.6ms)[0m  [1m[34mSELECT "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = 114[0m
+  Rendered administrators/posts/index.html.erb within layouts/administrator (243.0ms)
+  Rendered layouts/administrator/_header.html.erb (1.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 375ms (Views: 159.6ms | ActiveRecord: 111.6ms)
+
+
+Started GET "/administrators/post_categories" for 127.0.0.1 at 2017-04-26 15:50:00 +0300
+Processing by Administrators::PostCategoriesController#index as HTML
+  [1m[36mAdministrator Load (1.2ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/post_categories/index.html.erb within layouts/administrator
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_categories"[0m
+  [1m[36mPostCategory Load (0.9ms)[0m  [1m[34mSELECT  "post_categories".* FROM "post_categories" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mPostCategory Load (2.1ms)[0m  [1m[34mSELECT "post_categories".* FROM "post_categories" WHERE "post_categories"."id" IN (110, 0)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_categories"[0m
+  Rendered administrators/post_categories/index.html.erb within layouts/administrator (67.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 101ms (Views: 89.1ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/administrators/post_categories?page=2" for 127.0.0.1 at 2017-04-26 15:50:04 +0300
+Processing by Administrators::PostCategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/post_categories/index.html.erb within layouts/administrator
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "post_categories"[0m
+  [1m[36mPostCategory Load (1.0ms)[0m  [1m[34mSELECT  "post_categories".* FROM "post_categories" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  [1m[36mPostCategory Load (0.8ms)[0m  [1m[34mSELECT "post_categories".* FROM "post_categories" WHERE "post_categories"."id" = 0[0m
+  Rendered administrators/post_categories/index.html.erb within layouts/administrator (37.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.6ms)
+Completed 200 OK in 76ms (Views: 64.8ms | ActiveRecord: 3.9ms)
+
+
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /home/dima/Rails/laston_cms/config/environment.rb:5)
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-27 09:29:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (124.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:AdministratorsController> at /home/dima/Rails/laston_cms/app/controllers/administrators_controller.rb:2)
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (77.8ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (236.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (3.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (152.4ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (702.7ms)
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-27 09:30:15 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (1.4ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (1.0ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (29.1ms)
+  Rendered layouts/administrator/_header.html.erb (1.1ms)
+  Rendered layouts/administrator/_header.html.erb (1.0ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.6ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 75470ms (Views: 74439.7ms | ActiveRecord: 650.5ms)
+
+
+Completed 200 OK in 10270ms (Views: 10258.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/administrator.self-5d6828fce41dee209d4e4e76e52cdb15e4c9e81effa9ef90a5861373521ff2d8.css?body=1" for 127.0.0.1 at 2017-04-27 09:30:26 +0300
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-04-27 09:30:27 +0300
+Started GET "/assets/ckeditor/ckeditor.self-e0b9bfe15298d2b2dd388960b27d35e6a18c89b2390f8986d398c30da5496e4b.js?body=1" for 127.0.0.1 at 2017-04-27 09:30:27 +0300
+Started GET "/administrators/products/product0/edit" for 127.0.0.1 at 2017-04-27 09:30:59 +0300
+Processing by Administrators::ProductsController#edit as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mAdministrator Load (3.8ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendering administrators/products/edit.html.erb within layouts/administrator
+  [1m[36mProductAttachment Load (54.2ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  Rendered administrators/products/edit.html.erb within layouts/administrator (327.3ms)
+  Rendered layouts/administrator/_header.html.erb (1.3ms)
+  Rendered layouts/administrator/_sidebar.html.erb (1.1ms)
+Completed 200 OK in 494ms (Views: 322.2ms | ActiveRecord: 64.3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:01 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 09:31:02 +0300
+Started PATCH "/administrators/products/product0" for 127.0.0.1 at 2017-04-27 09:31:14 +0300
+Processing by Administrators::ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6+uae5pit0hw06HCWpghHShj3QbM54eBhyWVd02tgeUDC7/0AhPDRMlbVhT/jGDxOjLkA+Su5k2b2gb0fu28gA==", "product"=>{"active"=>"1", "stock"=>"1", "name"=>"Товар 0", "product_category_id"=>"597", "qty"=>"1", "price"=>"0.0", "slug"=>"product0", "short_description"=>"Здесь краткое описание", "description"=>"<p>описание</p>\r\n", "meta_title"=>"", "meta_description"=>"", "meta_keywords"=>""}, "commit"=>"Обновить", "id"=>"product0"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."slug" = $1 AND ("products"."id" != $2) LIMIT $3[0m  [["slug", "product0"], ["id", 242], ["LIMIT", 1]]
+  [1m[35mSQL (21.7ms)[0m  [1m[33mUPDATE "products" SET "description" = $1, "short_description" = $2, "meta_title" = $3, "meta_description" = $4, "meta_keywords" = $5, "updated_at" = $6 WHERE "products"."id" = $7[0m  [["description", "<p>описание</p>\r\n"], ["short_description", "Здесь краткое описание"], ["meta_title", ""], ["meta_description", ""], ["meta_keywords", ""], ["updated_at", 2017-04-27 06:31:14 UTC], ["id", 242]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from block (2 levels) in update at /home/dima/Rails/laston_cms/app/controllers/administrators/products_controller.rb:19)
+Redirected to http://localhost:3000/administrators/products/product0/edit
+Completed 302 Found in 137ms (ActiveRecord: 42.0ms)
+
+
+Started GET "/administrators/products/product0/edit" for 127.0.0.1 at 2017-04-27 09:31:14 +0300
+Processing by Administrators::ProductsController#edit as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mAdministrator Load (0.6ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  [1m[36mProductCategory Load (0.8ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendering administrators/products/edit.html.erb within layouts/administrator
+  [1m[36mProductAttachment Load (4.5ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  Rendered administrators/products/edit.html.erb within layouts/administrator (15.8ms)
+  Rendered layouts/administrator/_header.html.erb (0.8ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 67ms (Views: 39.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:15 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:15 +0300
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:15 +0300
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 09:31:16 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (26.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (68.9ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (24.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (1.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (23.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.8ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/products/show.html.erb within layouts/site (49.5ms)
+  [1m[36mLineItem Load (20.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (2.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (91.5ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (7.0ms)
+Completed 200 OK in 815ms (Views: 340.0ms | ActiveRecord: 207.7ms)
+
+
+Started PATCH "/administrators/products/product0" for 127.0.0.1 at 2017-04-27 09:31:55 +0300
+Processing by Administrators::ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+8jCkkDVaq7/J3/BGjjo2KwC+aCOG9rg5fr2ckeIfcMTKOcd2KQeokaviBe/LKk0vlPApaZSuyz5BWXxdMhApg==", "product"=>{"active"=>"1", "stock"=>"1", "name"=>"Товар 0", "product_category_id"=>"597", "qty"=>"10", "price"=>"100", "slug"=>"product0", "short_description"=>"Здесь краткое описание", "description"=>"<p>описание</p>\r\n", "meta_title"=>"", "meta_description"=>"", "meta_keywords"=>""}, "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f182a685e18 @tempfile=#<Tempfile:/tmp/RackMultipart20170427-3144-bshsaj.jpg>, @original_filename="kamni-mnogo-raznye-7645.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"kamni-mnogo-raznye-7645.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f182a685df0 @tempfile=#<Tempfile:/tmp/RackMultipart20170427-3144-jop8fr.jpg>, @original_filename="nastol.com.ua_182947.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"nastol.com.ua_182947.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f182a685dc8 @tempfile=#<Tempfile:/tmp/RackMultipart20170427-3144-wd5she.jpg>, @original_filename="nastol.com.ua_174945.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"nastol.com.ua_174945.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007f182a685da0 @tempfile=#<Tempfile:/tmp/RackMultipart20170427-3144-fcruhz.jpg>, @original_filename="nastol.com.ua_169826.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"images[]\"; filename=\"nastol.com.ua_169826.jpg\"\r\nContent-Type: image/jpeg\r\n">], "commit"=>"Обновить", "id"=>"product0"}
+  [1m[36mAdministrator Load (1.4ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (4.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.6ms)[0m  [1m[32mINSERT INTO "product_attachments" ("product_id", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 242], ["image", "kamni-mnogo-raznye-7645.jpg"], ["created_at", 2017-04-27 06:32:01 UTC], ["updated_at", 2017-04-27 06:32:01 UTC]]
+  [1m[35m (32.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "product_attachments" ("product_id", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 242], ["image", "nastol.com.ua_182947.jpg"], ["created_at", 2017-04-27 06:32:02 UTC], ["updated_at", 2017-04-27 06:32:02 UTC]]
+  [1m[35m (69.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "product_attachments" ("product_id", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 242], ["image", "nastol.com.ua_174945.jpg"], ["created_at", 2017-04-27 06:32:03 UTC], ["updated_at", 2017-04-27 06:32:03 UTC]]
+  [1m[35m (64.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "product_attachments" ("product_id", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 242], ["image", "nastol.com.ua_169826.jpg"], ["created_at", 2017-04-27 06:32:04 UTC], ["updated_at", 2017-04-27 06:32:04 UTC]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."slug" = $1 AND ("products"."id" != $2) LIMIT $3[0m  [["slug", "product0"], ["id", 242], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "products" SET "price" = $1, "qty" = $2, "updated_at" = $3 WHERE "products"."id" = $4[0m  [["price", 0.1e3], ["qty", 10], ["updated_at", 2017-04-27 06:32:04 UTC], ["id", 242]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from block (2 levels) in update at /home/dima/Rails/laston_cms/app/controllers/administrators/products_controller.rb:19)
+Redirected to http://localhost:3000/administrators/products/product0/edit
+Completed 302 Found in 8929ms (ActiveRecord: 260.8ms)
+
+
+Started GET "/administrators/products/product0/edit" for 127.0.0.1 at 2017-04-27 09:32:05 +0300
+Processing by Administrators::ProductsController#edit as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendering administrators/products/edit.html.erb within layouts/administrator
+  [1m[36mProductAttachment Load (1.5ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  Rendered administrators/products/edit.html.erb within layouts/administrator (15.4ms)
+  Rendered layouts/administrator/_header.html.erb (1.0ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 38.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:32:06 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-27 09:32:06 +0300
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:32:06 +0300
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-27 09:32:06 +0300
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-27 09:32:06 +0300
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-27 09:32:06 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 09:32:06 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 09:32:07 +0300
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-27 09:32:07 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-27 09:32:07 +0300
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 09:32:07 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.4ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (1.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/products/show.html.erb within layouts/site
+  [1m[36mProductAttachment Load (2.5ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (3.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/products/show.html.erb within layouts/site (31.1ms)
+  [1m[36mLineItem Load (0.9ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (2.3ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (36.7ms)
+  [1m[36mMenuItem Load (1.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.6ms)
+Completed 200 OK in 124ms (Views: 79.0ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/administrators/menus" for 127.0.0.1 at 2017-04-27 09:37:04 +0300
+Processing by Administrators::MenusController#index as HTML
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/menus/index.html.erb within layouts/administrator
+  [1m[36mMenu Load (1.9ms)[0m  [1m[34mSELECT "menus".* FROM "menus"[0m
+  [1m[36mMenuItem Load (1.3ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" IN (3, 4)[0m
+  Rendered administrators/menus/index.html.erb within layouts/administrator (51.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.8ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.6ms)
+Completed 200 OK in 115ms (Views: 80.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-27 09:37:08 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.9ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (2.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (5.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (89.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 151ms (Views: 102.6ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/administrators/menu_items/66/edit" for 127.0.0.1 at 2017-04-27 09:37:23 +0300
+Processing by Administrators::MenuItemsController#edit as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mAdministrator Load (0.9ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering administrators/menu_items/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66' ORDER BY "menu_items"."position" ASC[0m
+  Rendered administrators/menu_items/edit.html.erb within layouts/administrator (28.6ms)
+  Rendered layouts/administrator/_header.html.erb (1.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 88ms (Views: 52.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-27 09:44:20 +0300
+Processing by Site::StaticPagesController#home as HTML
+  [1m[36mMenu Load (1.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (1.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mPage Load (30.6ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "home"], ["LIMIT", 1]]
+  [1m[36mSlider Load (67.2ms)[0m  [1m[34mSELECT  "sliders".* FROM "sliders" WHERE "sliders"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main"], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendering site/static_pages/home.html.erb within layouts/site
+  [1m[36mSlide Load (45.4ms)[0m  [1m[34mSELECT "slides".* FROM "slides" WHERE "slides"."slider_id" = $1[0m  [["slider_id", 10]]
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."price" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/static_pages/home.html.erb within layouts/site (89.5ms)
+  [1m[36mLineItem Load (1.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (37.1ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.4ms)
+Completed 200 OK in 516ms (Views: 96.3ms | ActiveRecord: 174.2ms)
+
+
+Started GET "/administrators" for 127.0.0.1 at 2017-04-27 09:45:21 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/administrators"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [168 times] (95.0ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.5ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.0ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (266.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___10560703049424679_69870743329760 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.5ms)
+Started GET "/administrators/dashboard" for 127.0.0.1 at 2017-04-27 09:45:25 +0300
+Processing by AdministratorsController#dashboard as HTML
+  [1m[36mAdministrator Load (3.1ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/dashboard.html.erb within layouts/administrator
+  Rendered administrators/dashboard.html.erb within layouts/administrator (1.0ms)
+  Rendered layouts/administrator/_header.html.erb (1.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 68.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/administrators/" for 127.0.0.1 at 2017-04-27 09:45:29 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/administrators"):
+  
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [168 times] (72.4ms)
+  Rendered collection of /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb [6 times] (2.6ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from __home_dima__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___10560703049424679_69870880432060 at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.7ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (63.7ms)
+Started GET "/administrators/menus" for 127.0.0.1 at 2017-04-27 09:45:50 +0300
+Processing by Administrators::MenusController#index as HTML
+  [1m[36mAdministrator Load (4.1ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/menus/index.html.erb within layouts/administrator
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT "menus".* FROM "menus"[0m
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" IN (3, 4)[0m
+  Rendered administrators/menus/index.html.erb within layouts/administrator (18.4ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 43.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-27 09:45:52 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdministrator Load (2.0ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (3.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (3.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Load (1.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (4.1ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.9ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (100.9ms)
+  Rendered layouts/administrator/_header.html.erb (1.2ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 146ms (Views: 114.4ms | ActiveRecord: 20.1ms)
+
+
+Started DELETE "/administrators/menu_items/100" for 127.0.0.1 at 2017-04-27 09:45:59 +0300
+Processing by Administrators::MenuItemsController#destroy as JS
+  Parameters: {"id"=>"100"}
+  [1m[36mAdministrator Load (1.0ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE ("menu_items"."ancestry" LIKE '66/100/%' OR "menu_items"."ancestry" = '66/100')[0m
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_item_id" = $1[0m  [["menu_item_id", 100]]
+  [1m[35mSQL (2.4ms)[0m  [1m[31mDELETE FROM "menu_items" WHERE "menu_items"."id" = $1[0m  [["id", 100]]
+  [1m[35m (43.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 84ms (Views: 0.3ms | ActiveRecord: 50.3ms)
+
+
+Started GET "/administrators/menus/" for 127.0.0.1 at 2017-04-27 09:58:25 +0300
+Processing by Administrators::MenusController#index as HTML
+  [1m[36mAdministrator Load (4.5ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/menus/index.html.erb within layouts/administrator
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus"[0m
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" IN (3, 4)[0m
+  Rendered administrators/menus/index.html.erb within layouts/administrator (30.9ms)
+  Rendered layouts/administrator/_header.html.erb (2.4ms)
+  Rendered layouts/administrator/_sidebar.html.erb (1.6ms)
+Completed 200 OK in 84ms (Views: 73.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/administrators/menus/4/edit" for 127.0.0.1 at 2017-04-27 09:58:29 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdministrator Load (2.1ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 4]]
+  [1m[36mMenuItem Load (2.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (13.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 42.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/administrators/menus/4/edit" for 127.0.0.1 at 2017-04-27 09:59:56 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdministrator Load (0.9ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (2.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 4]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (14.5ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 62.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/administrators/menus/3/edit" for 127.0.0.1 at 2017-04-27 10:00:27 +0300
+Processing by Administrators::MenusController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdministrator Load (0.9ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMenu Load (2.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering administrators/menus/edit.html.erb within layouts/administrator
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL ORDER BY "menu_items"."position" ASC[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "menu_items".* FROM "menu_items" WHERE "menu_items"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  Rendered administrators/menus/edit.html.erb within layouts/administrator (69.6ms)
+  Rendered layouts/administrator/_header.html.erb (1.0ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 108ms (Views: 87.6ms | ActiveRecord: 10.4ms)
+
+
