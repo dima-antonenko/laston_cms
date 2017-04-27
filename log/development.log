@@ -30423,3 +30423,1085 @@ ActionController::UnknownFormat - ActionController::UnknownFormat:
 Started POST "/__better_errors/7c3dca7d98b3212e/variables" for 127.0.0.1 at 2017-04-27 10:25:10 +0300
   [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
   [1m[36mMenuItem Load (1.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+Started GET "/" for 127.0.0.1 at 2017-04-27 10:29:44 +0300
+Processing by Site::StaticPagesController#home as HTML
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (54.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT  "pages".* FROM "pages" WHERE "pages"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "home"], ["LIMIT", 1]]
+  [1m[36mSlider Load (1.2ms)[0m  [1m[34mSELECT  "sliders".* FROM "sliders" WHERE "sliders"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendering site/kute_shop/home.html.erb within layouts/site
+  [1m[36mSlide Load (0.7ms)[0m  [1m[34mSELECT "slides".* FROM "slides" WHERE "slides"."slider_id" = $1[0m  [["slider_id", 10]]
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY "products"."price" ASC LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/home.html.erb within layouts/site (36.0ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (53.0ms)
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (8.1ms)
+Completed 200 OK in 397ms (Views: 100.2ms | ActiveRecord: 102.4ms)
+
+
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-27 10:30:36 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:AdministratorsController> at /home/dima/Rails/laston_cms/app/controllers/administrators_controller.rb:2)
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (74.4ms)
+  Rendered layouts/administrator/_header.html.erb (1.1ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.9ms)
+Completed 200 OK in 140ms (Views: 93.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:30:39 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (3.1ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (37.0ms)
+  [1m[36mLineItem Load (1.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (63.1ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.7ms)
+Completed 200 OK in 383ms (Views: 113.6ms | ActiveRecord: 72.7ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:31:02 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (1.9ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (3.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (2.7ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (16.4ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 8.7ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/better_errors-2.1.1/lib/better_errors/raised_exception.rb:7)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from initialize at /home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/better_errors-2.1.1/lib/better_errors/raised_exception.rb:8)
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/models/product.rb:24:in `in_cart?'
+  app/views/site/kute_shop/product.html.erb:46:in `_app_views_site_kute_shop_product_html_erb___655264570521237760_69870761406420'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:159:in `block in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:166:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:354:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:157:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/renderer.rb:23:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:104:in `_render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:83:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/rendering.rb:26:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:36:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/site/products_controller.rb:14:in `show'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:188:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:126:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:455:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rescue.rb:20:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:126:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:30:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:190:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:262:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `each'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:725:in `call'
+  bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/migration.rb:553:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+Started POST "/__better_errors/630c2bece7ab7934/variables" for 127.0.0.1 at 2017-04-27 10:31:02 +0300
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:31:12 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (2.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (31.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (2.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (36.9ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (54.3ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.7ms)
+Completed 200 OK in 334ms (Views: 106.0ms | ActiveRecord: 62.8ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:31:51 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (44.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 47.8ms)
+
+
+
+SyntaxError - formal argument cannot be an instance variable
+  def in_cart?(@minicart)
+                        ^:
+  app/models/product.rb:24:in `'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:477:in `block in load_file'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:662:in `new_constants_in'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:476:in `load_file'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:375:in `block in require_or_load'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies/interlock.rb:12:in `block in loading'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/concurrency/share_lock.rb:150:in `exclusive'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies/interlock.rb:11:in `loading'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:37:in `load_interlock'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:358:in `require_or_load'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:511:in `load_missing_constant'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:203:in `const_missing'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:543:in `load_missing_constant'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:203:in `const_missing'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:543:in `load_missing_constant'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/dependencies.rb:203:in `const_missing'
+  app/controllers/site/products_controller.rb:6:in `show'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:188:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:126:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:455:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rescue.rb:20:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:126:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:30:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:190:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:262:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:725:in `call'
+  bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/migration.rb:553:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+Started POST "/__better_errors/4c271974f53b9155/variables" for 127.0.0.1 at 2017-04-27 10:31:52 +0300
+  [1m[36mMenuItem Load (1.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:32:32 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (50.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (31.5ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (2.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (51.2ms)
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.2ms)
+Completed 200 OK in 312ms (Views: 97.0ms | ActiveRecord: 63.5ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:33:36 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (1.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (43.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (39.1ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (42.5ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (5.0ms)
+Completed 200 OK in 308ms (Views: 98.9ms | ActiveRecord: 56.9ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:36:27 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (1.2ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "menu_items" ("title", "url") VALUES ($1, $2) RETURNING "id"[0m  [["title", "zz"], ["url", "/"]]
+  [1m[35m (48.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (44.5ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (2.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (50.4ms)
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (5.0ms)
+Completed 200 OK in 338ms (Views: 109.3ms | ActiveRecord: 63.3ms)
+
+
+Started GET "/carts/24" for 127.0.0.1 at 2017-04-27 10:36:36 +0300
+Processing by Site::CartsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mMenu Load (1.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (2.3ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering site/kute_shop/cart.html.erb within layouts/site
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = 243[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  Rendered site/kute_shop/cart.html.erb within layouts/site (17.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (1.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (29.0ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (3.8ms)
+Completed 200 OK in 132ms (Views: 64.2ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/line_items?product_id=product0" for 127.0.0.1 at 2017-04-27 10:36:40 +0300
+Processing by Site::LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"oEiw4VrAefZAj5KTych2I2SondkoyaYbYmNlU2bJ7C9IqJVuwrEN+vkHZUVs3DfPdvmk3ACAx9d+nPbQVYnRSg==", "product_id"=>"product0"}
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.6ms)[0m  [1m[32mINSERT INTO "line_items" ("product_id", "cart_id", "product_name", "product_price", "total_price") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["product_id", 242], ["cart_id", 24], ["product_name", "Товар 0"], ["product_price", "100.0"], ["total_price", 100]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."slug" = $1 AND ("products"."id" != $2) LIMIT $3[0m  [["slug", "product0"], ["id", 242], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "products" SET "qty" = $1, "updated_at" = $2 WHERE "products"."id" = $3[0m  [["qty", 9], ["updated_at", 2017-04-27 07:36:40 UTC], ["id", 242]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/carts/24
+Completed 302 Found in 99ms (ActiveRecord: 55.7ms)
+
+
+Started GET "/carts/24" for 127.0.0.1 at 2017-04-27 10:36:40 +0300
+Processing by Site::CartsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering site/kute_shop/cart.html.erb within layouts/site
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (243, 242)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  Rendered site/kute_shop/cart.html.erb within layouts/site (17.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (28.9ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.3ms)
+Completed 200 OK in 89ms (Views: 62.9ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:36:45 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (33.9ms)
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (36.2ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.5ms)
+Completed 200 OK in 115ms (Views: 84.5ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:38:11 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (1.2ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (37.9ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (2.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.1ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (2.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (40.2ms)
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (6.4ms)
+Completed 200 OK in 141ms (Views: 113.4ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:38:22 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (5.2ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (3.9ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.7ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (34.6ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (30.9ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.8ms)
+Completed 200 OK in 128ms (Views: 85.4ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:38:59 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (3.3ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (2.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (32.9ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (31.4ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.3ms)
+Completed 200 OK in 111ms (Views: 85.3ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:39:13 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (1.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (3.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (1.9ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (51.5ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (33.4ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.2ms)
+Completed 200 OK in 144ms (Views: 106.5ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:39:28 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (1.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (3.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (46.0ms)
+  [1m[36mLineItem Load (5.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (39.3ms)
+  [1m[36mMenuItem Load (1.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (6.0ms)
+Completed 200 OK in 132ms (Views: 102.5ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:39:48 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.9ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (2.7ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (41.5ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (36.0ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.0ms)
+Completed 200 OK in 125ms (Views: 95.2ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:39:59 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (1.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (3.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (1.2ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (2.9ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (68.1ms)
+  [1m[36mLineItem Load (1.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (5.0ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.8ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (41.8ms)
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (7.5ms)
+Completed 200 OK in 185ms (Views: 140.0ms | ActiveRecord: 24.8ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:40:20 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (2.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (1.1ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.8ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (77.8ms)
+  [1m[36mLineItem Load (0.5ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (30.1ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.4ms)
+Completed 200 OK in 170ms (Views: 135.6ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:41:14 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (8.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  Rendered site/kute_shop/product.html.erb within layouts/site (8.2ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 10.5ms)
+
+
+
+SyntaxError - syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+/div>".html_safe : button_to 'Добавить в корзи
+                              ^
+/home/dima/Rails/laston_cms/app/views/site/kute_shop/product.html.erb:53: syntax error, unexpected ',', expecting ')'
+авить в корзину', line_items_path(product_id: @
+                              ^
+/home/dima/Rails/laston_cms/app/views/site/kute_shop/product.html.erb:53: syntax error, unexpected ',', expecting ')'
+ms_path(product_id: @product), {class: "btn-add-cart"} );@ou
+                              ^:
+  app/views/site/kute_shop/product.html.erb:53:in `'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:310:in `compile'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:259:in `block (2 levels) in compile!'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:166:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:356:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:258:in `block in compile!'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:246:in `compile!'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:158:in `block in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:166:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:354:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:157:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/renderer.rb:23:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:104:in `_render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:83:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/rendering.rb:26:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:36:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/site/products_controller.rb:14:in `show'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:188:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:126:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:455:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rescue.rb:20:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:126:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:30:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:190:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:262:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:725:in `call'
+  bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/migration.rb:553:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+Started POST "/__better_errors/22ef9e3426cdb287/variables" for 127.0.0.1 at 2017-04-27 10:41:14 +0300
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (1.2ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  [1m[36mProductAttachment Load (3.3ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:41:30 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  Rendered site/kute_shop/product.html.erb within layouts/site (7.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 2.7ms)
+
+
+
+SyntaxError - syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+div>".html_safe : {button_to 'Добавить в корзи
+                              ^
+/home/dima/Rails/laston_cms/app/views/site/kute_shop/product.html.erb:53: syntax error, unexpected ',', expecting ')'
+авить в корзину', line_items_path(product_id: @
+                              ^
+/home/dima/Rails/laston_cms/app/views/site/kute_shop/product.html.erb:53: syntax error, unexpected ',', expecting ')'
+ms_path(product_id: @product), {class: "btn-add-cart"} });@o
+                              ^
+/home/dima/Rails/laston_cms/app/views/site/kute_shop/product.html.erb:53: syntax error, unexpected '}', expecting ')'
+ct), {class: "btn-add-cart"} });@output_buffer.safe_append='
+                              ^
+/home/dima/Rails/laston_cms/app/views/site/kute_shop/product.html.erb:168: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/home/dima/Rails/laston_cms/app/views/site/kute_shop/product.html.erb:170: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^:
+  app/views/site/kute_shop/product.html.erb:53:in `'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:310:in `compile'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:259:in `block (2 levels) in compile!'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:166:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:356:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:258:in `block in compile!'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:246:in `compile!'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:158:in `block in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:166:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:354:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/template.rb:157:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/template_renderer.rb:14:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/renderer.rb:42:in `render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/renderer/renderer.rb:23:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:104:in `_render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/streaming.rb:217:in `_render_template'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:83:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/rendering.rb:26:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:36:in `render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:43:in `render'
+  app/controllers/site/products_controller.rb:14:in `show'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:188:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rendering.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:126:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:455:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/callbacks.rb:19:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/rescue.rb:20:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `block in instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/notifications.rb:164:in `instrument'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/abstract_controller/base.rb:126:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionview/lib/action_view/rendering.rb:30:in `process'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:190:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_controller/metal.rb:262:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:39:in `block in serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/journey/router.rb:26:in `serve'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/routing/route_set.rb:725:in `call'
+  bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/app_request_handler.rb:13:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/meta_request_handler.rb:13:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (2.0.1) lib/rack/etag.rb:25:in `call'
+  rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.1) lib/rack/head.rb:12:in `call'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+  rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/cookies.rb:613:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activerecord/lib/active_record/migration.rb:553:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  rack-contrib (1.2.0) lib/rack/contrib/response_headers.rb:17:in `call'
+  meta_request (0.4.0) lib/meta_request/middlewares/headers.rb:16:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:36:in `call_app'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `block in call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/tagged_logging.rb:69:in `tagged'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/rack/logger.rb:24:in `call'
+  request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/executor.rb:12:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/actionpack/lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+   () home/dima/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bundler/gems/rails-531219fdbde9/railties/lib/rails/engine.rb:522:in `call'
+  rack (2.0.1) lib/rack/handler/webrick.rb:86:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/dima/.rbenv/versions/2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+Started POST "/__better_errors/4efcbbe3dddff179/variables" for 127.0.0.1 at 2017-04-27 10:41:30 +0300
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  [1m[36mProductAttachment Load (1.8ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mProduct Load (3.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+Started GET "/products/product0" for 127.0.0.1 at 2017-04-27 10:43:16 +0300
+Processing by Site::ProductsController#show as HTML
+  Parameters: {"id"=>"product0"}
+  [1m[36mMenu Load (0.9ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (1.2ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product0"], ["LIMIT", 1]]
+  Rendering site/kute_shop/product.html.erb within layouts/site
+  [1m[36mProductAttachment Load (0.7ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 242]]
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1 AND "line_items"."product_id" = $2 LIMIT $3[0m  [["cart_id", 24], ["product_id", 242], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 5]]
+  Rendered site/kute_shop/product.html.erb within layouts/site (31.9ms)
+  [1m[36mLineItem Load (0.6ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (1.4ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (29.2ms)
+  [1m[36mMenuItem Load (0.6ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (6.1ms)
+Completed 200 OK in 110ms (Views: 79.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/carts/24" for 127.0.0.1 at 2017-04-27 10:44:15 +0300
+Processing by Site::CartsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "main_menu"], ["LIMIT", 1]]
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."descriptor" = $1 LIMIT $2[0m  [["descriptor", "footer_menu"], ["LIMIT", 1]]
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mCart Load (1.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering site/kute_shop/cart.html.erb within layouts/site
+  [1m[36mLineItem Load (0.7ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (243, 242)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  Rendered site/kute_shop/cart.html.erb within layouts/site (19.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 24]]
+  [1m[36mMenuItem Load (0.9ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1 AND "menu_items"."ancestry" IS NULL[0m  [["menu_id", 3]]
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '66' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '66'[0m
+  [1m[36mMenuItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '67' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '67'[0m
+  [1m[36mMenuItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "menu_items" WHERE "menu_items"."ancestry" = '68' LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMenuItem Load (0.5ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."ancestry" = '68'[0m
+  Rendered layouts/site/_header.html.erb (26.8ms)
+  [1m[36mMenuItem Load (0.7ms)[0m  [1m[34mSELECT "menu_items".* FROM "menu_items" WHERE "menu_items"."menu_id" = $1[0m  [["menu_id", 4]]
+  Rendered layouts/site/_footer.html.erb (4.2ms)
+Completed 200 OK in 90ms (Views: 64.2ms | ActiveRecord: 9.5ms)
+
+

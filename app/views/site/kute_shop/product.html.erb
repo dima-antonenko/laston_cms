@@ -42,14 +42,20 @@
                             </div>
                             <div class="product-desc">
                                 <%= @product.short_description %>
-
+                               <hr/>
+                               
                             </div>
                             
                             <div class="form-action buy_area">
+                           
                                 <div class="col-xs-5 col-sm-6 add_to_cart">
-                                    
+                                   <% if @product.in_cart?(@minicart) %>
+                                    <div class="product-price-group"><span class="price">уже в корзине</span></div>
+                                   <% else %>
                                     <%= button_to 'Добавить в корзину', line_items_path(product_id: @product), {class: "btn-add-cart"} %>
+                                    <% end %>
                                 </div>
+
                                 <div class="col-xs-6 col-sm-6 buy_for_phone">
                                     
                                     <%= form_tag('/orders/create_quick', remote: true, authenticity_token: true) do %>
@@ -59,6 +65,8 @@
                                     <% end %>
                                     
                                 </div>
+
+
                             </div>
                             <hr/>
                             <!--
