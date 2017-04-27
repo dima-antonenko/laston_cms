@@ -6,6 +6,8 @@ class Site::ProductCategoriesController < SiteController
     @parent_product_categories = ProductCategory.where(product_category_id: 0)
     @subcategories = @product_category.product_categories
     @banner = Banner.find_by(descriptor: "first_banner") 
+
+    render theme_path('product_category')
   end
 
 end

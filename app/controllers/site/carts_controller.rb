@@ -4,6 +4,7 @@ class Site::CartsController < SiteController
   def show
     @order = Order.new
     @line_items = @cart.line_items.includes(:product)
+    render theme_path('cart')
   end
 
 

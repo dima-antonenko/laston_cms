@@ -4,6 +4,7 @@ class SiteController < ApplicationController
 
   layout "site"
 
+
   def all_pages_data
     @main_menu_items   = Menu.find_by(descriptor: 'main_menu').menu_items.where(ancestry: nil)
     @footer_menu_items = Menu.find_by(descriptor: 'footer_menu').menu_items
@@ -15,13 +16,22 @@ class SiteController < ApplicationController
     respond_to do |format|
       if result.class.to_s == 'Product::ActiveRecord_Relation'
         @products = result.paginate(page: params[:page], per_page: 10)
-        format.html { render 'search_results' }
+        format.html {  render theme_path('search_results') }
       elsif result.class.to_s == 'Product'
         format.html { redirect_to product_path(result) }
       elsif result.class.to_s == 'FalseClass'
         raise ActiveRecord::RecordNotFound, "Запись не найдена"
       end
     end
+  end
+
+
+  protected
+
+
+  def theme_path(resourse_item)
+    theme = 'kute_shop'
+    "site/#{theme}/#{resourse_item}"
   end
 
 end
