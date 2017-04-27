@@ -1,7 +1,7 @@
 class Administrators::SlidesController < AdministratorsController
-  
- 	
+   	
   before_action :set_slider, only: [:edit, :destroy, :update]	
+
 
   def edit
     @sliders = Slider.all.collect {|slide| [slide.name, slide.id ]}

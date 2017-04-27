@@ -31505,3 +31505,82 @@ Processing by Site::CartsController#show as HTML
 Completed 200 OK in 90ms (Views: 64.2ms | ActiveRecord: 9.5ms)
 
 
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-27 10:48:58 +0300
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:AdministratorsController> at /home/dima/Rails/laston_cms/app/controllers/administrators_controller.rb:2)
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (60.7ms)
+  Rendered layouts/administrator/_header.html.erb (0.8ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.6ms)
+Completed 200 OK in 121ms (Views: 79.0ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-27 10:50:55 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (2.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (1.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (23.6ms)
+  Rendered layouts/administrator/_header.html.erb (1.0ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 45.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-27 10:51:01 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (0.6ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (0.8ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (24.4ms)
+  Rendered layouts/administrator/_header.html.erb (1.2ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 58ms (Views: 50.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/administrators/products" for 127.0.0.1 at 2017-04-27 10:51:11 +0300
+Processing by Administrators::ProductsController#index as HTML
+  [1m[36mAdministrator Load (1.2ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering administrators/products/index.html.erb within layouts/administrator
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  "products".* FROM "products" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  [1m[36mProductCategory Load (0.7ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories" WHERE "product_categories"."id" = 597[0m
+  Rendered administrators/products/index.html.erb within layouts/administrator (27.0ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 58ms (Views: 48.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/__meta_request/66bda705-5a36-4337-a1b1-331a0e33d634.json" for 127.0.0.1 at 2017-04-27 10:51:12 +0300
+Started GET "/administrators/products/product3/edit" for 127.0.0.1 at 2017-04-27 10:51:21 +0300
+Processing by Administrators::ProductsController#edit as HTML
+  Parameters: {"id"=>"product3"}
+  [1m[36mAdministrator Load (0.7ms)[0m  [1m[34mSELECT  "administrators".* FROM "administrators" WHERE "administrators"."id" = $1 ORDER BY "administrators"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (3.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."slug" = $1 ORDER BY "products"."id" ASC LIMIT $2[0m  [["slug", "product3"], ["LIMIT", 1]]
+  [1m[36mProductCategory Load (0.6ms)[0m  [1m[34mSELECT "product_categories".* FROM "product_categories"[0m
+  Rendering administrators/products/edit.html.erb within layouts/administrator
+  [1m[36mProductAttachment Load (0.6ms)[0m  [1m[34mSELECT "product_attachments".* FROM "product_attachments" WHERE "product_attachments"."product_id" = $1[0m  [["product_id", 245]]
+  Rendered administrators/products/edit.html.erb within layouts/administrator (14.6ms)
+  Rendered layouts/administrator/_header.html.erb (0.9ms)
+  Rendered layouts/administrator/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 61ms (Views: 39.9ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/__meta_request/62089977-afe1-4f15-8682-b8ccc7059b02.json" for 127.0.0.1 at 2017-04-27 10:51:21 +0300
+Started GET "/assets/ckeditor/config.js?t=GB8C" for 127.0.0.1 at 2017-04-27 10:51:22 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/editor.css?t=GB8C" for 127.0.0.1 at 2017-04-27 10:51:23 +0300
+Started GET "/assets/ckeditor/lang/en.js?t=GB8C" for 127.0.0.1 at 2017-04-27 10:51:23 +0300
+Started GET "/assets/ckeditor/styles.js?t=GB8C" for 127.0.0.1 at 2017-04-27 10:51:23 +0300
+Started GET "/assets/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" for 127.0.0.1 at 2017-04-27 10:51:23 +0300
+Started GET "/assets/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" for 127.0.0.1 at 2017-04-27 10:51:23 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 10:51:23 +0300
+Started GET "/assets/ckeditor/contents.css?t=GB8C" for 127.0.0.1 at 2017-04-27 10:51:24 +0300
+Started GET "/assets/ckeditor/plugins/copyformatting/styles/copyformatting.css" for 127.0.0.1 at 2017-04-27 10:51:24 +0300
+Started GET "/assets/ckeditor/skins/moono-lisa/icons.png?t=580bcaf" for 127.0.0.1 at 2017-04-27 10:51:24 +0300

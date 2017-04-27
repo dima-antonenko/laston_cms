@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   match "/administrators/products/checked" => "administrators/products#checked", via: [:get, :post]
 
+
   scope module: 'site' do
     resources :products, only: [:show]
 
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
     resources :orders, only: [:create]
   end
 
+
   get "/contacts"          => "site/static_pages#contacts", via: [:get]
   get "/company_info"      => "site/static_pages#company_info", via: [:get]
   get "/delivery_info"     => "site/static_pages#delivery_info", via: [:get]
@@ -41,27 +43,42 @@ Rails.application.routes.draw do
 
   match "/orders/create_quick" => "site/orders#create_quick", via: [:post]
 
+
   namespace :administrators do
-    resources :products
-    resources :product_attacments
-    resources :product_categories
-    resources :post_categories
-    resources :posts
-    resources :menus
-    resources :menu_items do
+    resources :products, only: [:index, :edit, :update, :create, :destroy, :new]
+
+    resources :product_attacments,  only: [:destroy]
+
+    resources :product_categories, only: [:index, :edit, :update, :create, :destroy, :new]
+
+    resources :post_categories, only: [:index, :edit, :update, :create, :destroy, :new]
+
+    resources :posts, only: [:index, :edit, :update, :create, :destroy, :new]
+
+    resources :menus, only: [:edit]
+
+    resources :menu_items, only: [:create, :update, :edit, :update] do
       get 'add_children', on: :member,  via: [:get]   
     end  
-    resources :sliders
-    resources :slides
-    resources :site_variables
-    resources :pages
-    resources :back_calls
-    resources :product_questions
-    resources :banners
-    resources :form_requests
-    resources :orders 
-  end
 
+    resources :sliders, only: [:index, :edit]
+
+    resources :slides, only: [:edit, :update, :create, :destroy, :new]
+
+    resources :site_variables, only: [:edit, :update, :index]
+
+    resources :pages, only: [:edit, :update, :index]
+
+    resources :back_calls, only: [:index, :destroy]
+
+    resources :product_questions, only: [:index, :show, :destroy]
+
+    resources :banners, only: [:index, :edit, :update]
+
+    resources :form_requests, , only: [:index, :show ,:destroy]
+
+    resources :orders, only: [:index, :show, :destroy] 
+  end
 
 
 end

@@ -11,7 +11,6 @@ class Administrators::ProductCategoriesController < AdministratorsController
   def new
     @product_category = ProductCategory.new()
     @list_to_form     = ProductCategory.all.collect{|category| [category.name, category.id]} << ['Родитель', 0]
-
   end
 
   def create
