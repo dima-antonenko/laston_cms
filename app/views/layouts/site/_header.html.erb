@@ -11,7 +11,7 @@
                 <%= form_tag('/search_product', class: 'form-inline', method: :get) do %>
                     <div class="form-group form-category">
                     
-                       <%= select_tag "type", "<option value=\"product_sku\">По артикулу</option><option value=\"product_name\">По названию</option>".html_safe, class: 'select-category' %>
+                       <%= select_tag "type", "<option value=\"product_name\">По названию</option><option value=\"product_sku\">По артикулу</option>".html_safe, class: 'select-category' %>
                     </div>
                     <div class="form-group input-serach">
                        <!-- <input type="text"  placeholder="Поиск"> -->
