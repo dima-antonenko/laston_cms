@@ -1,5 +1,5 @@
 class Site::CartsController < SiteController
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  before_action :set_cart, only: [:show, :destroy]
 
   def show
     @order = Order.new
@@ -21,7 +21,7 @@ class Site::CartsController < SiteController
 
   def destroy
     if @cart.id == session[:cart_id]
-      @cart.delete_cart
+      Site::SCart::DeleteCart.new(@cart).main
       session[:cart_id] = nil
     end
     redirect_to '/'

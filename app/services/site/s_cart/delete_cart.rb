@@ -18,7 +18,7 @@ module Site
 
       def update_qty_from_products
         @line_items.each do |item|
-          @cart.delete_item(item.id)
+          Site::SCart::DeleteItem.new(item.id, @cart).main
         end  
       end
 
