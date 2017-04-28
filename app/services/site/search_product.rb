@@ -29,7 +29,9 @@ module Site
 
 
     def search_by_name
-      products = Product.where("name LIKE ?", "%#{@search_value}%", active: true) rescue false
+      #byebug
+      products = Product.where("name LIKE ?", "%#{@search_value}%") rescue false
+      products = products.where(active: true) if products != false
     end
 
 

@@ -10,20 +10,6 @@ class SiteController < ApplicationController
     @minicart          = Cart.find(session[:cart_id]) if session[:cart_id]
   end
 
-  def search_product
-    result = Site::SearchProduct.new(params).main
-    respond_to do |format|
-      if result.class.to_s == 'Product::ActiveRecord_Relation'
-        @products = result.paginate(page: params[:page], per_page: 10)
-        format.html {  render theme_path('search_results') }
-      elsif result.class.to_s == 'Product'
-        format.html { redirect_to product_path(result) }
-      elsif result.class.to_s == 'FalseClass'
-        raise ActiveRecord::RecordNotFound, "Запись не найдена"
-      end
-    end
-  end
-
 
   protected
 

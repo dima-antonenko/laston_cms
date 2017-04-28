@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   get "/payment_info"      => "site/static_pages#payment_info", via: [:get]
   get "/terms_of_service"  => "site/static_pages#terms_of_service", via: [:get]
 
-  get "/search_product"  => "site#search_product", via: [:get]
+  get "/search_product"  => "site/static_pages#search_product", via: [:get]
 
   match "/orders/create_quick" => "site/orders#create_quick", via: [:post]
 
@@ -75,7 +75,7 @@ Rails.application.routes.draw do
 
     resources :banners, only: [:index, :edit, :update]
 
-    resources :form_requests, , only: [:index, :show ,:destroy]
+    resources :form_requests,  only: [:index, :show ,:destroy]
 
     resources :orders, only: [:index, :show, :destroy] 
   end
