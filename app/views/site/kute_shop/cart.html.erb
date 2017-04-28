@@ -4,6 +4,7 @@
     
     <!-- ./breadcrumb -->
     <!-- page heading-->
+    <% if @line_items.size > 0 %>
     <h2 class="page-heading">
     <span class="page-heading-title2">Корзина</span>
     </h2>
@@ -70,4 +71,9 @@
       </div>
     </div>
   </div>
+  <% else %>
+  <h2 class="page-heading">
+    <span class="page-heading-title2">Корзина пустая</span>
+    </h2>
+  <% end %>
 </div>
