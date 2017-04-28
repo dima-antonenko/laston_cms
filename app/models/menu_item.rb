@@ -18,5 +18,3 @@ class MenuItem < ActiveRecord::Base
   validates :position, presence: true
 
 end
-
-MenuItem.create(title: 'zz', url: '/', position: 1)
