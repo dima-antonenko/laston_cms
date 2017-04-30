@@ -141,25 +141,7 @@ Page.create(name: "Информаци о оплате", descriptor: "payment_inf
 Page.create(name: "Условия обслуживания", descriptor: "terms_of_service", description: description_page)
 
 
-Menu.destroy_all
-MenuItem.destroy_all
-Menu.create(name: "Главное меню", descriptor: "main_menu")
-Menu.create(name: "Меню в футоре", descriptor: "footer_menu")
 
-
-MenuItem.create(title: "Главная", menu_id: Menu.first.id, url: '/', position: 1)
-MenuItem.create(title: "Контакты", menu_id: Menu.first.id, url: '/contacts', position: 2)
-MenuItem.create(title: "О Компании", menu_id: Menu.first.id, url: '/about', position: 3)
-MenuItem.create(title: "Тестовая страница", menu_id: Menu.first.id, url: '/', position: 4)
-MenuItem.create(title: "Тестовая страница2", menu_id: Menu.first.id, menu_item_id: MenuItem.last.id, url: '/', position: 1)
-
-
-last_menu_id = Menu.last.id
-MenuItem.create(title: "Главная", menu_id: last_menu_id, url: '/', position: 1)
-MenuItem.create(title: "Контакты", menu_id: last_menu_id, url: '/contacts', position: 2)
-MenuItem.create(title: "Доставка", menu_id: last_menu_id, url: '/delivery_info', position: 3)
-MenuItem.create(title: "Оплата", menu_id: last_menu_id, url: '/payment_info', position: 3)
-MenuItem.create(title: "Условия обслуживания", menu_id: last_menu_id, url: '/terms_of_service', position: 4)
 
 
 Banner.destroy_all
@@ -191,29 +173,6 @@ end
 
 =end
 
-
-####################
-# Меню
-####################
-=begin
-  
-MenuItem.destroy_all
-
-parent_item1 = MenuItem.create(title: 'Главный 1', url: '/', position: 1, menu_id: 3)
-parent_item2 = MenuItem.create(title: 'Главный 2', url: '/', position: 2, menu_id: 3)
-parent_item3 = MenuItem.create(title: 'Главный 3', url: '/', position: 3, menu_id: 3)
-
-
-
-MenuItem.create(title: 'Подпункт 1', url: '/', position: 1, menu_id: 3, parent:  parent_item1)
-MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, parent:  parent_item1)
-
-MenuItem.create(title: 'Подпункт 1', url: '/', position: 1, menu_id: 3, parent:  parent_item2)
-MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, parent:  parent_item2)
-
-MenuItem.create(title: 'Подпункт 1', url: '/', position: 1, menu_id: 3, parent:  parent_item3)
-MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, parent:  parent_item3)
-=end
 
 
 
@@ -300,7 +259,7 @@ end
 ####################
 # Посты
 ####################
-
+=begin
 Post.destroy_all
 last_category_id = PostCategory.last.id
 
@@ -321,6 +280,49 @@ PostCategory.all.each do |category|
     post.save
   end
 end
+=end
+####################
+####################
+
+
+
+
+
+####################
+# Меню
+####################
+
+MenuItem.destroy_all
+Menu.destroy_all
+
+main_menu_id = Menu.create(name: "Главное меню", descriptor: "main_menu").id
+footer_menu_id  = Menu.create(name: "Меню в футоре", descriptor: "footer_menu").id
+
+demo_post_path          = '/posts/' + Post.last.slug
+demo_post_category_path = '/post_categories/' + PostCategory.last.slug
+
+demo_product_path          = '/products/' + Product.last.slug
+demo_product_category_path = 'product_categories/' + ProductCategory.last.slug
+
+
+MenuItem.create(title: 'Главная',       url: '/', position: 1, menu_id: main_menu_id)
+MenuItem.create(title: 'Каталог',       url: '/product_categories', position: 2, menu_id: main_menu_id)
+parent_item = MenuItem.create(title: 'Демо-страницы', url: '/', position: 3, menu_id: main_menu_id)
+
+
+MenuItem.create(title: 'Категория товара',    url: demo_product_category_path, position: 1, menu_id: main_menu_id, parent:  parent_item)
+MenuItem.create(title: 'Товар',               url: demo_product_path,          position: 2, menu_id: main_menu_id, parent:  parent_item)
+MenuItem.create(title: 'Категория записи',    url: demo_post_category_path,    position: 3, menu_id: main_menu_id, parent:  parent_item)
+MenuItem.create(title: 'Запись',              url: demo_post_path,             position: 4, menu_id: main_menu_id, parent:  parent_item)
+MenuItem.create(title: 'Статческая страница', url: '/contacts',                position: 5, menu_id: main_menu_id, parent:  parent_item)
+
+#footer_menu 
+
+MenuItem.create(title: "Главная",              menu_id: footer_menu_id, url: '/', position: 1)
+MenuItem.create(title: "Контакты",             menu_id: footer_menu_id, url: '/contacts', position: 2)
+MenuItem.create(title: "Доставка",             menu_id: footer_menu_id, url: '/delivery_info', position: 3)
+MenuItem.create(title: "Оплата",               menu_id: footer_menu_id, url: '/payment_info', position: 3)
+MenuItem.create(title: "Условия обслуживания", menu_id: footer_menu_id, url: '/terms_of_service', position: 4)
 
 ####################
 ####################

@@ -55,7 +55,7 @@ Rails.application.routes.draw do
 
     resources :posts, only: [:index, :edit, :update, :create, :destroy, :new]
 
-    resources :menus, only: [:edit]
+    resources :menus, only: [:index, :edit]
 
     resources :menu_items, only: [:create, :update, :edit, :update] do
       get 'add_children', on: :member,  via: [:get]   
