@@ -1,3 +1,18 @@
+product_category_description = "<p>В последние годы сезоны сменяются так стремительно, что насладиться относительным теплом - когда платье с кедами, а поверх легкая куртка - времени остается не так много. Поэтому куртку стоит выбирать заблаговременно. Несмотря на то, что бомберы в сезоне 2017 заполонили все магазины, кожаные косухи составляют им сильную конкуренцию. И для девушки, которая хочет выглядеть женственно и стильно, они - классный вариант. Кожа, вообще, в этом году в почете.<br />
+Демисезонные куртки допускаются не просто короткие, а ультракороткие. А традиционные строгого классического кроя активно разбавлены менее строгими. Они идеально гармонируют с юбками и платьями, брюками и блузками. Хорошо смотрится жакет с укороченными рукавами, придающий образу женщины шика и лоска. Именно поэтому цена пиджаков и жакетов выше цены обычной куртки.<br />
+Ультракороткие, не достающие до пояса кожаные курточки-спенсеры смотрятся стильно даже с вечерним платьем.<br />
+Мегапопулярны в этом сезоне куртки-бомберы из кожи, да-да... Их носят преимущественно с джинсами, зауженными штанами и леггинсами, необычными юбками.<br />
+Вернулись в моду также длинные плащи и кожаные тренчи. Вещи такой длины удачно сочетаются с любой одеждой. А вот куртки косухи из моды вообще не выходили. Как и прежде, в тренде черные, коричневые и красные, а еще металлик, пудра и голубой.<br />
+Повседневные куртки представлены в стеганном варианте. Одежда со строчками в виде ромбов, полосок, клеток превращает любую скучную классику в элегантный наряд.</p>"
+
+product_description = "<p>В последние годы сезоны сменяются так стремительно, что насладиться относительным теплом - когда платье с кедами, а поверх легкая куртка - времени остается не так много. Поэтому куртку стоит выбирать заблаговременно. Несмотря на то, что бомберы в сезоне 2017 заполонили все магазины, кожаные косухи составляют им сильную конкуренцию. И для девушки, которая хочет выглядеть женственно и стильно, они - классный вариант. Кожа, вообще, в этом году в почете.<br />
+Демисезонные куртки допускаются не просто короткие, а ультракороткие. А традиционные строгого классического кроя активно разбавлены менее строгими. Они идеально гармонируют с юбками и платьями, брюками и блузками. Хорошо смотрится жакет с укороченными рукавами, придающий образу женщины шика и лоска. Именно поэтому цена пиджаков и жакетов выше цены обычной куртки.<br />
+Ультракороткие, не достающие до пояса кожаные курточки-спенсеры смотрятся стильно даже с вечерним платьем.<br />
+Мегапопулярны в этом сезоне куртки-бомберы из кожи, да-да... Их носят преимущественно с джинсами, зауженными штанами и леггинсами, необычными юбками.<br />
+Вернулись в моду также длинные плащи и кожаные тренчи. Вещи такой длины удачно сочетаются с любой одеждой. А вот куртки косухи из моды вообще не выходили. Как и прежде, в тренде черные, коричневые и красные, а еще металлик, пудра и голубой.<br />
+Повседневные куртки представлены в стеганном варианте. Одежда со строчками в виде ромбов, полосок, клеток превращает любую скучную классику в элегантный наряд.</p>"
+
+product_short_description = "В последние годы сезоны сменяются так стремительно, что насладиться относительным теплом - когда платье с кедами, а поверх легкая куртка - времени остается не так много. Поэтому куртку стоит выбирать заблаговременно."
 =begin
 
 ProductCategory.destroy_all
@@ -98,29 +113,7 @@ end
 
 
 
-ProductCategory.destroy_all
 
-10.times do |i|
-  category =  ProductCategory.new(name: "Категория #{i}", description: "this is description", slug:"slug-category-#{i}")
-
-  File.open("public/demo/product_categories/avatar#{rand(1..5)}.jpg") do |f|
-    category.avatar = f
-  end
-  category.save
-end
-
-
-ProductCategory.all.each do |product_category|
-  5.times do |i|
-    category = ProductCategory.new(product_category_id: product_category.id, name: "Категория #{i}",
-                                   description: "this is description", slug: "category-#{i}")
-
-    File.open("public/demo/product_categories/avatar#{rand(1..5)}.jpg") do |f|
-      category.avatar = f
-    end
-    category.save
-  end
-end
 
 
 
@@ -198,24 +191,15 @@ end
 
 
 
-Product.destroy_all
 
-#first_category_id = ProductCategory.first.id
-categories = ProductCategory.all
-
-categories.each do |product_category|
-  4.times do |t|
-    product = Product.new(product_category_id: product_category.id, name: "Товар #{t}", description: "описание", price: t * 100,
-                          slug: "product#{t}", short_description: "zzz")
-    File.open("public/demo/products/avatar#{rand(1..8)}.jpg") do |f|
-      product.avatar = f
-    end
-    product.save
-  end
-
-end
 =end
 
+
+####################
+# Меню
+####################
+=begin
+  
 MenuItem.destroy_all
 
 parent_item1 = MenuItem.create(title: 'Главный 1', url: '/', position: 1, menu_id: 3)
@@ -232,3 +216,83 @@ MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, 
 
 MenuItem.create(title: 'Подпункт 1', url: '/', position: 1, menu_id: 3, parent:  parent_item3)
 MenuItem.create(title: 'Подпункт 2', url: '/', position: 2, menu_id: 3, parent:  parent_item3)
+=end
+
+
+
+
+####################
+# Категории товаров
+####################
+=begin
+ProductCategory.destroy_all
+
+10.times do |i|
+  category =  ProductCategory.new(name: "Категория #{i}", description: product_category_description, slug:"slug-category-#{i}")
+
+  File.open("public/demo/product_categories/avatar#{rand(1..9)}.jpg") do |f|
+    category.avatar = f
+  end
+
+  File.open("public/demo/product_categories/big_avatars/avatar#{rand(1..6)}.jpg") do |f|
+    category.large_avatar = f
+  end
+
+  category.save
+ 
+end
+
+ProductCategory.all.each do |product_category|
+  5.times do |i|
+    category = ProductCategory.new(product_category_id: product_category.id, description: product_category_description)
+    category.name = "Категория #{product_category.id}-#{i}"
+    category.slug = "category-#{product_category.id}-#{i}"
+
+    File.open("public/demo/product_categories/avatar#{rand(1..9)}.jpg") do |f|
+      category.avatar = f
+    end
+
+    File.open("public/demo/product_categories/big_avatars/avatar#{rand(1..6)}.jpg") do |f|
+      category.large_avatar = f
+    end
+    category.save
+  end
+end
+=end 
+####################
+####################
+
+
+
+
+
+####################
+# Товары
+####################
+
+Product.destroy_all
+ProductCategory.all.each do |product_category|
+  rand(4..10).times do |t|
+    product = Product.new(product_category_id: product_category.id, description: product_description, price: t * 100,
+                          slug: "product#{t}", short_description: product_short_description)
+    product.name = "Товар #{t}"
+
+    File.open("public/demo/products/avatar#{rand(1..18)}.jpg") do |f|
+      product.avatar = f
+    end
+    product.save
+  end
+end
+
+Product.all.each do |product|
+  5.times do |i|
+    attacment = ProductAttachment.new(product_id: product.id)
+    File.open("public/demo/products/avatar#{rand(1..18)}.jpg") do |f|
+      attacment.image = f
+    end
+    attacment.save
+  end
+end
+
+####################
+####################
