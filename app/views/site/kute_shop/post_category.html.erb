@@ -60,7 +60,7 @@
                     <span class="page-heading-title2"><%= @post_category.name %></span>
                 </h2>
                 <div class="sortPagiBar clearfix">
-                  <%= @post_category.description %>
+                  <%= @post_category.description.html_safe %>
                 </div>
                 <ul class="blog-posts">
                  <% @posts.each do |post| %>

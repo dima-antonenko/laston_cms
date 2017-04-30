@@ -4,6 +4,7 @@ class Site::ProductsController < SiteController
 
 	def show
 		@product = Product.friendly.find(params[:id])
+    @product_category = @product.product_category
     @attacments = ProductAttachment.where(product_id: @product.id)
     @random_products = Product.limit(5)
     

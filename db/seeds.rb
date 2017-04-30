@@ -13,6 +13,11 @@ product_description = "<p>В последние годы сезоны сменя
 Повседневные куртки представлены в стеганном варианте. Одежда со строчками в виде ромбов, полосок, клеток превращает любую скучную классику в элегантный наряд.</p>"
 
 product_short_description = "В последние годы сезоны сменяются так стремительно, что насладиться относительным теплом - когда платье с кедами, а поверх легкая куртка - времени остается не так много. Поэтому куртку стоит выбирать заблаговременно."
+
+post_lead = "В последние годы сезоны сменяются так стремительно, что насладиться относительным теплом - когда платье с кедами, а поверх легкая куртка - времени остается не так много. Поэтому куртку стоит выбирать заблаговременно."
+
+post_content = product_description
+
 =begin
 
 ProductCategory.destroy_all
@@ -97,15 +102,7 @@ Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutru
 Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue."
 
 
-Post.destroy_all
-last_category_id = PostCategory.last.id
-15.times do |i|
-  post = Post.new(name: "Запись #{i}", post_category_id: last_category_id, lead: lead_text, content: content_text, slug: "post#{i}")
-  File.open("public/demo/posts/1.jpg") do |f|
-    post.avatar = f
-  end
-  post.save
-end
+
 
 
 
@@ -269,7 +266,7 @@ end
 ####################
 # Товары
 ####################
-
+=begin
 Product.destroy_all
 ProductCategory.all.each do |product_category|
   rand(4..10).times do |t|
@@ -291,6 +288,37 @@ Product.all.each do |product|
       attacment.image = f
     end
     attacment.save
+  end
+end
+=end
+####################
+####################
+
+
+
+
+####################
+# Посты
+####################
+
+Post.destroy_all
+last_category_id = PostCategory.last.id
+
+10.times do |i|
+  post = Post.new(name: "Запись #{i}", post_category_id: last_category_id, lead: post_lead, content: post_content, slug: "post#{i}")
+  File.open("public/demo/posts/avatar#{rand(1..9)}.jpg") do |f|
+    post.avatar = f
+  end
+  post.save
+end
+
+PostCategory.all.each do |category|
+  4.times do |i|
+    post = Post.new(name: "Запись #{i}", post_category_id: category.id, lead: post_lead, content: post_content, slug: "post#{i}")
+    File.open("public/demo/posts/avatar#{rand(1..9)}.jpg") do |f|
+      post.avatar = f
+    end
+    post.save
   end
 end
 
