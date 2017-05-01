@@ -5,7 +5,7 @@ class Administrators::ProductQuestionsController < AdministratorsController
 
 
   def index
-    @product_questions = ProductQuestion.all.order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
+    @product_questions = ProductQuestion.all.includes(:product).order('created_at DESC').paginate(:page => params[:page], :per_page => 20)
   end
 
   def show

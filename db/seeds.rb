@@ -18,143 +18,27 @@ post_lead = "В последние годы сезоны сменяются та
 
 post_content = product_description
 
-=begin
+content_description_page = "<p>После оформления заказа реквизиты для оплаты будут указаны в автоматическом письме на email.</p>
 
-ProductCategory.destroy_all
-Product.destroy_all
+<p>Перед оплатой уточните, пожалуйста, наличие товара у менеджера магазина. Посылки отправляются день в день после согласования с Вами менеджером всех ньюансов, аспектов заказа.</p>
 
-10.times do |i|
-  ProductCategory.create(name: "Категория #{i}", description: "this is description")
-end
+<p>Товар, купленный на Some Store, можно вернуть строго в течение 14-ти календарных дней с момента оформления заказа.</p>
 
-ProductCategory.all.each do |product_category|
-  5.times do |i|
-    ProductCategory.create!(product_category_id: product_category.id, name: "Категория #{product_category.id}-#{i}",
-                           description: "this is description")
-  end
-end
+<p><b>Условия возврата</b></p>
 
-first_category_id = ProductCategory.first.id
+<ul>
+	<li>- Написать на корпоративную почту email@test.ru, связаться с менеджером по одному из указанных телефонов на сайте или посредством чата и предоставить следующую необходимую информацию для возврата: номер и дата заказа, Ф.И.О., артикул товара, причину возврата.</li>
+	<li>- Проверить товарный вид и целостность возвращаемых изделий и упаковки (наличие сохранных ярлыков, бирок, упаковок со штрих-кодом; отсутствие следов носки, пятен и других загрязнений). Товары с признаками использования и не соответствующие требованиям выше - не возвращаются.</li>
+</ul>
 
-50.times do |t|
-  Product.create!(product_category_id: first_category_id, name: "Товар #{t}", description: "описание", price: t * 100)
-end
+<p>Прошу обратить внимание, что все затраты связанные с возвратом и обменом товара несет покупатель.</p>
 
+<p><b>Способы возврата товара и денег</b></p>
 
-PostCategory.destroy_all
+<p>Возврат и обмен товаров осуществляется через Транспортную компанию &quot;Новая Почта&quot;. Отправку осуществлять на адрес и данные указанные в траснпортной накладной &quot;Новой Почты&quot;, которую Вам предоставили при получении товара.</p>
 
-40.times do |i|
-  PostCategory.create!(name: "Категория #{i}", description: "this is a description")
-end  
-
-
-
-
-
-
-
-BackCall.destroy_all
-
-30.times do |i|
-  BackCall.create(product_id: Product.last.id, phone: "8-800-555-35-35-#{i}")
-end
-
-
-
-
-Order.destroy_all
-
-30.times do |i|
-  Order.create(customer_name: "Олег", customer_email: "1@mail.ru", customer_phone: "+7 123-456-00-#{i}", customer_city: "Москва",
-   total_price: 1000, customer_address: "ул. Солнечная, дом 11, кв. 5")
-end
-
-
-FormRequest.destroy_all
-
-30.times do |i|
-  FormRequest.create(name: "Олег", phone: "+7 123-456-00-#{i}", text: "Здесь текст заявки")
-end
-
-
-
-
-
-ProductQuestion.destroy_all
-
-10.times do |i|
-  ProductQuestion.create(name: "Олег", phone: "8-800-555-35-35", product_id: Product.first.id, text: "Здесь текст вопроса")
-end  
-
-
-
-
-
-
-lead_text = "Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel."
-content_text = "Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.
-Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.
-Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.
-Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.
-Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.
-Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue."
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-description_page = "<p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>
-
-<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>
-
-<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque eget, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>
-
-<p>Nam elit agna,endrerit sit amet, tincidunt ac, viverra sed, nulla. Donec porta diam eu massa. Quisque diam lorem, interdum vitae,dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque sed dolor. Aliquam congue fermentum nisl.</p>
-
-<p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>
-
-<p>Integer rutrum ante eu lacus.Vestibulum libero nisl, porta vel, scelerisque egeteque. Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse sollicitudin velit sed leo. Ut pharetra augue nec augue.</p>"
-
-Page.destroy_all
-
-Page.create(name: "Главная", descriptor: "home", description: description_page)
-Page.create(name: "Контакты", descriptor: "contacts", description: description_page)
-Page.create(name: "Информаци о доставке", descriptor: "delivery_info", description: description_page)
-Page.create(name: "Информаци о оплате", descriptor: "payment_info", description: description_page)
-Page.create(name: "Условия обслуживания", descriptor: "terms_of_service", description: description_page)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=end
-
-
+<p>Денежные средства возвращаются на предоставленный Вами карточный счет банка. Прошу обратить внимание, что все затараты связанные связанные с возвратом и обменом товара несет покупатель.</p>
+"
 
 
 
@@ -354,7 +238,7 @@ banner.save
 
 
 ####################
-# SiteVariable
+# Блоки информации
 ####################
 =begin
 SiteVariable.destroy_all
@@ -362,3 +246,62 @@ SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in
 =end
 ####################
 ####################
+
+
+
+
+####################
+# Блоки информации
+####################
+=begin
+Page.destroy_all
+
+Page.create(name: "Главная", descriptor: "home", description: content_description_page)
+Page.create(name: "Контакты", descriptor: "contacts", description: content_description_page)
+Page.create(name: "Информаци о доставке", descriptor: "delivery_info", description: content_description_page)
+Page.create(name: "Информаци о оплате", descriptor: "payment_info", description: content_description_page)
+Page.create(name: "Условия обслуживания", descriptor: "terms_of_service", description: content_description_page)
+=end
+####################
+####################
+
+
+
+
+####################
+# Контент для админки
+####################
+=begin
+BackCall.destroy_all
+last_product_id = Product.last.id
+
+30.times do |i|
+  BackCall.create(product_id: last_product_id, phone: "8-800-555-35-35-#{i}")
+end
+
+
+Order.destroy_all
+
+30.times do |i|
+  Order.create(customer_name: "Олег", customer_email: "1@mail.ru", customer_phone: "+7 123-456-00-#{i}", customer_city: "Москва",
+   total_price: 1000, customer_address: "ул. Солнечная, дом 11, кв. 5")
+end
+
+
+FormRequest.destroy_all
+
+30.times do |i|
+  FormRequest.create(name: "Олег", phone: "+7 123-456-00-#{i}", text: "Здесь текст заявки")
+end
+
+
+ProductQuestion.destroy_all
+
+10.times do |i|
+  ProductQuestion.create(name: "Олег", phone: "8-800-555-35-35", product_id: last_product_id, text: "Здесь текст вопроса")
+end
+=end
+####################
+####################
+
+
