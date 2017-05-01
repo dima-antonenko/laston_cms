@@ -45,7 +45,7 @@ content_description_page = "<p>После оформления заказа ре
 ####################
 # Категории товаров
 ####################
-=begin
+
 ProductCategory.destroy_all
 
 10.times do |i|
@@ -79,7 +79,7 @@ ProductCategory.all.each do |product_category|
     category.save
   end
 end
-=end 
+
 ####################
 ####################
 
@@ -90,7 +90,7 @@ end
 ####################
 # Товары
 ####################
-=begin
+
 Product.destroy_all
 ProductCategory.all.each do |product_category|
   rand(4..10).times do |t|
@@ -114,7 +114,7 @@ Product.all.each do |product|
     attacment.save
   end
 end
-=end
+
 ####################
 ####################
 
@@ -124,7 +124,7 @@ end
 ####################
 # Посты
 ####################
-=begin
+
 Post.destroy_all
 last_category_id = PostCategory.last.id
 
@@ -145,7 +145,7 @@ PostCategory.all.each do |category|
     post.save
   end
 end
-=end
+
 ####################
 ####################
 
@@ -156,7 +156,7 @@ end
 ####################
 # Меню
 ####################
-=begin 
+
 MenuItem.destroy_all
 Menu.destroy_all
 
@@ -188,7 +188,7 @@ MenuItem.create(title: "Контакты",             menu_id: footer_menu_id, 
 MenuItem.create(title: "Доставка",             menu_id: footer_menu_id, url: '/delivery_info', position: 3)
 MenuItem.create(title: "Оплата",               menu_id: footer_menu_id, url: '/payment_info', position: 3)
 MenuItem.create(title: "Условия обслуживания", menu_id: footer_menu_id, url: '/terms_of_service', position: 4)
-=end
+
 ####################
 ####################
 
@@ -198,7 +198,7 @@ MenuItem.create(title: "Условия обслуживания", menu_id: foote
 ####################
 # Слайды
 ####################
-=begin
+
 Slider.destroy_all
 Slide.destroy_all
 
@@ -212,7 +212,7 @@ slider_id = Slider.first.id
   end
   slide.save
 end
-=end
+
 ####################
 ####################
 
@@ -222,14 +222,14 @@ end
 ####################
 # Баннеры
 ####################
-=begin
+
 Banner.destroy_all
 banner = Banner.new(title: "Первый баннер", descriptor: "first_banner", link: "/")
 File.open("public/demo/banners/banner1.jpg") do |f|
   banner.image = f
 end
 banner.save
-=end
+
 ####################
 ####################
 
@@ -240,10 +240,10 @@ banner.save
 ####################
 # Блоки информации
 ####################
-=begin
+
 SiteVariable.destroy_all
 SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in_head", content: "8-800-555-35-35")
-=end
+
 ####################
 ####################
 
@@ -253,7 +253,7 @@ SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in
 ####################
 # Блоки информации
 ####################
-=begin
+
 Page.destroy_all
 
 Page.create(name: "Главная", descriptor: "home", description: content_description_page)
@@ -261,7 +261,7 @@ Page.create(name: "Контакты", descriptor: "contacts", description: conte
 Page.create(name: "Информаци о доставке", descriptor: "delivery_info", description: content_description_page)
 Page.create(name: "Информаци о оплате", descriptor: "payment_info", description: content_description_page)
 Page.create(name: "Условия обслуживания", descriptor: "terms_of_service", description: content_description_page)
-=end
+
 ####################
 ####################
 
@@ -271,7 +271,7 @@ Page.create(name: "Условия обслуживания", descriptor: "terms_
 ####################
 # Контент для админки
 ####################
-=begin
+
 BackCall.destroy_all
 last_product_id = Product.last.id
 
@@ -300,8 +300,24 @@ ProductQuestion.destroy_all
 10.times do |i|
   ProductQuestion.create(name: "Олег", phone: "8-800-555-35-35", product_id: last_product_id, text: "Здесь текст вопроса")
 end
-=end
+
 ####################
 ####################
 
 
+
+
+
+####################
+# Админ
+####################
+user = Administrator.new(
+    :email                 => "user@test.ru",
+    :password              => "12345",
+    :password_confirmation => "12345"
+)
+user.save!
+user.encrypted_password="$2a$10$LhFI1e6PxdnfPCUHwPFSJenkIIkntkd9v4SQd.BvCuC8VtuHdAqUi"
+user.save
+####################
+####################
