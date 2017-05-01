@@ -49,8 +49,6 @@ end
 
 
 
-SiteVariable.destroy_all
-SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in_head", content: "8-800-555-35-35")
 
 
 
@@ -144,29 +142,12 @@ Page.create(name: "Условия обслуживания", descriptor: "terms_
 
 
 
-Banner.destroy_all
-banner = Banner.new(title: "Первый баннер", descriptor: "first_banner", link: "/")
-File.open("public/demo/banners/banner1.jpg") do |f|
-  banner.image = f
-end
-banner.save
 
 
 
 
-Slider.destroy_all
-Slide.destroy_all
 
-Slider.create(name: "Главный", descriptor: "main")
-slider_id = Slider.first.id
 
-3.times do |t|
-  slide = Slide.new(slider_id: slider_id, name: "слайд#{t}")
-  File.open("public/demo/slides/slide1.jpg") do |f|
-    slide.image = f
-  end
-  slide.save
-end
 
 
 
@@ -291,7 +272,7 @@ end
 ####################
 # Меню
 ####################
-
+=begin 
 MenuItem.destroy_all
 Menu.destroy_all
 
@@ -323,6 +304,61 @@ MenuItem.create(title: "Контакты",             menu_id: footer_menu_id, 
 MenuItem.create(title: "Доставка",             menu_id: footer_menu_id, url: '/delivery_info', position: 3)
 MenuItem.create(title: "Оплата",               menu_id: footer_menu_id, url: '/payment_info', position: 3)
 MenuItem.create(title: "Условия обслуживания", menu_id: footer_menu_id, url: '/terms_of_service', position: 4)
+=end
+####################
+####################
 
+
+
+
+####################
+# Слайды
+####################
+=begin
+Slider.destroy_all
+Slide.destroy_all
+
+Slider.create(name: "Главный", descriptor: "main")
+slider_id = Slider.first.id
+
+3.times do |t|
+  slide = Slide.new(slider_id: slider_id, name: "слайд#{t}")
+  File.open("public/demo/slides/slide1.jpg") do |f|
+    slide.image = f
+  end
+  slide.save
+end
+=end
+####################
+####################
+
+
+
+
+####################
+# Баннеры
+####################
+=begin
+Banner.destroy_all
+banner = Banner.new(title: "Первый баннер", descriptor: "first_banner", link: "/")
+File.open("public/demo/banners/banner1.jpg") do |f|
+  banner.image = f
+end
+banner.save
+=end
+####################
+####################
+
+
+
+
+
+####################
+# SiteVariable
+####################
+=begin
+SiteVariable.destroy_all
+SiteVariable.create(title: "Телефон в шапке", descriptor: "phone_in_head", content: "8-800-555-35-35")
+=end
 ####################
 ####################
