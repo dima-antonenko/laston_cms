@@ -22,7 +22,7 @@ class Product < ActiveRecord::Base
 
 
   def in_cart?(cart)
-    if cart.line_items
+    if cart and cart.line_items
       cart.line_items.find_by(product_id: self.id) ? true : false
     else
       false

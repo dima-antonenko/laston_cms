@@ -3,13 +3,13 @@ module Site
     class Create
 
       def initialize(params)
-        @product = Product.find(params[:back_call][:product_id]) rescue nil
+        @product = Product.find_by(id: params[:back_call][:product_id], active: true) rescue nil
         @phone   = params[:back_call][:phone]
       end
 
 
       def main
-        if @product.active and @phone.empty? != true
+        if @phone.empty? != true
           BackCall.create(product_id: @product.id, phone: @phone)
         else
           false

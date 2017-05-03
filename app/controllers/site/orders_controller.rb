@@ -1,5 +1,5 @@
 class Site::OrdersController < SiteController
-  include CurrentCart
+#  include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
@@ -34,6 +34,13 @@ class Site::OrdersController < SiteController
 
 
   private
+
+  def set_cart
+    @cart = Cart.find(session[:cart_id])
+  rescue ActiveRecord::RecordNotFound
+    @cart = Cart.create
+    session[:cart_id] = @cart.id
+  end
 
 
   def set_order

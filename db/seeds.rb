@@ -95,7 +95,7 @@ Product.destroy_all
 ProductCategory.all.each do |product_category|
   rand(4..10).times do |t|
     product = Product.new(product_category_id: product_category.id, description: product_description, price: t * 100,
-                          slug: "product#{t}", short_description: product_short_description)
+                          slug: "product#{t}", short_description: product_short_description, qty: 20)
     product.name = "Товар #{t}"
 
     File.open("public/demo/products/avatar#{rand(1..18)}.jpg") do |f|
@@ -160,6 +160,8 @@ end
 MenuItem.destroy_all
 Menu.destroy_all
 
+first_product_categoty_slug = ProductCategory.first.slug
+
 main_menu_id = Menu.create(name: "Главное меню", descriptor: "main_menu").id
 footer_menu_id  = Menu.create(name: "Меню в футоре", descriptor: "footer_menu").id
 
@@ -171,7 +173,7 @@ demo_product_category_path = 'product_categories/' + ProductCategory.last.slug
 
 
 MenuItem.create(title: 'Главная',       url: '/', position: 1, menu_id: main_menu_id)
-MenuItem.create(title: 'Каталог',       url: '/product_categories', position: 2, menu_id: main_menu_id)
+MenuItem.create(title: 'Каталог',       url: "/product_categories/#{first_product_categoty_slug}", position: 2, menu_id: main_menu_id)
 parent_item = MenuItem.create(title: 'Демо-страницы', url: '/', position: 3, menu_id: main_menu_id)
 
 

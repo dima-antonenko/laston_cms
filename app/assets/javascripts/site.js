@@ -42,6 +42,11 @@ product_ui = {
 
   success_create_order: function() {
     $.notify("Заказ отправлен, спасибо", "success");
+    $('#order_customer_name').val('');
+    $('#order_customer_email').val('');
+    $('#order_customer_phone').val('');
+    $('#order_customer_city').val('');
+    $('#order_customer_address').val('');
     setTimeout(function() {
       window.location.href = "/";
     }, 2000);

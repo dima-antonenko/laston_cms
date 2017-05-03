@@ -12,7 +12,7 @@ module SAdministrator
       def main
         @menu_item.title        = @params[:title]
         @menu_item.url          = @params[:url]
-        @menu_item.menu_item_id = @params[:menu_item_id]
+        #@menu_item.menu_item_id = @params[:menu_item_id]
         @menu_item.position     = @params[:position]
         @menu_item.save ? @menu_item : false
       end

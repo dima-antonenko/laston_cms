@@ -3,7 +3,7 @@
     <span class="uk-text-muted uk-text-upper uk-text-small" id="product_edit_sn">Меню: <%= @menu_item.menu.name %></span>
 </div>
 <div id="page_content_inner">
-    <%= form_for([:administrators, @menu_item], class: "uk-form-stacked", id: "product_edit_form", :multipart => true, remote: true, authenticity_token: true ) do |f| %>
+    <%= form_for([:administrators, @menu_item], class: "uk-form-stacked", id: "product_edit_form", multipart: true, remote: true, authenticity_token: true ) do |f| %>
     <div class="uk-grid uk-grid-medium" data-uk-grid-margin>
         <div class="uk-width-xLarge-2-10 uk-width-large-3-10">
 
